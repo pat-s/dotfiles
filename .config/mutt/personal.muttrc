@@ -1,0 +1,3 @@
+macro index,pager i1 '<sync-mailbox><enter-command>source /home/pjs/.config/mutt/accounts/gmail.muttrc<enter><change-folder>!<enter>;<check-stats>' "switch to patrick.schratz@gmail.com"
+source /home/pjs/.config/mutt/accounts/gmail.muttrc
+macro index,pager i2 '<sync-mailbox><enter-command>source /home/pjs/.config/mutt/accounts/gmail2.muttrc<enter><change-folder>!<enter>;<check-stats>' "switch to patrick.johann22@gmail.com"

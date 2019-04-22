@@ -1,0 +1,353 @@
+# sway config file
+
+#####################
+# Global settings
+#####################
+
+# Set mod key (Mod1=<Alt>, Mod4=<Super>)
+set $mod Mod4 
+set $sterm st 
+#set $menu rofi -dmenu 
+set $menu j4-dmenu-desktop --dmenu='bemenu -i --nb "#3f3f3f" --nf "#dcdccc" --fn "pango:DejaVu Sans Mono 12"' --term='termite'
+
+# Configure border style <normal|1pixel|pixel xx|none|pixel>
+new_window pixel 1
+new_float normal
+
+# Hide borders
+hide_edge_borders none
+
+floating_modifier $mod normal
+
+#####################
+# Keybindings
+#####################
+
+# start a terminal
+bindsym $mod+Return exec --no-startup-id $sterm
+
+# kill focused window
+bindsym $mod+q kill
+
+# start program launcher
+bindsym $mod+d exec --no-startup-id $menu 
+
+# window switcher
+bindsym $mod+Tab exec rofi -show window -theme sidetab
+
+# application launcher
+bindsym $mod+space exec rofi -show drun -theme sidetab
+bindsym $mod+F1 exec st -e fish -c 'nnn'
+bindsym $mod+F3 exec --no-startup-id firefox
+bindsym $mod+F4 exec st -e sh -c 'tmuxinator start arch'
+bindsym $mod+F5 exec --no-startup-id rstudio
+bindsym $mod+F6 exec st -e sh -c 'pass show Science/Friedolin  | sudo openconnect vpn.uni-jena.de -u bi28yuv@uni-jena.de --passwd-on-stdin | dmenu -l 20'
+bindsym $mod+t exec --no-startup-id pkill compton
+bindsym Print exec --no-startup-id grim
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# workspace back and forth (with/without active container)
+workspace_auto_back_and_forth yes
+bindsym $mod+b workspace back_and_forth
+bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
+workspace file output eDP-1
+workspace messages output eDP-1
+workspace firefox output DP-1
+workspace terminal output DP-1
+
+# split orientation
+bindsym $mod+s split toggle
+
+# toggle fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+#bindsym $mod+s layout stacking
+#bindsym $mod+w layout tabbed
+#bindsym $mod+e layout toggle split
+bindsym $mod+w layout toggle tabbed split 
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+#bindsym $mod+space focus mode_toggle
+
+# toggle sticky
+bindsym $mod+Shift+s sticky toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# move the currently focused window to the scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym $mod+minus scratchpad show
+
+# hide/unhide i3status bar
+bindsym $mod+m bar mode toggle
+
+#####################
+# Workspaces
+#####################
+
+# navigate workspaces next / previous
+bindsym $mod+Ctrl+Right workspace next
+bindsym $mod+Ctrl+Left workspace prev
+
+# Workspace names
+# to display names or symbols instead of plain workspace numbers 
+
+set $ws1 1:file
+set $ws2 2:mail
+set $ws3 3:firefox
+set $ws4 4:terminal
+set $ws5 5:rstudio
+set $ws6 6:messages
+set $ws7 7:vscode
+set $ws8 8:notion
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+
+# Move focused container to workspace
+bindsym $mod+Ctrl+1 move container to workspace $ws1
+bindsym $mod+Ctrl+2 move container to workspace $ws2
+bindsym $mod+Ctrl+3 move container to workspace $ws3
+bindsym $mod+Ctrl+4 move container to workspace $ws4
+bindsym $mod+Ctrl+5 move container to workspace $ws5
+bindsym $mod+Ctrl+6 move container to workspace $ws6
+bindsym $mod+Ctrl+7 move container to workspace $ws7
+bindsym $mod+Ctrl+8 move container to workspace $ws8
+bindsym $mod+Ctrl+9 move container to workspace $ws9
+
+# Move to workspace with focused container
+bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2; workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3; workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4; workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws7; workspace $ws9
+
+# move focused workspace between monitors
+bindsym $mod+Ctrl+greater move workspace to output right
+bindsym $mod+Ctrl+less move workspace to output left
+
+
+# Open applications on specific workspaces
+#assign [class="nnn"] $ws1
+assign [class="Mailspring"] $ws2
+assign [class="Firefox"] $ws3
+assign [class="RStudio"] $ws5
+assign [class="Franz"] $ws6
+assign [class="Code"] $ws7
+assign [class="Notion"] $ws8
+
+# Open specific applications in floating mode
+for_window [title="alsamixer"] floating enable border pixel 1
+for_window [class="Clipgrab"] floating enable
+for_window [title="File Transfer*"] floating enable
+for_window [class="Galculator"] floating enable border pixel 1
+for_window [class="GParted"] floating enable border normal
+for_window [title="i3_help"] floating enable sticky enable border normal
+for_window [class="Lightdm-settings"] floating enable
+for_window [class="Lxappearance"] floating enable sticky enable border normal
+for_window [class="qt5ct"] floating enable sticky enable border normal
+for_window [class="(?i)System-config-printer.py"] floating enable border normal
+for_window [class="Skype"] floating enable border normal
+for_window [class="Timeset-gui"] floating enable border normal
+for_window [class="(?i)virtualbox"] floating enable border normal
+
+# switch to workspace with urgent window automatically
+# for_window [urgent=latest] focus
+
+#####################
+# exit commands
+#####################
+bindsym $mod+F10 exec swaymsg exit
+bindsym $mod+F9 exec poweroff
+bindsym $mod+F8 exec reboot
+bindsym $mod+F11 exec --no-startup-id swaylock-blur
+bindsym $mod+F12 exec manview
+
+# restart sway inplace (preserves your layout/session)
+bindsym $mod+Shift+r reload
+
+# Set shut down, restart and locking features
+bindsym $mod+0 mode "mode_system"
+mode "mode_system" {
+    bindsym l exec --no-startup-id swaylock-blur
+    bindsym e exec --no-startup-id swaymsg exit
+    bindsym r exec --no-startup-id reboot
+    bindsym Shift+s exec --no-startup-id poweroff
+
+    # exit system mode: "Enter" or "Escape"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+
+# Resize window (you can also use the mouse for that)
+bindsym $mod+r mode "resize"
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+        # Pressing left will rhrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym h resize shrink width 5 px or 5 ppt
+        bindsym l resize grow width 5 px or 5 ppt
+        bindsym k resize grow height 5 px or 5 ppt
+        bindsym j resize shrink height 5 px or 5 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # exit resize mode: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+# Autostart applications
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# exec --no-startup-id nm-applet
+exec --no-startup-id 'nm-applet --indicator'
+# exe --no-startup-id xfce4-power-manager
+exec --no-startup-id blueman-applet
+exec --no-startup-id redshift
+exec --no-startup-id "exec /usr/bin/insync start" 
+exec --no-startup-id dropbox
+exec --no-startup-id Firefox
+exec --no-startup-id notion-app
+
+
+#####################
+# Wallpaper
+#####################
+#output "*" background ~/Pictures/wallpapers/WallpaperStudio10-90225.jpg fill
+output "*" background ~/Pictures/wallpapers/WallpaperStudio10-84481.jpg fill
+
+#####################
+# Bar
+#####################
+
+# Start i3bar to display a workspace bar (plus the system information i3status if available)
+bar {
+    swaybar_command waybar
+    #status_command py3status -c ~/.i3status.conf
+
+	strip_workspace_numbers yes
+}
+
+# top bar
+#bar {
+    #tray_output none
+    #workspace_buttons no
+    #status_command py3status -c ~/.i3status-top.conf
+	#position top    
+#}
+
+#####################
+# Screenshot
+#####################
+
+input * xkb_layout "de"
+input * xkb_variant "colemak,,typewriter"
+input * xkb_options "grp:win_space_toggle"
+#input "MANUFACTURER1 Keyboard" xkb_model "pc101"
+#input "MANUFACTURER2 Keyboard" xkb_model "jp106"
+bindsym --release Print exec grim -g \"$(slurp)" - | wl-copy
+
+
+#####################
+# HiDPI
+#####################
+
+output eDP-1 resolution 1920x1080 pos 0,0
+output DP-1 resolution 3820x2160 pos 1920,100
+#output HDMI-A-2 resolution 1920x1080 pos 0,0
+output HDMI-A-2 resolution 1920x1080 pos 1920,0
+output HDMI-A-3 resolution 1920x1080 pos 1920,0
+
+
+#####################
+# Gaps
+#####################
+
+smart_gaps off
+gaps outer 10
+gaps inner 10
+
+#####################
+# keyboard
+#####################
+
+input "2:7:SynPS/2_Synaptics_TouchPad" {
+       dwt enabled
+       tap enabled
+       natural_scroll disabled
+       middle_emulation enabled
+}
+
+# Title bar border
+set $default_border none
+
+# Brightness buttons laptop (via brightnessctl)
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+
+#####################
+# remove title bar 
+######################
+for_window [class="^.*"] border pixel 2
+
+#################
+# Volume 
+#################
+
+#exec --no-startup-id pulseaudio
+#exec --no-startup-id pa-applet
+exec --no-startup-id volumeicon
+
+bindsym $mod+Ctrl+m exec pavucontrol
+
+exec xrdb ~/.Xdefaults

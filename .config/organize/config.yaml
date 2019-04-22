@@ -1,0 +1,121 @@
+rules:
+  # move screenshots into "Screenshots" folder
+  - folders:
+      - ~/Pictures/
+    filters:
+      - Filename:
+          startswith: 'Selection'
+    actions:
+      - Move: ~/screenshots/
+
+  # rename screenshots to "screenshot-date"
+  - folders:
+      - ~/screenshots
+    filters:
+      - Filename:
+          startswith: 'Selection'
+    actions:
+      - Rename: screenshot-.png
+
+  - folders:
+      - ~/screenshots
+    filters:
+      - Filename:
+          startswith: 'screenshot'
+    actions:
+      - Rename: screenshot.png
+
+  # move downloads older > 7 days into the trash
+  - folders:
+      - ~/Downloads
+    filters:
+      - LastModified:
+          days: 7
+          mode: older
+    actions:
+      - Trash
+
+##################################
+# figs papers
+##################################
+
+        #  # move figures to respective folders
+        #  - folders:
+        #      - /mnt/mccoy/home/patrick/00-inbox/
+        #    filters:
+        #      - Filename:
+        #          startswith: 'paper1'
+        #      - Extension
+        #    actions:
+        #      - Move: /mnt/mccoy/home/patrick/PhD/papers/01_model_comparison/04_figures/{path.stem}.{extension.lower}
+        #
+        #  # move figures to respective folders
+        #  - folders:
+        #      - /mnt/mccoy/home/patrick/00-inbox/
+        #    filters:
+        #      - Filename:
+        #          startswith: 'paper2'
+        #      - Extension
+        #    actions:
+        #      - Move: /mnt/mccoy/home/patrick/PhD/papers/02_armillaria/03_figures/{path.stem}.{extension.lower}
+        #
+        #  # move figures to respective folders
+        #  - folders:
+        #      - /mnt/mccoy/home/patrick/00-inbox/
+        #    filters:
+        #      - Filename:
+        #          startswith: 'paper3'
+        #      - Extension: 
+        #    actions:
+        #      - Move: /mnt/mccoy/home/patrick/PhD/papers/03_hyperspectral/03_figures/{path.stem}.{extension.lower}
+        #
+        ###################################
+        ## figs presentations
+        ###################################
+        #
+        #  - folders:
+        #      - /mnt/mccoy/home/patrick/PhD/papers/01_model_comparison/04_figures/02_results/
+        #    filters:
+        #      - Filename:
+        #          endswith: '[pres]'
+        #    #filters:
+        #      #- Extension: 'png'
+        #    actions:
+        #      - Copy: 
+        #          dest: ~/git/presentations/papers/paper1/figs/{path.stem}.png
+        #          overwrite: true
+
+##################################
+# banking
+##################################
+
+  - folders:
+      - ~/Downloads
+    filters:
+      - Filename:
+          contains: 'Kreditkartenabrechnung'
+      - LastModified:
+    actions:
+      - Move: ~/gdrive/Dokumente/Finanzen/DKB Bank/Kreditkartenabrechnungen/{lastmodified.year}/
+
+  - folders:
+      - ~/Downloads
+    filters:
+      - Filename:
+          contains: 'Kontoauszug'
+      - LastModified:
+    actions:
+      - Move: ~/gdrive/Dokumente/Finanzen/DKB Bank/Kontoauszüge/{lastmodified.year}/
+
+##################################
+# Lohnabrechnungen
+##################################
+
+  - folders:
+      - ~/Downloads
+    filters:
+      - Filename:
+          contains: 'Lohnschein'
+      - LastModified:
+    actions:
+      - Move: ~/gdrive/Dokumente/Uni/Lohnabrechnungen/{lastmodified.year}/
