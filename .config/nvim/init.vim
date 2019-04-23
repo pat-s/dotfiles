@@ -112,6 +112,11 @@ map <leader>t :set bg=light<CR>
 " Toggle Markdown
 nnoremap  <leader>m :MarkdownPreview <CR>
 
+" Git
+nnoremap  <leader>gs :Gstatus <CR>
+nnoremap  <leader>gc :Gcommit % <CR>
+nnoremap  <leader>gp :Gpush <CR>
+
 " Toggle Goyo
 nnoremap <leader>g :Goyo <CR>
 
