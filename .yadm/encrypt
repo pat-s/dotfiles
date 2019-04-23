@@ -1,0 +1,7 @@
+.Rprofile.d/PAT.R
+.ssh/id_rsa
+.ssh/id_rsa.pub
+.ssh/keys/aur
+.ssh/keys/aur.pub
+.smbcredentials.txt
+
