@@ -262,7 +262,7 @@ vnoremap <leader>P "+P
 
     " Git
 
-    "Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-fugitive'
 
     "
 
@@ -271,6 +271,8 @@ vnoremap <leader>P "+P
     Plug 'airblade/vim-gitgutter'
 
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+
+    Plug 'mzlogin/vim-markdown-toc'
 
     " specify browser to open preview page
     " default: ''
