@@ -34,7 +34,17 @@ abbr gs "git status"
 set -gx R_HOME "/usr/lib64/R"
 fish_vi_key_bindings
 
+#####
+# yadm
+#####
+
+abbr ya "yadm add"
+abbr yc "yadm commit -m '"
+
+#####
 # tmux
+#####
+
 set -gx TERM "xterm-256color"
 set -gx EDITOR "nvim"
 set -gx READER "zathura"
