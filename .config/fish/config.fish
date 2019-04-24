@@ -40,6 +40,8 @@ fish_vi_key_bindings
 
 abbr ya "yadm add"
 abbr yc "yadm commit -m '"
+abbr yp "yadm push"
+
 
 #####
 # tmux
