@@ -1,26 +1,4 @@
 
-IMAPStore gmail-remote
-Host imap.gmail.com
-Port  993
-User patrick.schratz@gmail.com
-PassCmd "pass mutt-wizard-gmail"
-SSLType IMAPS
-CertificateFile /etc/ssl/certs/ca-certificates.crt
-
-MaildirStore gmail-local
-Subfolders Verbatim
-Path ~/.local/share/mail/gmail/
-Inbox ~/.local/share/mail/gmail/INBOX
-Flatten .
-
-Channel gmail
-Expunge Both
-Master :gmail-remote:
-Slave :gmail-local:
-Patterns * !"[Gmail]/All Mail"
-Create Both
-SyncState *
-# End profile
 
 IMAPStore gmail2-remote
 Host imap.gmail.com
@@ -40,6 +18,30 @@ Channel gmail2
 Expunge Both
 Master :gmail2-remote:
 Slave :gmail2-local:
+Patterns * !"[Gmail]/All Mail"
+Create Both
+SyncState *
+# End profile
+
+
+IMAPStore gmail-remote
+Host imap.gmail.com
+Port  993
+User patrick.schratz@gmail.com
+PassCmd "pass mutt-wizard-gmail"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore gmail-local
+Subfolders Verbatim
+Path ~/.local/share/mail/gmail/
+Inbox ~/.local/share/mail/gmail/INBOX
+Flatten .
+
+Channel gmail
+Expunge Both
+Master :gmail-remote:
+Slave :gmail-local:
 Patterns * !"[Gmail]/All Mail"
 Create Both
 SyncState *
