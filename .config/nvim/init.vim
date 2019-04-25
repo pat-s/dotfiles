@@ -2,8 +2,6 @@
 
 set termguicolors
 
-colorscheme gruvbox
-
 set nocompatible            " Disable compatibility to old-time vi
 
 set showmatch               " Show matching brackets.
@@ -348,6 +346,7 @@ vnoremap <leader>P "+P
 call plug#end()
 
 
+colorscheme gruvbox
 
 " suppress the annoying 'match x of y', 'The only match' and 'Pattern not
 

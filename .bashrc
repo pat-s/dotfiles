@@ -1,1 +1,1 @@
-/home/pjs/.bashrc##hpc
+/home/patrick/.bashrc##hpc

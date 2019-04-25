@@ -7,8 +7,10 @@ export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput se
 [ -f "$HOME/.config/shortcutrc" ] && source "$HOME/.config/shortcutrc" # Load shortcut aliases
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
+export PATH=~/.local/bin:$PATH
+
 export SPACK_ROOT=/opt/spack
-$ . $SPACK_ROOT/share/spack/setup-env.sh
+. $SPACK_ROOT/share/spack/setup-env.sh
 
 spack load gcc@7.3.0
 spack load neovim@0.3.4
@@ -19,3 +21,8 @@ spack load /5664dlp
 spack load git
 spack load byobu
 spack load ccache
+
+alias paper1="cd ~/papers/2018-model-comparison/ && spack load r@3.5.1 && radian"
+alias paper2="cd ~/papers/2019-feature-selection/ && spack load r@3.5.2 && radian"
+
+alias r="radian"
