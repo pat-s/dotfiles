@@ -310,7 +310,7 @@ set -g @tpm_plugins '          \
    tmux-plugins/tmux-sidebar \
    tmux-olugins/vim-tmux-navigator \
  '
- 
+
 set -g @continuum-restore 'off'
 # set -g @continuum-boot 'on'
 set -g @resurrect-capture-pane-contents 'on'
@@ -335,7 +335,7 @@ set -g @sysstat_cpu_color_stress "white,bold $color_level_stress $color_level_st
 # shortcut to kill session
 bind X confirm-before kill-session
 
-# setting the delay between prefix and command 
+# setting the delay between prefix and command
 set -s escape-time 1
 
 bind | split-window -h
