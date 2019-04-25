@@ -34,7 +34,7 @@ set splitright              "open split to the right
 
 set splitbelow              "open split below
 
-filetype on
+" filetype on
 
 
 

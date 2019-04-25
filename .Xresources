@@ -36,7 +36,7 @@ Xft.lcdfilter: lcddefault
 
 !*.font:	Liberation Mono:pixelsize=18:antialias=true:autohint=true;
 !*.font:	Inconsolata:pixelsize=18:antialias=true:autohint=true;
-*.font:	Fira Code Medium:pixelsize=16:antialias=true:autohint=true;
+!*.font:	Fira Code Medium:pixelsize=16:antialias=true:autohint=true;
 !*.alpha: 200
 
 rofi.run-command: fish -c '{cmd}'
