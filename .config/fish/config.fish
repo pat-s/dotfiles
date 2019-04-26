@@ -39,6 +39,7 @@ abbr gs "git status"
 abbr ya "yadm add"
 abbr yc "yadm commit -m '"
 abbr yp "yadm push"
+abbr ys "yadm status"
 
 #####
 # tmux
