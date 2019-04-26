@@ -1,24 +1,25 @@
-abbr vpn '/opt/cisco/anyconnect/bin/vpn'
+#####
+# abbreviations
+#####
+
 abbr mymount 'bash ~/mymount.sh'
 abbr servers 'bash ~/tilix_all.sh'
 abbr R '/usr/bin/R --no-save'
 abbr r "radian"
 abbr git-sub-up "git submodule update --remote --merge"
-abbr ed "gedit"
 abbr imp "impressive -c memory -t WipeLeft -ff --noclicks --nowheel --fade"
 abbr ss "sudo systemctl"
 
-# configs
+# edit configs
 abbr fcf "nvim ~/.config/fish/config.fish"
 abbr icf "nvim ~/.config/i3/config"
 abbr vcf "nvim ~/.config/nvim/init.vim"
 abbr scf "nvim ~/.config/sway/config"
 abbr ncf "nvim ~/.config/nvim/init.vim"
 
-abbr fr "omf reload"
+# pacman
 abbr t "trizen"
 abbr tup "trizen -Syu"
-abbr wallp "feh --bg-scale"
 
 #####
 # Git
@@ -31,9 +32,6 @@ abbr gunst "git reset HEAD"
 abbr gdiff "git diff"
 abbr gs "git status"
 
-set -gx R_HOME "/usr/lib64/R"
-fish_vi_key_bindings
-
 #####
 # yadm
 #####
@@ -42,9 +40,14 @@ abbr ya "yadm add"
 abbr yc "yadm commit -m '"
 abbr yp "yadm push"
 
-
 #####
 # tmux
+#####
+
+abbr --add mux "tmuxinator"
+
+#####
+# default env vars
 #####
 
 set -gx TERM "xterm-256color"
@@ -61,8 +64,9 @@ set -gx SUDO_ASKPASS "~/.scripts/tools/dmenupass"
 set -e fish_user_paths
 set -U fish_user_paths $fish_user_paths /.scripts/i3cmds/ ~/.scripts/nnn/ ~/.scripts/tools ~/.local/bin
 
-set -gx QT_QPA_PLATFORMTHEME "qt5ct"
-set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR"'/keeagent.socket'
+#####
+# nnn
+#####
 
 set -gx NNN_BMS "g:~/git;c:/mnt/cluster/home/patrick;f:/mnt/cluster/home/patrick/papers/2019-feature-selection;l:/mnt/lossa/data_mccoy_kirk_scotty/patrick;r:/home/pjs/git/rcourses;p:/mnt/cluster/home/patrick/papers/2018-model-comparison"
 set -gx NNN_CP_MV_PROG "1"
@@ -75,5 +79,22 @@ set -gx NNN_CONTEXT_COLORS  "1234"
 set -gx NNN_SCRIPT "/home/pjs/.scripts/nnn"
 set -gx NNN_COPIER '~/.scripts/nnn/copy-sel-to-clipboard'
 
+#####
+# misc
+#####
+
 # aur auto vote
 set -gx AUR_AUTO_VOTE_PASSWORD "aI479rsAPyUZ72IQy"
+
+# fish
+abbr fr "omf reload"
+
+# wallpaper
+abbr wallp "feh --bg-scale"
+
+# R
+set -gx R_HOME "/usr/lib64/R"
+
+# vi mode
+fish_vi_key_bindings
+
