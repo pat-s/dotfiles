@@ -2,7 +2,7 @@
 # muttrc file for account gmail
 set realname = "Patrick Schratz"
 set from = "patrick.schratz@gmail.com"
-set sendmail = "/usr/bin/msmtp -a gmail"
+set sendmail = "msmtp -a gmail"
 set folder = "/home/pjs/.local/share/mail/gmail"
 set header_cache = /home/pjs/.config/mutt/accounts/gmail/cache/headers
 set message_cachedir = /home/pjs/.config/mutt/accounts/gmail/cache/bodies
