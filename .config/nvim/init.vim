@@ -1,4 +1,5 @@
 " from https://www.circuidipity.com/neovim/
+" bj
 
 set termguicolors
 
@@ -143,6 +144,7 @@ vnoremap <leader>P "+P
     Plug 'Shougo/neosnippet.vim'
 
 
+    Plug 'w0rp/ale'
 
     " neosnippets
 
@@ -212,6 +214,9 @@ vnoremap <leader>P "+P
   "Plug 'altercation/vim-colors-solarized'
   Plug 'morhetz/gruvbox'
 
+
+  Plug 'ctrlpvim/ctrlp.vim'
+
     " R
 
     Plug 'jalvesaq/Nvim-R'
@@ -229,6 +234,10 @@ vnoremap <leader>P "+P
       let R_hl_term = 0
 
       let R_bracketed_paste = 1
+      let R_nvimpager = 'no'
+
+
+      "let R_objbr_place = 'console,below'
 
   Plug 'vim-pandoc/vim-rmarkdown'
   Plug 'vim-pandoc/vim-pandoc'
@@ -345,6 +354,9 @@ vnoremap <leader>P "+P
 
 call plug#end()
 
+      autocmd FileType r if string(g:SendCmdToR) == "function('SendCmdToR_fake')" | call StartR("R") | endif
+      autocmd FileType rmd if string(g:SendCmdToR) == "function('SendCmdToR_fake')" | call StartR("R") | endif
+      autocmd VimLeave * if exists("g:SendCmdToR") && string(g:SendCmdToR) != "function('SendCmdToR_fake')" | call RQuit("nosave") | endif
 
 colorscheme gruvbox
 
@@ -378,7 +390,13 @@ colorscheme gruvbox
 
     inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-
+    """ R """
+    " start R with F2 key
+    map <F2> <Plug>RStart
+    imap <F2> <Plug>RStart
+    vmap <F2> <Plug>RStart
+    " Use Ctrl-Space to do omnicompletion
+    inoremap <C-Space> <C-x><C-o>
 
  "   " wrap existing omnifunc
 
