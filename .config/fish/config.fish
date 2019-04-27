@@ -70,7 +70,7 @@ set -gx SUDO_ASKPASS "~/.scripts/tools/dmenupass"
 
 # adds `~/.scripts` and all subdirectories to $PATH
 set -e fish_user_paths
-set -U fish_user_paths ~/git/nnn/scripts/nlaunch ~/.scripts/i3cmds/  ~/.scripts/tools ~/.local/bin ~/git/nnn/plugins $fish_user_paths
+set -U fish_user_paths ~/git/nnn/scripts/nlaunch ~/.scripts/i3cmds/  ~/.scripts/tools ~/.local/bin ~/git/nnn/plugins ~/.scripts/R $fish_user_paths
 
 #####
 # nnn

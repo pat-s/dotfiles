@@ -1,19 +1,34 @@
 options(scipen = 999) # do not print e-10 for small numbers
+
 options(usethis.full_name = "Patrick Schratz")
 options(reprex.styler = TRUE) # use styler indention when doing a reprex
-# https://www.tidyverse.org/articles/2019/01/rlang-0-3-1/
-if (requireNamespace("rlang", quietly = TRUE)) {
-  options(error = rlang::entrace)
+## https://www.tidyverse.org/articles/2019/01/rlang-0-3-1/
+#if (requireNamespace("rlang", quietly = TRUE)) {
+#  options(error = rlang::entrace)
+#}
+#
+# Nvim-R suggestion
+grDevices::X11.options(width = 4.5, height = 4, ypos = 0,
+                       xpos = 1000, pointsize = 10)
+
+# And add this to your `~/.Rprofile` if you want to use `w3m`, a text based web
+# browser, to navigate through R docs after `help.start()` when you cannot run a
+# graphical web browser (e.g. when you are in the Linux console):
+
+if(interactive() && Sys.info()[["sysname"]] == "Linux" && Sys.getenv("DISPLAY") == ""){
+  if(Sys.getenv("TMUX") != "")
+    options(browser = function(u) system(paste0("tmux new-window 'w3m ", u, "'")))
+  else if(Sys.getenv("NVIMR_TMPDIR") != "")
+    options(browser = function(u) .C("nvimcom_msg_to_nvim",
+                                     paste0('StartTxtBrowser("w3m", "', u, '")')))
 }
 
 options(
-    clustermq.scheduler = "ssh",
-    clustermq.ssh.host = "patrick@kirk.geogr.uni-jena.de", # use your user and host, obviously
-    clustermq.ssh.log = "~/cmq_ssh.log", # log for easier debugging
+    browser = "reload_html",
 
+    help_type = "html",
     # styler
     styler.addins.style = "mlr_style",
-
 
     # see https://help.farbox.com/pygments.html
     # for a list of supported color schemes, default scheme is "native"
