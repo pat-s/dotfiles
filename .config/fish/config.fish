@@ -33,6 +33,13 @@ abbr gdiff "git diff"
 abbr gs "git status"
 
 #####
+# st
+#####
+
+alias std "xrdb ~/.xresources/gruvbox-dark.xresources"
+alias stl "xrdb ~/.xresources/gruvbox-light.xresources"
+
+#####
 # yadm
 #####
 
