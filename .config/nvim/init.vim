@@ -47,7 +47,6 @@ let g:vimtex_compiler_progname='nvr'
 
 
 
-" test
 
 
 
@@ -112,7 +111,8 @@ nnoremap  <leader>m :MarkdownPreview <CR>
 
 " Git
 nnoremap  <leader>gs :Gstatus <CR>
-nnoremap  <leader>gc :Gcommit % <CR>
+nnoremap  <leader>gcf :Gcommit % <CR>
+nnoremap  <leader>gc :Gcommit <CR>
 nnoremap  <leader>gp :Gpush <CR>
 
 " Toggle Goyo
@@ -128,19 +128,15 @@ nnoremap <leader>P "+P
 vnoremap <leader>p "+p
 vnoremap <leader>P "+P
 
-"####
 
 "# Plugins
 
-"###
-
     " Specify a directory for Plugs
-
     call plug#begin('~/.local/share/nvim/plugged')
 
-
-
     Plug 'Shougo/neosnippet.vim'
+    " put word under cursor in quotes
+    Plug 'tpope/vim-surround'
 
     " strip trailing whitespace
     Plug 'itspriddle/vim-stripper'
@@ -150,6 +146,8 @@ vnoremap <leader>P "+P
     Plug 'tpope/vim-commentary'
     " Github
     Plug 'tpope/vim-rhubarb'
+    " Travis
+    Plug 'iurifq/vim-travis-ci'
 
     " multi-purpose (fzy, open)
     Plug 'Shougo/denite.nvim'
@@ -202,7 +200,7 @@ vnoremap <leader>P "+P
 
     " show indent guides
 
-    Plug 'nathanaelkane/vim-indent-guides'
+    "Plug 'nathanaelkane/vim-indent-guides'
 
 
     " LaTeX
@@ -231,12 +229,21 @@ vnoremap <leader>P "+P
     " Search and replace (:far)
 
     Plug 'brooth/far.vim'
+      let g:far#window_layout = 'tab'
+      let g:far#source = 'rg'
 
   """ Themes
   "Plug 'dracula/vim', { 'as': 'dracula' }
   "Plug 'altercation/vim-colors-solarized'
   Plug 'morhetz/gruvbox'
 
+    hi! link rPreProc GruvboxBlue
+    hi! link rFunction GruvboxAqua
+    hi! link rCommentTodo GruvboxOrange
+    hi! link rOperator GruvboxRed
+    hi! link rLstElmt GruvboxPurple
+    hi! link rOperator GruvBoxBlue
+    hi! link rDelimiter GruvboxFg3
 
   Plug 'ctrlpvim/ctrlp.vim'
 
@@ -247,7 +254,9 @@ vnoremap <leader>P "+P
       vmap <Space> <Plug>RDSendSelection
 
       nmap <Space> <Plug>RDSendLine
-
+      autocmd FileType *.R noremap <buffer> <leader>d :RDocumentPackage<cr>
+      autocmd FileType *.R noremap <buffer> <leader>l :RLoadPackage<cr>
+      let g:r_indent_align_args = 0
       let R_assign=2
 
       let R_app = "radian"
@@ -259,27 +268,22 @@ vnoremap <leader>P "+P
       let R_bracketed_paste = 1
       let R_nvimpager = 'no'
       let g:R_close_term = 1                    " Close terminal buffer after R quited
-let g:R_in_buffer = 1                     " Run R in Vim/Neovim built in terminal emulator
-let g:rout_follow_colorscheme = 1         " R output is highlighted
+      let g:R_in_buffer = 1                     " Run R in Vim/Neovim built in terminal emulator
+      let g:rout_follow_colorscheme = 1         " R output is highlighted
 
       "let R_objbr_place = 'console,below'
 
-  Plug 'vim-pandoc/vim-rmarkdown'
-  Plug 'vim-pandoc/vim-pandoc'
-  Plug 'vim-pandoc/vim-pandoc-syntax'
+    Plug 'vim-pandoc/vim-rmarkdown'
+    Plug 'vim-pandoc/vim-pandoc'
+    Plug 'vim-pandoc/vim-pandoc-syntax'
 
 
     " autocompletion
-
     Plug 'ncm2/ncm2'
-
-
     " enable ncm2 for all buffers
-
     "autocmd BufEnter * call ncm2#enable_for_buffer()
 
     " IMPORTANT: :help Ncm2PopupOpen for more information
-
     set completeopt=noinsert,menuone,noselect
 
     " NOTE: you need to install completion sources to get completions. Check
@@ -404,7 +408,7 @@ colorscheme gruvbox
 
     inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-    """ R """
+    """ R
     " start R with F2 key
     map <F2> <Plug>RStart
     imap <F2> <Plug>RStart
