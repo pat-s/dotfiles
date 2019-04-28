@@ -36,8 +36,8 @@ set splitright              "open split to the right
 set splitbelow              "open split below
 
 " filetype on
-
-
+syntax enable
+filetype plugin indent on
 
 let mapleader = "\<Space>"
 
@@ -88,7 +88,6 @@ map <leader>t :set bg=light<CR>
 " Enter blank line
 
   map <Enter> o<ESC>
-
 
 
 " Disables automatic commenting on newline:
@@ -142,6 +141,30 @@ vnoremap <leader>P "+P
 
 
     Plug 'Shougo/neosnippet.vim'
+
+    " strip trailing whitespace
+    Plug 'itspriddle/vim-stripper'
+    " Simplified copy/paste
+    Plug 'svermeulen/vim-easyclip'
+    " Easy commenting
+    Plug 'tpope/vim-commentary'
+    " Github
+    Plug 'tpope/vim-rhubarb'
+
+    " multi-purpose (fzy, open)
+    Plug 'Shougo/denite.nvim'
+
+    " project management
+    Plug 'dbakker/vim-projectroot'
+    " open terminal or file manager in same dir
+    Plug 'justinmk/vim-gtfo'
+        let g:gtfo#terminals = { 'unix' : 'st' }
+
+    " devtools plugin
+    Plug 'mllg/vim-devtools-plugin', { 'for': ['r', 'rmd', 'rnoweb']}
+    " edit fish scripts
+    Plug 'dag/vim-fish'
+
 
 
     Plug 'w0rp/ale'
@@ -235,7 +258,9 @@ vnoremap <leader>P "+P
 
       let R_bracketed_paste = 1
       let R_nvimpager = 'no'
-
+      let g:R_close_term = 1                    " Close terminal buffer after R quited
+let g:R_in_buffer = 1                     " Run R in Vim/Neovim built in terminal emulator
+let g:rout_follow_colorscheme = 1         " R output is highlighted
 
       "let R_objbr_place = 'console,below'
 
@@ -247,7 +272,6 @@ vnoremap <leader>P "+P
     " autocompletion
 
     Plug 'ncm2/ncm2'
-
 
 
     " enable ncm2 for all buffers
@@ -275,8 +299,7 @@ vnoremap <leader>P "+P
     " Git
 
     Plug 'tpope/vim-fugitive'
-
-    "
+    nmap <F9> :Gstatus<cr>
 
     " Shows git changes in the file
 
@@ -291,7 +314,6 @@ vnoremap <leader>P "+P
     let g:mkdp_browser = 'surf'
 
 
-
     " Linting
 
 "    Plug 'neomake/neomake'
@@ -299,16 +321,12 @@ vnoremap <leader>P "+P
     Plug 'christoomey/vim-tmux-navigator'
 
 
-
     " Statusline
 
     Plug 'vim-airline/vim-airline'
 
-
     Plug 'vim-airline/vim-airline-themes'
-
       let g:airline_theme='molokai'
-
 
 
     " Auto-close brackets and quotes
@@ -316,18 +334,15 @@ vnoremap <leader>P "+P
     Plug 'tpope/vim-surround'
 
 
-
     " File Browser Plugin (Ctrl+n)
 
     Plug 'scrooloose/nerdtree'
       map <C-n> :NERDTreeToggle<CR>
       " auto refresh nerdtree on file save
-      autocmd BufWritePost * NERDTreeFocus | execute 'normal R' | wincmd p
+      "autocmd BufWritePost * NERDTreeFocus | execute 'normal R' | wincmd p
 
       " Close nerdtree if all windows are closed
-
       autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
       let NERDTreeShowHidden=1
 
     "Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -335,7 +350,6 @@ vnoremap <leader>P "+P
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
     Plug 'ryanoasis/vim-devicons'
-
 
 
     " Vim 8 only
