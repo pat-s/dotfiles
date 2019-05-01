@@ -138,6 +138,8 @@ vnoremap <leader>P "+P
     " put word under cursor in quotes
     Plug 'tpope/vim-surround'
 
+    Plug 'editorconfig/editorconfig-vim'
+
     " strip trailing whitespace
     Plug 'itspriddle/vim-stripper'
     " Simplified copy/paste
@@ -166,7 +168,16 @@ vnoremap <leader>P "+P
 
 
     Plug 'w0rp/ale'
-
+      nmap <F8> <Plug>(ale_fix)
+      "let g:ale_linters = {
+      "          'r': ['styler']
+      "          }
+      let g:ale_fixers = {
+            \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+            \   'r': ['styler'],
+            \}
+      let g:ale_r_styler_options = 'styler::mlr_style'
+      "let g:ale_r_lintr_options = ''
     " neosnippets
 
     if has('nvim')
@@ -384,7 +395,8 @@ colorscheme gruvbox
 
     set shortmess+=c
 
-
+    " ale shortcut
+    nmap <F8> <Plug>(ale_fix)
 
     " CTRL-C doesn't trigger the InsertLeave autocmd . map to <ESC> instead.
 

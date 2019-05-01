@@ -53,6 +53,7 @@ abbr ys "yadm status"
 #####
 
 abbr --add mux "tmuxinator"
+abbr ms "tmuxinator start"
 
 #####
 # default env vars
