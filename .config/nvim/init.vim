@@ -41,7 +41,7 @@ filetype plugin indent on
 
 let mapleader = "\<Space>"
 
-let maplocalleader="\<Space>"
+let maplocalleader=","
 
 let g:vimtex_compiler_progname='nvr'
 
@@ -82,7 +82,8 @@ endif " has autocmd
 
    " map <leader>r :vsp<space>$REFER<CR>
 
-map <leader>t :set bg=light<CR>
+  map <leader>lb :set bg=light<CR>
+  map <leader>db :set bg=dark<CR>
 
 " Enter blank line
 
@@ -168,7 +169,6 @@ vnoremap <leader>P "+P
 
 
     Plug 'w0rp/ale'
-      nmap <F8> <Plug>(ale_fix)
       "let g:ale_linters = {
       "          'r': ['styler']
       "          }
@@ -265,8 +265,10 @@ vnoremap <leader>P "+P
       vmap <Space> <Plug>RDSendSelection
 
       nmap <Space> <Plug>RDSendLine
-      autocmd FileType *.R noremap <buffer> <leader>d :RDocumentPackage<cr>
-      autocmd FileType *.R noremap <buffer> <leader>l :RLoadPackage<cr>
+      nmap <LocalLeader>rl :RLoadPackage<CR>
+      nmap <LocalLeader>rd :RDocumentPackage<CR>
+      autocmd FileType r noremap <buffer> <LocalLeader>dd :RDocumentPackage<cr>
+      autocmd FileType r noremap <buffer> <LocalLeader>ll :RLoadPackage<cr>
       let g:r_indent_align_args = 0
       let R_assign=2
 
