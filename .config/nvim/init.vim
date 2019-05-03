@@ -46,8 +46,12 @@ let maplocalleader=","
 let g:vimtex_compiler_progname='nvr'
 
 
-
-
+" i3 syntax highlighting
+aug i3config_ft_detection
+  au!
+  au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
+  au BufNewFile,BufRead ~/.config/sway/config set filetype=i3config
+aug end
 
 
 " auto-reload config on save
@@ -134,6 +138,8 @@ vnoremap <leader>P "+P
 
     " Specify a directory for Plugs
     call plug#begin('~/.local/share/nvim/plugged')
+
+    Plug 'mboughaba/i3config.vim'
 
     Plug 'Shougo/neosnippet.vim'
     " put word under cursor in quotes
