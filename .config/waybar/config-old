@@ -1,0 +1,123 @@
+
+{
+  "layer": "top",
+  "position": "top",
+
+  "modules-left": [
+    "sway/workspaces",
+    "custom/right-arrow-dark"
+  ],
+  "modules-center": [
+    "custom/left-arrow-dark",
+    "clock#1",
+    "custom/left-arrow-light",
+    "custom/left-arrow-dark",
+    "clock#2",
+    "custom/right-arrow-dark",
+    "custom/right-arrow-light",
+    "clock#3",
+    "custom/right-arrow-dark"
+  ],
+  "modules-right": [
+    "custom/left-arrow-dark",
+    "pulseaudio",
+    "custom/left-arrow-light",
+    "custom/left-arrow-dark",
+    "memory",
+    "custom/left-arrow-light",
+    "custom/left-arrow-dark",
+    "cpu",
+    "custom/left-arrow-light",
+    "custom/left-arrow-dark",
+    "temperature",
+    "custom/left-arrow-light",
+    "custom/left-arrow-dark",
+    "battery",
+    "custom/left-arrow-light",
+    "custom/left-arrow-dark",
+    "network",
+    "tray"
+  ],
+
+  "custom/left-arrow-dark": {
+    "format": ""
+  },
+  "custom/left-arrow-light": {
+    "format": ""
+  },
+  "custom/right-arrow-dark": {
+    "format": ""
+  },
+  "custom/right-arrow-light": {
+    "format": ""
+  },
+
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "format": "{name}"
+  },
+  "network": {
+    "interface": "wlp59s0",
+    "format": "{ifname}",
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "{ifname} ",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip-format": "{ifname}",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+    "on-click": "termite -e nmtui"
+},
+
+  "clock#1": {
+    "format": "{:%a}"
+  },
+  "clock#2": {
+    "format": "{:%H:%M}"
+  },
+  "clock#3": {
+    "format": "{:%m-%d}"
+  },
+
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "{icon}  {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "headphones": "",
+      "default": [
+        "",
+        ""
+      ]
+    },
+    "scroll-step": 5,
+    "on-click": "pavucontrol"
+  },
+  "memory": {
+    "interval": 5,
+    "format": "Mem {}%"
+  },
+  "cpu": {
+    "interval": 5,
+    "format": "CPU {usage:2}%"
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "tray": {
+    "icon-size": 20
+  }
+}
