@@ -11,7 +11,7 @@ set $power ~/.config/rofi/modi/power
 set $wifi ~/.config/rofi/modi/nmcli
 #set $menu rofi -dmenu
 set $menu dmenu_path | dmenu -b | xargs swaymsg exec --
-# set $menu j4-dmenu-desktop --dmenu='bemenu -i --nb "#3f3f3f" --nf "#dcdccc" --fn "pango:DejaVu Sans Mono 12"' --term='termite'
+set $menurofi rofi -m $(expr $(swaymsg -t get_tree | jq '.nodes | map([recurse(.nodes[]?, .floating_nodes[]?) | .focused] | any) | index(true)') - 1) -show drun -run-command 'swaymsg exec -- {cmd}'
 set $screenshot grim ~/Pictures/scrn-$(date +"%Y-%m-%d-%H-%M-%S").png
 set $lock ~/.scripts/tools/lock
 
@@ -58,8 +58,7 @@ bindsym $mod+Tab		workspace back_and_forth
 #bindsym $mod+Tab exec rofi -show window -theme sidetab
 
 # application launcher
-bindsym $mod+space exec rofi -theme sidetab -show drun
-
+bindsym $mod+space exec $menurofi
 bindsym $mod+F1 exec st -e fish -c 'nnn'
 bindsym $mod+F2 exec st -n 'neomutt' -e fish -c 'neomutt'
 bindsym $mod+F3 exec firefox
@@ -346,7 +345,7 @@ exec --no-startup-id "st -n 'nnn' -e fish -c 'nnn'"
 exec --no-startup-id "st -n 'tmux' -e fish -c 'tmuxinator start arch'"
 exec --no-startup-id rstudio
 exec --no-startup-id nextcloud
-exec spotify
+# exec spotify
 
 #####################
 # Wallpaper
