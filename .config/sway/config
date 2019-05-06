@@ -5,24 +5,24 @@
 #####################
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
-set $mod Mod4
-set $sterm st
-set $power ~/.config/rofi/modi/power
-set $wifi ~/.config/rofi/modi/nmcli
+set $mod        Mod4
+set $sterm      st
+set $power      ~/.config/rofi/modi/power
+set $wifi       ~/.config/rofi/modi/nmcli
 #set $menu rofi -dmenu
-set $menu dmenu_path | dmenu -b | xargs swaymsg exec --
-set $menurofi rofi -m $(expr $(swaymsg -t get_tree | jq '.nodes | map([recurse(.nodes[]?, .floating_nodes[]?) | .focused] | any) | index(true)') - 1) -show drun -run-command 'swaymsg exec -- {cmd}'
+set $menu       dmenu_path | dmenu -b | xargs swaymsg exec --
+set $menurofi   rofi -m $(expr $(swaymsg -t get_tree | jq '.nodes | map([recurse(.nodes[]?, .floating_nodes[]?) | .focused] | any) | index(true)') - 1) -show drun -run-command 'swaymsg exec -- {cmd}'
 set $screenshot grim ~/Pictures/scrn-$(date +"%Y-%m-%d-%H-%M-%S").png
-set $lock ~/.scripts/tools/lock
+set $lock       ~/.scripts/tools/lock
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-default_border pixel 1
+default_border          pixel   1
 default_floating_border normal
 
 # Hide borders
-hide_edge_borders none
+hide_edge_borders       none
 
-floating_modifier $mod normal
+floating_modifier $mod  normal
 
 set $cl_high #009ddc
 set $cl_indi #d9d8d8
@@ -34,129 +34,123 @@ set $cl_urge #ee2e24
 client.focused          $cl_high $cl_high $cl_fore $cl_indi $cl_high
 client.focused_inactive $cl_back $cl_back $cl_fore $cl_back $cl_back
 client.unfocused        $cl_back $cl_back $cl_fore $cl_back $cl_back
-client.urgent $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
+client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 
 #####################
 # Keybindings
 #####################
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id $sterm
+bindsym $mod+Return exec    $sterm
 
 # kill focused window
-bindsym $mod+q kill
+bindsym $mod+q      kill
 
 # start program launcher
-bindsym $mod+d exec $menu
+bindsym $mod+d      exec    $menu
 
 # from https://github.com/Robinhuett/dotfiles/blob/master/.config/sway/config
-bindsym $mod+Escape exec $power
-bindsym $mod+End exec $wifi
+bindsym $mod+Escape exec    $power
+bindsym $mod+End    exec    $wifi
 
 # window switcher
-bindsym $mod+Tab		workspace back_and_forth
-#bindsym $mod+Tab exec rofi -show window -theme sidetab
+bindsym $mod+Tab		    workspace back_and_forth
 
 # application launcher
-bindsym $mod+space exec $menurofi
-bindsym $mod+F1 exec st -e fish -c 'nnn'
-bindsym $mod+F2 exec st -n 'neomutt' -e fish -c 'neomutt'
-bindsym $mod+F3 exec firefox
-bindsym $mod+F4 exec st -e fish -c 'tmuxinator start arch'
-bindsym $mod+F5 exec rstudio
-#bindsym $mod+F6		exec --no-startup-id torwrap
-#bindsym $mod+F7		exec --no-startup-id td-toggle
-#bindsym $mod+F8		exec --no-startup-id ~/.config/mutt/etc/mailsync.sh
-bindsym $mod+F9		exec --no-startup-id dmenumount
-bindsym $mod+F10	exec --no-startup-id dmenuumount
-bindsym $mod+F11	exec --no-startup-id ducksearch
-bindsym $mod+F12	exec $term -e nmtui
-bindsym Print exec $screenshot
+bindsym $mod+space  exec    $menurofi
+bindsym $mod+F1     exec    st -e fish -c 'nnn'
+bindsym $mod+F2     exec    st -n 'neomutt' -e fish -c 'neomutt'
+bindsym $mod+F3     exec    firefox
+bindsym $mod+F4     exec    st -e fish -c 'tmuxinator start arch'
+bindsym $mod+F5     exec    rstudio
+
+bindsym $mod+F9		exec    dmenumount
+bindsym $mod+F10	exec    dmenuumount
+bindsym $mod+F11	exec    ducksearch
+bindsym $mod+F12    exec    manview
+bindsym Print       exec    $screenshot
 
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+bindsym $mod+h                  focus left
+bindsym $mod+j                  focus down
+bindsym $mod+k                  focus up
+bindsym $mod+l                  focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym $mod+Left               focus left
+bindsym $mod+Down               focus down
+bindsym $mod+Up                 focus up
+bindsym $mod+Right              focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $mod+Shift+h            move left
+bindsym $mod+Shift+j            move down
+bindsym $mod+Shift+k            move up
+bindsym $mod+Shift+l            move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+Left         move left
+bindsym $mod+Shift+Down         move down
+bindsym $mod+Shift+Up           move up
+bindsym $mod+Shift+Right        move right
 
 # workspace back and forth (with/without active container)
-workspace_auto_back_and_forth yes
-bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
-workspace file output eDP-1
-workspace messages output eDP-1
-workspace firefox output DP-1
-workspace terminal output DP-1
-
-bindsym $mod+b			bar mode toggle
+workspace_auto_back_and_forth   yes
+bindsym $mod+Shift+b            move container to workspace back_and_forth; workspace back_and_forth
+bindsym $mod+b			        bar mode toggle
 
 # split orientation
-bindsym $mod+s split toggle
+bindsym $mod+s                  split toggle
 
 # toggle fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+f                  fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-#bindsym $mod+s layout stacking
-#bindsym $mod+w layout tabbed
-#bindsym $mod+e layout toggle split
-bindsym $mod+w layout toggle tabbed split
+bindsym $mod+w                  layout toggle tabbed split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+space        floating toggle
 
 # change focus between tiling / floating windows
 #bindsym $mod+space focus mode_toggle
 
 # toggle sticky
-bindsym $mod+Shift+s sticky toggle
+bindsym $mod+Shift+s            sticky toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+bindsym $mod+a                  focus parent
 
 # move the currently focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+Shift+minus        move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus scratchpad show
+bindsym $mod+minus              scratchpad show
 
 # hide/unhide i3status bar
-bindsym $mod+m bar mode toggle
+bindsym $mod+m                  bar mode toggle
 
 # emoji picker
-bindsym $mod+Pause		exec --no-startup-id dmenuunicode
+bindsym $mod+Pause		        dmenuunicode
+
+# Hide cursor after some time
+seat * hide_cursor 1500
 
 #####################
 # Workspaces
 #####################
 
 # navigate workspaces next / previous
-bindsym $mod+Ctrl+Right workspace next
-bindsym $mod+Ctrl+Left workspace prev
+bindsym $mod+Ctrl+Right         workspace next
+bindsym $mod+Ctrl+Left          workspace prev
 
 # Workspace names
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
+
+# workspace         Primary Output      Secondary Output
 set $ws1 1:
 set $ws2 2:
 set $ws3 3:
@@ -166,6 +160,17 @@ set $ws6 6:
 set $ws7 7:vscode
 set $ws8 8:📔
 set $ws9 9:
+
+# assign workspaces to monitors
+workspace $ws1			output eDP-1        DP-1 DP-2 HDMI-1
+workspace $ws2  		output eDP-1        DP-1 DP-2 HDMI-1
+workspace $ws3			output DP-1         eDP-1 DP-2 HDMI-1
+workspace $ws4			output DP-1         eDP-1 DP-2 HDMI-1
+workspace $ws5			output DP-1         eDP-1 DP-2 HDMI-1
+workspace $ws6			output eDP-1        DP-1 DP-2 HDMI-1
+workspace $ws7			output eDP-1        DP-1 DP-2 HDMI-1
+workspace $ws8			output DP-1         eDP-1 DP-2 HDMI-1
+workspace $ws9			output eDP-1        DP-1 DP-2 HDMI-1
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -204,31 +209,30 @@ bindsym $mod+Shift+9 move container to workspace $ws7; workspace $ws9
 bindsym $mod+Ctrl+greater move workspace to output right
 bindsym $mod+Ctrl+less move workspace to output left
 
-
 # Open applications on specific workspaces
-assign [instance="nnn"] $ws1
-assign [instance="neomutt"] $ws2
-assign [instance="tmux"] $ws4
-assign [class="RStudio"] $ws5
-assign [class="Slack"] $ws6
-assign [class="Code"] $ws7
-assign [class="Notion"] $ws8
-assign [instance="Spotify"] $ws9
+assign [instance="nnn"]         $ws1
+assign [instance="neomutt"]     $ws2
+assign [instance="tmux"]        $ws4
+assign [class="RStudio"]        $ws5
+assign [class="Slack"]          $ws6
+assign [class="Code"]           $ws7
+assign [class="Notion"]         $ws8
+assign [instance="Spotify"]     $ws9
 
 # Open specific applications in floating mode
-for_window [title="alsamixer"] floating enable border pixel 1
-for_window [class="Clipgrab"] floating enable
-for_window [title="File Transfer*"] floating enable
-for_window [class="Galculator"] floating enable border pixel 1
-for_window [class="GParted"] floating enable border normal
-for_window [title="i3_help"] floating enable sticky enable border normal
-for_window [class="Lightdm-settings"] floating enable
-for_window [class="Lxappearance"] floating enable sticky enable border normal
-for_window [class="qt5ct"] floating enable sticky enable border normal
-for_window [class="(?i)System-config-printer.py"] floating enable border normal
-for_window [class="Skype"] floating enable border normal
-for_window [class="Timeset-gui"] floating enable border normal
-for_window [class="(?i)virtualbox"] floating enable border normal
+for_window [title="alsamixer"]                      floating enable border pixel 1
+for_window [class="Clipgrab"]                       floating enable
+for_window [title="File Transfer*"]                 floating enable
+for_window [class="Galculator"]                     floating enable border pixel 1
+for_window [class="GParted"]                        floating enable border normal
+for_window [title="i3_help"]                        floating enable sticky enable border normal
+for_window [class="Lightdm-settings"]               floating enable
+for_window [class="Lxappearance"]                   floating enable sticky enable border normal
+for_window [class="qt5ct"]                          floating enable sticky enable border normal
+for_window [class="(?i)System-config-printer.py"]   floating enable border normal
+for_window [class="Skype"]                          floating enable border normal
+for_window [class="Timeset-gui"]                    floating enable border normal
+for_window [class="(?i)virtualbox"]                 floating enable border normal
 
 # switch to workspace with urgent window automatically
 # for_window [urgent=latest] focus
@@ -236,63 +240,26 @@ for_window [class="(?i)virtualbox"] floating enable border normal
 #####################
 # exit commands
 #####################
-#bindsym $mod+F10 exec swaymsg exit
-#bindsym $mod+F9 exec poweroff
-#bindsym $mod+F8 exec reboot
-#bindsym $mod+F11 exec --no-startup-id swaylock-blur
-#bindsym $mod+F12 exec manview
 
 # restart sway inplace (preserves your layout/session)
-bindsym $mod+Shift+r reload
+bindsym $mod+Shift+r    reload
 
-# Set shut down, restart and locking features
-#bindsym $mod+0 mode "mode_system"
-#mode "mode_system" {
-#    bindsym l exec --no-startup-id swaylock-blur
-#    bindsym e exec --no-startup-id swaymsg exit
-#    bindsym r exec --no-startup-id reboot
-#    bindsym Shift+s exec --no-startup-id poweroff
-#
-#    # exit system mode: "Enter" or "Escape"
-#    bindsym Return mode "default"
-#    bindsym Escape mode "default"
-#}
-
-
-bindsym $mod+z exec $lock
+bindsym $mod+z exec     $lock
 
 set $mode_system System: (l) lock, (e) logout, (s) suspend, (r) reboot, (S) shutdown, (R) UEFI
 mode "$mode_system" {
-    bindsym l exec $lock, mode "default"
-    bindsym e exit
-    bindsym s exec --no-startup-id systemctl suspend, mode "default"
-    bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
-    bindsym Shift+r exec --no-startup-id systemctl reboot --firmware-setup, mode "default"
+    bindsym l       exec $lock, mode "default"
+    bindsym e            exit
+    bindsym s       exec systemctl suspend, mode "default"
+    bindsym r       exec systemctl reboot, mode "default"
+    bindsym Shift+s exec systemctl poweroff -i, mode "default"
+    bindsym Shift+r exec systemctl reboot --firmware-setup, mode "default"
 
     # return to default mode
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+    bindsym Return  mode "default"
+    bindsym Escape  mode "default"
 }
-bindsym $mod+0 mode "$mode_system"
-
-# Set shut down, restart and locking features
-#bindsym $mod+0 mode "mode_system"
-#set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
-#mode "mode_system" {
-#    bindsym l exec --no-startup-id xlock
-#    bindsym s exec --no-startup-id i3exit suspend, mode "default"
-#    bindsym u exec --no-startup-id i3exit switch_user, mode "default"
-#    bindsym e exec --no-startup-id session-logout
-#    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
-#    bindsym r exec --no-startup-id reboot
-#    bindsym Shift+s exec --no-startup-id poweroff
-#
-#    # exit system mode: "Enter" or "Escape"
-#    bindsym Return mode "default"
-#    bindsym Escape mode "default"
-#}
-
+bindsym $mod+0      mode "$mode_system"
 
 # Resize window (you can also use the mouse for that)
 # Modes
@@ -308,43 +275,20 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-#bindsym $mod+r mode "resize"
-#mode "resize" {
-#        # These bindings trigger as soon as you enter the resize mode
-#        # Pressing left will rhrink the window’s width.
-#        # Pressing right will grow the window’s width.
-#        # Pressing up will shrink the window’s height.
-#        # Pressing down will grow the window’s height.
-#        bindsym h resize shrink width 5 px or 5 ppt
-#        bindsym l resize grow width 5 px or 5 ppt
-#        bindsym k resize grow height 5 px or 5 ppt
-#        bindsym j resize shrink height 5 px or 5 ppt
-#
-#        # same bindings, but for the arrow keys
-#        bindsym Left resize shrink width 10 px or 10 ppt
-#        bindsym Down resize grow height 10 px or 10 ppt
-#        bindsym Up resize shrink height 10 px or 10 ppt
-#        bindsym Right resize grow width 10 px or 10 ppt
-#
-#        # exit resize mode: Enter or Escape
-#        bindsym Return mode "default"
-#        bindsym Escape mode "default"
-#}
-
 # Autostart applications
-exec --no-startup-id mako # notification daemon for WL
-exec --no-startup-id 'nm-applet --indicator'
-exec --no-startup-id blueman-applet
-exec --no-startup-id redshift
-exec --no-startup-id "exec /usr/bin/insync start"
-exec --no-startup-id dropbox
-exec --no-startup-id slack
-exec --no-startup-id notion-app
-exec --no-startup-id "st -n 'neomutt' -e fish -c 'neomutt'"
-exec --no-startup-id "st -n 'nnn' -e fish -c 'nnn'"
-exec --no-startup-id "st -n 'tmux' -e fish -c 'tmuxinator start arch'"
-exec --no-startup-id rstudio
-exec --no-startup-id nextcloud
+exec mako # notification daemon for WL
+exec 'nm-applet --indicator'
+exec blueman-applet
+exec redshift
+exec "exec /usr/bin/insync start"
+exec dropbox
+exec slack
+exec notion-app
+exec "st -n 'neomutt' -e fish -c 'neomutt'"
+exec "st -n 'nnn' -e fish -c 'nnn'"
+exec "st -n 'tmux' -e fish -c 'tmuxinator start arch'"
+exec rstudio
+exec nextcloud
 # exec spotify
 
 #####################
@@ -357,8 +301,8 @@ exec --no-startup-id nextcloud
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
     swaybar_command waybar
-    #status_command py3status -c ~/.i3status.conf
-
+    font pango:DejaVu Sans Mono 10
+	strip_workspace_numbers yes
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
     #status_command while date +'%d-%m-%Y %H:%M'; do sleep 1; done
@@ -372,47 +316,50 @@ bar {
         # Background of status bar
         background #323232
     }
-    font pango:DejaVu Sans Mono 10
 
-    #colors {
-    #    statusline #ffffff
-    #    background #323232
-    #    inactive_workspace #32323200 #32323200 #5c5c5c
-#}
-	strip_workspace_numbers yes
+    colors {
+        statusline          #ffffff
+        background          #2e3440aa
+		##############      Border      Filling     Text
+		inactive_workspace  #81a1c1     #4c566a     #eceff4
+		focused_workspace   #eceff4     #5e81ac     #eceff4
+		active_workspace    #eceff4     #5e81ac     #eceff4
+		urgent_workspace    #eceff4     #bf616a     #eceff4
+		binding_mode        #3b4252     #a3be8c     #3b4252
+    }
 }
-
-# top bar
-#bar {
-    #tray_output none
-    #workspace_buttons no
-    #status_command py3status -c ~/.i3status-top.conf
-	#position top
-#}
 
 #####################
 # Screenshot
 #####################
 
-input * xkb_layout "de"
-input * xkb_variant "colemak,,typewriter"
-input * xkb_options "grp:win_space_toggle"
-# swaps capslock with Escape
-input * xkb_options "caps:swapescape"
-#input "MANUFACTURER1 Keyboard" xkb_model "pc101"
-#input "MANUFACTURER2 Keyboard" xkb_model "jp106"
-bindsym --release Print exec grim -g \"$(slurp)" - | wl-copy
+input "*" {
+	xkb_layout "de"
+	xkb_variant "colemak,,typewriter"
+	xkb_options "grp:win_space_toggle"
+	# swaps capslock with Escape
+	xkb_options "caps:swapescape"
 
+    # Pointers
+    dwt                 disabled
+    tap                 enabled
+    natural_scroll      disabled
+    middle_emulation    enabled
+    tap_button_map      lrm
+    scroll_method       two_finger
+    scroll_factor       0.5
+    }
+bindsym --release Print exec grim -g \"$(slurp)" - | wl-copy
 
 #####################
 # HiDPI
 #####################
 
-output eDP-1 resolution 1920x1080 pos 0,0
-output DP-1 resolution 3820x2160 pos 1920,100
-#output HDMI-A-2 resolution 1920x1080 pos 0,0
-output HDMI-A-2 resolution 1920x1080 pos 1920,0
-output HDMI-A-3 resolution 1920x1080 pos 1920,0
+output		eDP-1 resolution 1920x1080 pos 0,0
+output		DP-1 resolution 3820x2160 pos 1920,100
+#output		HDMI-A-2 resolution 1920x1080 pos 0,0
+output		HDMI-A-2 resolution 1920x1080 pos 1920,0
+output 		HDMI-A-3 resolution 1920x1080 pos 1920,0
 
 
 #####################
@@ -440,8 +387,8 @@ set $default_border none
 # Brightness buttons laptop (via brightnessctl)
 #bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 #bindsym XF86MonBrightnessUp exec brightnessctl set +5%
-bindsym --locked XF86MonBrightnessUp exec --no-startup-id light -A 10
-bindsym --locked XF86MonBrightnessDown exec --no-startup-id light -U 10
+bindsym --locked XF86MonBrightnessUp exec light -A 10
+bindsym --locked XF86MonBrightnessDown exec light -U 10
 
 #####################
 # remove title bar
@@ -457,9 +404,9 @@ for_window [class="^.*"] border pixel 2
 exec --no-startup-id volumeicon
 
 # Multimedia
-bindsym --locked XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') +5%
-bindsym --locked XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') -5%
-bindsym --locked XF86AudioMute exec --no-startup-id pactl set-sink-mute $(pacmd list-sinks |awk '/* index:/{print $3}') toggle
+bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') +5%
+bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') -5%
+bindsym --locked XF86AudioMute exec pactl set-sink-mute $(pacmd list-sinks |awk '/* index:/{print $3}') toggle
 bindsym --locked XF86AudioPlay exec playerctl play-pause
 bindsym --locked XF86AudioNext exec playerctl next
 bindsym --locked XF86AudioPrev exec playerctl previous
@@ -468,3 +415,4 @@ bindsym $mod+Ctrl+m exec pavucontrol
 
 exec swaybg -i ~/Pictures/wallpapers/dark-forest.jpg
 exec xrdb ~/.Xdefaults
+workspace $ws4
