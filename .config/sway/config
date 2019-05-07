@@ -357,10 +357,8 @@ bindsym --release Print exec grim -g \"$(slurp)" - | wl-copy
 
 output		eDP-1 resolution 1920x1080 pos 0,0
 output		DP-1 resolution 3820x2160 pos 1920,100
-#output		HDMI-A-2 resolution 1920x1080 pos 0,0
-output		HDMI-A-2 resolution 1920x1080 pos 1920,0
+output		HDMI-A-2 resolution 1920x1080 pos 0,0
 output 		HDMI-A-3 resolution 1920x1080 pos 1920,0
-
 
 #####################
 # Gaps
