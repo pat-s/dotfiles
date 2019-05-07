@@ -12,7 +12,7 @@
 #
 
 [database]
-path=/home/pjs/.mail
+path=/home/pjs/.local/share/mail
 
 # User configuration
 #
@@ -48,6 +48,8 @@ primary_email=patrick.schratz@gmail.com
 #		names will be ignored, independent of its depth/location
 #		in the mail store.
 #
+
+other_email=patrick.johann22@gmail.com;
 
 [new]
 tags=unread;inbox;
