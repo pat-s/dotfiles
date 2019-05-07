@@ -1,17 +1,16 @@
 # vim: filetype=neomuttrc
 # muttrc file for account gmail
 set realname = "Patrick Schratz"
-set from = "patrick.schratz@gmail.com"
+set from = "patrick.schratz@uni-jena.de"
 set sendmail = "msmtp -a gmail"
 set folder = "/home/pjs/.local/share/mail/gmail"
 set header_cache = /home/pjs/.config/mutt/accounts/gmail/cache/headers
 set message_cachedir = /home/pjs/.config/mutt/accounts/gmail/cache/bodies
 set certificate_file = /home/pjs/.config/mutt/accounts/gmail/certificates
 
-alias me Patrick Schratz <patrick.schratz@gmail.com>
+alias me Patrick Schratz <patrick.schratz@uni-jena.de>
 set reverse_name=yes # Use address of receiver for replies
 alternates patrick.schratz@uni-jena.de
-
 set mbox_type = Maildir
 set ssl_starttls = yes
 set ssl_force_tls = yes
@@ -21,6 +20,7 @@ bind index,pager g noop
 bind index,pager M noop
 bind index,pager C noop
 bind index gg first-entry
+bind index z recall-message
 macro index o "<shell-escape>/home/pjs/.config/mutt/bin/mailsync -V gmail<enter>" "run mbsync to sync gmail"
 unmailboxes *
 set imap_check_subscribed
