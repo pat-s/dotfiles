@@ -4,5 +4,7 @@ set date_format="%d/%m/%Y %H:%M"
 set index_format="%2C %zs %?X?A& ? %D %-15.15F %s (%-4.4c)"
 set sort = "threads"
 set sort_aux = "reverse-date-received"
+set mailcap_path = "~/.mailcap"
+set signature = ".signature-gmail
 
 alias kolloquium patrick.schratz@uni-jena.de,geoinf@listserv.uni-jena.de,kai.heckel@uni-jena.de,rosemarie.mendler@uni-jena.de,msc_geoinf_15@listserv.uni-jena.de,msc_geoinf_16@listserv.uni-jena.de,msc_geoinf_17@listserv.uni-jena.de,msc_geoinf_18@listserv.uni-jena.de,msc_geoinf_19@listserv.uni-jena.de,lestup@bgc-jena.mpg.de,mflach@bgc-jena.mpg.de,christian.pfeifer@think-jena.de,jurquiza@bgc-jena.mpg.de,physgeo@uni-jena.de,wigeo@uni-jena.de
