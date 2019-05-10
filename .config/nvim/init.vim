@@ -172,7 +172,12 @@ vnoremap <leader>P "+P
     " edit fish scripts
     Plug 'dag/vim-fish'
 
-
+    " nnn plugin
+    Plug 'mcchrish/nnn.vim'
+      let g:nnn#action = {
+            \ '<c-t>': 'tab split',
+            \ '<c-x>': 'split',
+            \ '<c-v>': 'vsplit' }
 
     Plug 'w0rp/ale'
       "let g:ale_linters = {
@@ -409,8 +414,6 @@ colorscheme gruvbox
     " CTRL-C doesn't trigger the InsertLeave autocmd . map to <ESC> instead.
 
     inoremap <c-c> <ESC>
-
-
 
     " When the <Enter> key is pressed while the popup menu is visible, it only
 
