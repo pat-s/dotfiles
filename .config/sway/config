@@ -289,6 +289,7 @@ exec "st -n 'nnn' -e fish -c 'nnn'"
 exec "st -n 'tmux' -e fish -c 'tmuxinator start arch'"
 exec rstudio
 exec nextcloud
+exec clipman -d
 # exec spotify
 
 #####################
@@ -350,6 +351,13 @@ input "*" {
     scroll_factor       0.5
     }
 bindsym --release Print exec grim -g \"$(slurp)" - | wl-copy
+
+#####################
+# Clipboard
+#####################
+
+# https://github.com/yory8/clipman
+bindsym $mod+c exec clipman -s --selector="rofi"
 
 #####################
 # HiDPI
