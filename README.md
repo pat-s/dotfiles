@@ -5,7 +5,7 @@ Sensitive ones are encrypted with GPG.
 
 Management is done via [YADM](https://yadm.io/).
 
-The `.scripts` directory is based on [LARBS](https://github.com/LukeSmithxyz/LARBS) by Luke Smith. 
+The `.scripts` directory is mainly based on [LARBS](https://github.com/LukeSmithxyz/LARBS) by Luke Smith. 
 
 ## Default applications
 
@@ -22,5 +22,4 @@ Notebook: [Notion](https://www.notion.so/)
 Colorscheme: [gruvbox](https://github.com/morhetz/gruvbox)  
 Desktop enviroment: [i3-gaps](https://github.com/Airblader/i3) / [sway](https://swaywm.org/)  
 Distro: [Archlabs](https://archlabslinux.com/)
-
-
+Sway Clipboard manager: [clipman](https://github.com/yory8/clipman)
