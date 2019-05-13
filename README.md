@@ -21,5 +21,5 @@ Notebook: [Notion](https://www.notion.so/)
 
 Colorscheme: [gruvbox](https://github.com/morhetz/gruvbox)  
 Desktop enviroment: [i3-gaps](https://github.com/Airblader/i3) / [sway](https://swaywm.org/)  
-Distro: [Archlabs](https://archlabslinux.com/)
+Distro: [Archlabs](https://archlabslinux.com/)  
 Sway Clipboard manager: [clipman](https://github.com/yory8/clipman)
