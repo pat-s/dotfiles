@@ -5,7 +5,7 @@
 
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["tray", "custom/spotify", "custom/weather", "custom/mail", "custom/storage", "backlight", "pulseaudio", "network", "idle_inhibitor", "battery", "clock"],
+    "modules-right": ["tray", "custom/spotify", "custom/weather", "custom/mail", "cpu", "memory", "custom/storage", "backlight", "pulseaudio", "network", "idle_inhibitor", "battery", "clock"],
     "sway/mode": {
         "format": " {}"
     },
@@ -16,6 +16,14 @@
     "sway/window": {
         "max-length": 80,
         "tooltip": false
+    },
+    "cpu": {
+       "interval": 5,
+       "format": "CPU {usage:2}%"
+    },
+    "memory": {
+      "interval": 5,
+      "format": "Mem {}%"
     },
     "clock": {
         "format": "{:%a %d %b %H:%M}",
