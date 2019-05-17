@@ -27,7 +27,9 @@ set number                  " add line numbers
 
 set wildmode=longest,list,full   " get bash-like tab completions
 
- set cc=80                   " set an 80 column border for good coding style
+set cc=80                   " set an 80 column border for good coding style
+
+set wrap!
 
 set clipboard=unnamedplus
 
@@ -146,6 +148,10 @@ vnoremap <leader>P "+P
     Plug 'tpope/vim-surround'
 
     Plug 'editorconfig/editorconfig-vim'
+
+    " Long lines in mail
+    Plug 'manu-mannattil/vim-longlines'
+    autocmd FileType mail LongLines
 
     " strip trailing whitespace
     Plug 'itspriddle/vim-stripper'
