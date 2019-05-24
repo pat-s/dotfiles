@@ -27,7 +27,9 @@ set number                  " add line numbers
 
 set wildmode=longest,list,full   " get bash-like tab completions
 
- set cc=80                   " set an 80 column border for good coding style
+set cc=80                   " set an 80 column border for good coding style
+
+set wrap!
 
 set clipboard=unnamedplus
 
@@ -41,13 +43,17 @@ filetype plugin indent on
 
 let mapleader = "\<Space>"
 
-let maplocalleader="\<Space>"
+let maplocalleader=","
 
 let g:vimtex_compiler_progname='nvr'
 
 
-
-
+" i3 syntax highlighting
+aug i3config_ft_detection
+  au!
+  au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
+  au BufNewFile,BufRead ~/.config/sway/config set filetype=i3config
+aug end
 
 
 " auto-reload config on save
@@ -82,7 +88,8 @@ endif " has autocmd
 
    " map <leader>r :vsp<space>$REFER<CR>
 
-map <leader>t :set bg=light<CR>
+  map <leader>lb :set bg=light<CR>
+  map <leader>db :set bg=dark<CR>
 
 " Enter blank line
 
@@ -134,9 +141,17 @@ vnoremap <leader>P "+P
     " Specify a directory for Plugs
     call plug#begin('~/.local/share/nvim/plugged')
 
+    Plug 'mboughaba/i3config.vim'
+
     Plug 'Shougo/neosnippet.vim'
     " put word under cursor in quotes
     Plug 'tpope/vim-surround'
+
+    Plug 'editorconfig/editorconfig-vim'
+
+    " Long lines in mail
+    Plug 'manu-mannattil/vim-longlines'
+    autocmd FileType mail LongLines
 
     " strip trailing whitespace
     Plug 'itspriddle/vim-stripper'
@@ -163,10 +178,23 @@ vnoremap <leader>P "+P
     " edit fish scripts
     Plug 'dag/vim-fish'
 
-
+    " nnn plugin
+    Plug 'mcchrish/nnn.vim'
+      let g:nnn#action = {
+            \ '<c-t>': 'tab split',
+            \ '<c-x>': 'split',
+            \ '<c-v>': 'vsplit' }
 
     Plug 'w0rp/ale'
-
+      "let g:ale_linters = {
+      "          'r': ['styler']
+      "          }
+      let g:ale_fixers = {
+            \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+            \   'r': ['styler'],
+            \}
+      let g:ale_r_styler_options = 'styler::mlr_style'
+      "let g:ale_r_lintr_options = ''
     " neosnippets
 
     if has('nvim')
@@ -254,8 +282,10 @@ vnoremap <leader>P "+P
       vmap <Space> <Plug>RDSendSelection
 
       nmap <Space> <Plug>RDSendLine
-      autocmd FileType *.R noremap <buffer> <leader>d :RDocumentPackage<cr>
-      autocmd FileType *.R noremap <buffer> <leader>l :RLoadPackage<cr>
+      nmap <LocalLeader>rl :RLoadPackage<CR>
+      nmap <LocalLeader>rd :RDocumentPackage<CR>
+      autocmd FileType r noremap <buffer> <LocalLeader>dd :RDocumentPackage<cr>
+      autocmd FileType r noremap <buffer> <LocalLeader>ll :RLoadPackage<cr>
       let g:r_indent_align_args = 0
       let R_assign=2
 
@@ -384,13 +414,12 @@ colorscheme gruvbox
 
     set shortmess+=c
 
-
+    " ale shortcut
+    nmap <F8> <Plug>(ale_fix)
 
     " CTRL-C doesn't trigger the InsertLeave autocmd . map to <ESC> instead.
 
     inoremap <c-c> <ESC>
-
-
 
     " When the <Enter> key is pressed while the popup menu is visible, it only
 

@@ -11,6 +11,11 @@ options(reprex.styler = TRUE) # use styler indention when doing a reprex
 grDevices::X11.options(width = 4.5, height = 4, ypos = 0,
                        xpos = 1000, pointsize = 10)
 
+if (grepl("mlr", getwd()) || grepl("paradox", getwd())) {
+  options(styler.addins.style = "mlr_style")
+}
+library("usethis")
+
 # And add this to your `~/.Rprofile` if you want to use `w3m`, a text based web
 # browser, to navigate through R docs after `help.start()` when you cannot run a
 # graphical web browser (e.g. when you are in the Linux console):
@@ -28,7 +33,7 @@ options(
 
     help_type = "html",
     # styler
-    styler.addins.style = "mlr_style",
+    # styler.addins.style = "mlr_style",
 
     # see https://help.farbox.com/pygments.html
     # for a list of supported color schemes, default scheme is "native"

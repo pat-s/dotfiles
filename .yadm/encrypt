@@ -1,4 +1,4 @@
-.Rprofile.d/PAT.R
+.Renviron.d/Github_PAT.R
 .ssh/id_rsa
 .ssh/id_rsa.pub
 .ssh/keys/aur

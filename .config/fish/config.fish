@@ -53,6 +53,7 @@ abbr ys "yadm status"
 #####
 
 abbr --add mux "tmuxinator"
+abbr ms "tmuxinator start"
 
 #####
 # default env vars
@@ -70,13 +71,13 @@ set -gx SUDO_ASKPASS "~/.scripts/tools/dmenupass"
 
 # adds `~/.scripts` and all subdirectories to $PATH
 set -e fish_user_paths
-set -U fish_user_paths ~/git/nnn/scripts/nlaunch ~/.scripts/i3cmds/  ~/.scripts/tools ~/.local/bin ~/git/nnn/plugins ~/.scripts/R $fish_user_paths
+set -U fish_user_paths ~/.scripts/sway/ ~/git/nnn/scripts/nlaunch ~/.scripts/i3cmds/  ~/.scripts/tools ~/.local/bin ~/git/nnn/plugins ~/.scripts/R $fish_user_paths
 
 #####
 # nnn
 #####
 
-set -gx NNN_BMS "g:~/git;c:/mnt/cluster/home/patrick;f:/mnt/cluster/home/patrick/papers/2019-feature-selection;l:/mnt/lossa/data_mccoy_kirk_scotty/patrick;r:/home/pjs/git/rcourses;p:/mnt/cluster/home/patrick/papers/2018-model-comparison"
+set -gx NNN_BMS "d:~/Downloads;g:~/git;c:/mnt/cluster/home/patrick;f:/mnt/cluster/home/patrick/papers/2019-feature-selection;l:/mnt/lossa/data_mccoy_kirk_scotty/patrick;r:/home/pjs/git/rcourses;p:/mnt/cluster/home/patrick/papers/2018-model-comparison"
 set -gx NNN_CP_MV_PROG "1"
 #set -gx NNN_USE_EDITOR "1"
 set -gx NNN_OPENER "mimeo"
