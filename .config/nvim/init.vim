@@ -345,7 +345,7 @@ vnoremap <leader>P "+P
 
     " specify browser to open preview page
     " default: ''
-    let g:mkdp_browser = 'surf'
+    let g:mkdp_browser = 'chromium'
 
 
     " Linting
