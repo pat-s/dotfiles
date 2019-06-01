@@ -38,8 +38,8 @@ set splitright              "open split to the right
 set splitbelow              "open split below
 
 " filetype on
-syntax enable
 filetype plugin indent on
+syntax enable
 
 let mapleader = "\<Space>"
 
@@ -239,6 +239,20 @@ vnoremap <leader>P "+P
       let g:vimtex_view_automatic="1"
       let g:vimtex_fold_enabled="1"
       let g:vimtex_indent_enabled="1"
+      let g:vimtex_view_general_viewer="zathura"
+      let g:vimtex_toc_config = {
+            \ 'fold_enable': '1',
+            \ 'tocdepth': '1',
+            \ 'fold_level_start': '-1',
+            \ 'resize': '0',
+            \ 'layer_status': {
+                \ 'label': 0,
+                \ 'todo': 0,
+                \ 'include': 0
+                \ }
+            \ }
+
+
 
     " Grammar
     Plug 'rhysd/vim-grammarous'
@@ -345,7 +359,7 @@ vnoremap <leader>P "+P
 
     " specify browser to open preview page
     " default: ''
-    let g:mkdp_browser = 'surf'
+    let g:mkdp_browser = 'chromium'
 
 
     " Linting
