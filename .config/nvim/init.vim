@@ -239,7 +239,9 @@ vnoremap <leader>P "+P
       let g:vimtex_view_automatic="1"
       let g:vimtex_fold_enabled="1"
       let g:vimtex_indent_enabled="1"
-      let g:vimtex_view_general_viewer="zathura"
+      let g:vimtex_view_general_viewer="okular"
+      let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+      let g:vimtex_view_general_options_latexmk = '--unique'
       let g:vimtex_toc_config = {
             \ 'fold_enable': '1',
             \ 'tocdepth': '1',
