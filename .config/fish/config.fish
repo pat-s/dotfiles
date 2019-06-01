@@ -1,4 +1,4 @@
-#####
+
 # abbreviations
 #####
 
@@ -68,6 +68,10 @@ set -gx BIB "~/Documents/Bibliography.bib"
 set -gx MYVIMRC "~/.config/nvim/init.vim"
 set -gx BEMENU_BACKEND "wayland"
 set -gx SUDO_ASKPASS "~/.scripts/tools/dmenupass"
+#set -gx GDK_BACKEND "wayland"
+#set -gx QT_QPA_PLATFORM "wayland-egl"
+#set -gx QT_WAYLAND_FORCE_DPI "physical"
+set -gx MOZ_ENABLE_WAYLAND "1"
 
 # adds `~/.scripts` and all subdirectories to $PATH
 set -e fish_user_paths
@@ -106,4 +110,4 @@ set -gx R_HOME "/usr/lib64/R"
 
 # vi mode
 fish_vi_key_bindings
-
+cat ~/.cache/wal/sequences

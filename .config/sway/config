@@ -296,6 +296,12 @@ exec clipman -d
 # Wallpaper
 
 #####################
+# colorscheme
+#####################
+bindsym $mod+g exec wal -f ~/.config/wal/colorschemes/light/base16-gruvbox-soft.json
+bindsym $mod+Shift+G exec wal -f ~/.config/wal/colorschemes/dark/base16-gruvbox-medium.json
+
+#####################
 # Bar
 #####################
 
