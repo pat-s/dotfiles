@@ -12,7 +12,7 @@ grDevices::X11.options(width = 4.5, height = 4, ypos = 0,
                        xpos = 1000, pointsize = 10)
 
 if (grepl("mlr", getwd()) || grepl("paradox", getwd())) {
-  options(styler.addins.style = "mlr_style")
+  options(styler.addins_style_transformer = "mlr_style()")
 }
 library("usethis")
 
