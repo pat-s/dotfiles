@@ -29,7 +29,9 @@ set wildmode=longest,list,full   " get bash-like tab completions
 
 set cc=80                   " set an 80 column border for good coding style
 
-set wrap!
+set wrap
+set linebreak
+set nolist  " list disables linebreak
 
 set clipboard=unnamedplus
 
@@ -267,6 +269,7 @@ vnoremap <leader>P "+P
     Plug 'reedes/vim-wordy'
 
     Plug 'junegunn/goyo.vim'
+      let g:goyo_width = '120'
 
     " Search and replace (:far)
 

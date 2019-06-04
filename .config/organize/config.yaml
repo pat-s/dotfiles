@@ -65,7 +65,7 @@ rules:
         #    filters:
         #      - Filename:
         #          startswith: 'paper3'
-        #      - Extension: 
+        #      - Extension:
         #    actions:
         #      - Move: /mnt/mccoy/home/patrick/PhD/papers/03_hyperspectral/03_figures/{path.stem}.{extension.lower}
         #
@@ -81,7 +81,7 @@ rules:
         #    #filters:
         #      #- Extension: 'png'
         #    actions:
-        #      - Copy: 
+        #      - Copy:
         #          dest: ~/git/presentations/papers/paper1/figs/{path.stem}.png
         #          overwrite: true
 
@@ -113,9 +113,20 @@ rules:
 
   - folders:
       - ~/Downloads
+      - ~/gdrive/00-inbox
     filters:
       - Filename:
           contains: 'Lohnschein'
       - LastModified:
     actions:
       - Move: ~/gdrive/Dokumente/Uni/Lohnabrechnungen/{lastmodified.year}/
+
+  - folders:
+      - ~/Downloads
+      - ~/gdrive/00-inbox
+    filters:
+      - Filename:
+          contains: ['Lohnabrechnung', 'LMU']
+      - LastModified:
+    actions:
+      - Move: ~/gdrive/Dokumente/Uni/LMU/Lohnabrechnungen/{lastmodified.year}/
