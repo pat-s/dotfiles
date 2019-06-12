@@ -16,6 +16,7 @@ abbr icf "nvim ~/.config/i3/config"
 abbr vcf "nvim ~/.config/nvim/init.vim"
 abbr scf "nvim ~/.config/sway/config"
 abbr ncf "nvim ~/.config/nvim/init.vim"
+abbr paper2 "nvim ~/git/2019-feature-selection/analysis/paper/Schratz_hyperspectral.tex"
 
 # pacman
 abbr t "trizen"
@@ -31,13 +32,6 @@ abbr gc "git commit -m"
 abbr gunst "git reset HEAD"
 abbr gdiff "git diff"
 abbr gs "git status"
-
-#####
-# st
-#####
-
-alias std "xrdb ~/.xresources/gruvbox-dark.xresources"
-alias stl "xrdb ~/.xresources/gruvbox-light.xresources"
 
 #####
 # yadm
