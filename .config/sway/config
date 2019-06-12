@@ -12,7 +12,8 @@ set $wifi       ~/.config/rofi/modi/nmcli
 #set $menu rofi -dmenu
 set $menu       dmenu_path | dmenu -b | xargs swaymsg exec --
 set $menurofi   rofi -m $(expr $(swaymsg -t get_tree | jq '.nodes | map([recurse(.nodes[]?, .floating_nodes[]?) | .focused] | any) | index(true)') - 1) -show drun -run-command 'swaymsg exec -- {cmd}'
-set $screenshot grim ~/Pictures/scrn-$(date +"%Y-%m-%d-%H-%M-%S").png
+# set $screenshot grim ~/Pictures/scrn-$(date +"%Y-%m-%d-%H-%M-%S").png
+set $screenshot ~/.scripts/sway/screenshot
 set $lock       ~/.scripts/tools/lock
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
