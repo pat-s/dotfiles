@@ -79,60 +79,41 @@ rofi.run-command: fish -c '{cmd}'
 rofi.run-list-command: 'fish -c functions'
 rofi.font: Inconsolata 14
 
-!https://github.com/solarized/xresources/blob/master/Xresources.dar://github.com/solarized/xresources/blob/master/Xresources.dark
-##define S_base03        #002b36
-##define S_base02        #073642
-##define S_base01        #586e75
-##define S_base00        #657b83
-##define S_base0         #839496
-##define S_base1         #93a1a1
-##define S_base2         #eee8d5
-##define S_base3         #fdf6e3
-#
-#*background:            S_base03
-#*foreground:            S_base0
-#*fadeColor:             S_base03
-#*cursorColor:           S_base1
-#*pointerColorBackground:S_base01
-#*pointerColorForeground:S_base1
-#
-##define S_yellow        #b58900
-##define S_orange        #cb4b16
-##define S_red           #dc322f
-##define S_magenta       #d33682
-##define S_violet        #6c71c4
-##define S_blue          #268bd2
-##define S_cyan          #2aa198
-##define S_green         #859900
-#
-#!! black dark/light
-#*color0:                S_base02
-#*color8:                S_base03
-#
-#!! red dark/light
-#*color1:                S_red
-#*color9:                S_orange
-#
-#!! green dark/light
-#*color2:                S_green
-#*color10:               S_base01
-#
-#!! yellow dark/light
-#*color3:                S_yellow
-#*color11:               S_base00
-#
-#!! blue dark/light
-#*color4:                S_blue
-#*color12:               S_base0
-#
-#!! magenta dark/light
-#*color5:                S_magenta
-#*color13:               S_violet
-#
-#!! cyan dark/light
-#*color6:                S_cyan
-#*color14:               S_base1
-#
-#!! white dark/light
-#*color7:                S_base2
-#*color15: S_base3
+
+/* !! gruvbox: */
+
+/* *.color0: #1d2021 */
+/* *.color1: #cc241d */
+/* *.color2: #98971a */
+/* *.color3: #d79921 */
+/* *.color4: #458588 */
+/* *.color5: #b16286 */
+/* *.color6: #689d6a */
+/* *.color7: #a89984 */
+/* *.color8: #928374 */
+/* *.color9: #fb4934 */
+/* *.color10: #b8bb26 */
+/* *.color11: #fabd2f */
+/* *.color12: #83a598 */
+/* *.color13: #d3869b */
+/* *.color14: #8ec07c */
+/* *.color15: #ebdbb2 */
+
+/* !! gruvbox light: */
+
+/* *.color0: #fbf1c7 */
+/* *.color1: #cc241d */
+/* *.color2: #98971a */
+/* *.color3: #d79921 */
+/* *.color4: #458588 */
+/* *.color5: #b16286 */
+/* *.color6: #689d6a */
+/* *.color7: #7c6f64 */
+/* *.color8: #928374 */
+/* *.color9: #9d0006 */
+/* *.color10: #79740e */
+/* *.color11: #b57614 */
+/* *.color12: #076678 */
+/* *.color13: #8f3f71 */
+/* *.color14: #427b58 */
+/* *.color15: #3c3836 */
