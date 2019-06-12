@@ -30,7 +30,7 @@
         "tooltip": false
     },
     "battery": {
-        "format": "{capacity}% {icon}",
+        "format": "{time} {capacity}% {icon}",
         "format-icons": ["", "", "", "", ""],
         "format-charging": "{capacity}% ",
         "interval": 30,
@@ -50,7 +50,7 @@
             "ethernet": [""],
             "disconnected": [""]
         },
-        "on-click": "st -e nmtui",
+        "on-click": "st -e nm-applet --indicator",
     "tooltip": false
     },
     "pulseaudio": {
