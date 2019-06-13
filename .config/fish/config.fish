@@ -76,7 +76,7 @@ set -U fish_user_paths ~/.scripts/sway/ ~/git/nnn/scripts/nlaunch ~/.scripts/i3c
 # nnn
 #####
 
-set -gx NNN_BMS "d:~/Downloads;g:~/git;c:/mnt/cluster/home/patrick;f:/mnt/cluster/home/patrick/papers/2019-feature-selection;l:/mnt/lossa/data_mccoy_kirk_scotty/patrick;r:/home/pjs/git/rcourses;p:/mnt/cluster/home/patrick/papers/2018-model-comparison"
+set -gx NNN_BMS "d:~/Downloads;g:~/git;c:~/.config/nnn/edi;f:/mnt/cluster/home/patrick/papers/2019-feature-selection;m:~/.config/nnn/mccoy;r:/home/pjs/git/rcourses;p:/mnt/cluster/home/patrick/papers/2018-model-comparison;a:~/.config/nnn/mars/"
 set -gx NNN_CP_MV_PROG "1"
 #set -gx NNN_USE_EDITOR "1"
 set -gx NNN_OPENER "mimeo"
