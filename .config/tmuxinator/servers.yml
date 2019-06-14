@@ -43,49 +43,6 @@ root: ~/
 # post: tmux -CC attach -t servers
 
 windows:
-  - mccoy:
-      #layout: 8bd0,207x59,0,0{141x59,0,0,29,65x59,142,0[65x29,142,0,33,65x29,142,30,38]}
-      layout: 71d2,319x81,0,0{197x81,0,0[197x40,0,0,6,197x40,0,41,17],121x81,198,0[121x40,198,0,15,121x40,198,41,18]}]
-      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
-      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
-      # synchronize: after
-      panes:
-        -
-          - ssh mccoy
-          - htop
-        -
-          - ssh mccoy
-          - byobu
-        -
-          - ssh mccoy
-        -
-          - ssh mccoy
-  - scotty:
-      #layout: 8bd0,207x59,0,0{141x59,0,0,29,65x59,142,0[65x29,142,0,33,65x29,142,30,38]}
-      layout: 71d2,319x81,0,0{197x81,0,0[197x40,0,0,6,197x40,0,41,17],121x81,198,0[121x40,198,0,15,121x40,198,41,18]}]
-      panes:
-        -
-          - ssh scotty
-          - htop
-        -
-          - ssh scotty
-          - byobu
-        -
-          - ssh scotty
-        -
-          - ssh scotty
-  - jupiter:
-      #layout: 8bd0,207x59,0,0{141x59,0,0,29,65x59,142,0[65x29,142,0,33,65x29,142,30,38]}
-      layout: 71d2,319x81,0,0{197x81,0,0[197x40,0,0,6,197x40,0,41,17],121x81,198,0[121x40,198,0,15,121x40,198,41,18]}]
-      panes:
-        -
-          - ssh jupiter
-        -
-          - ssh jupiter
-        -
-          - ssh jupiter
-        -
-          - ssh jupiter
   - edi:
       #layout: 8bd0,207x59,0,0{141x59,0,0,29,65x59,142,0[65x29,142,0,33,65x29,142,30,38]}
       layout: 71d2,319x81,0,0{197x81,0,0[197x40,0,0,6,197x40,0,41,17],121x81,198,0[121x40,198,0,15,121x40,198,41,18]}]
@@ -101,3 +58,29 @@ windows:
         -
           - ssh edi
           - byobu
+  - jupiter:
+      #layout: 8bd0,207x59,0,0{141x59,0,0,29,65x59,142,0[65x29,142,0,33,65x29,142,30,38]}
+      layout: 71d2,319x81,0,0{197x81,0,0[197x40,0,0,6,197x40,0,41,17],121x81,198,0[121x40,198,0,15,121x40,198,41,18]}]
+      panes:
+        -
+          - ssh jupiter
+        -
+          - ssh jupiter
+        -
+          - ssh jupiter
+        -
+          - ssh jupiter
+  - mars:
+      #layout: 8bd0,207x59,0,0{141x59,0,0,29,65x59,142,0[65x29,142,0,33,65x29,142,30,38]}
+      layout: 71d2,319x81,0,0{197x81,0,0[197x40,0,0,6,197x40,0,41,17],121x81,198,0[121x40,198,0,15,121x40,198,41,18]}]
+      panes:
+        -
+          - ssh mars
+        -
+          - ssh mars
+        -
+          - ssh mars
+        -
+          - ssh mars
+
+
