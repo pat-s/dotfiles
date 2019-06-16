@@ -16,7 +16,7 @@ abbr icf "nvim ~/.config/i3/config"
 abbr vcf "nvim ~/.config/nvim/init.vim"
 abbr scf "nvim ~/.config/sway/config"
 abbr ncf "nvim ~/.config/nvim/init.vim"
-abbr paper2 "nvim ~/git/2019-feature-selection/analysis/paper/Schratz_hyperspectral.tex"
+abbr paper2 "nvim ~/git/2019-feature-selection/code/98-paper/journal/manuscript.tex"
 
 # pacman
 abbr t "trizen"
