@@ -291,6 +291,7 @@ exec "st -n 'tmux' -e fish -c 'tmuxinator start arch'"
 exec rstudio
 exec nextcloud
 exec clipman -d
+exec variety
 # exec spotify
 
 #####################
@@ -380,8 +381,8 @@ output 		HDMI-A-3 resolution 1920x1080 pos 1920,0
 #####################
 
 smart_gaps off
-gaps outer 10
-gaps inner 10
+gaps outer 5
+gaps inner 5
 
 #####################
 # keyboard
@@ -426,6 +427,8 @@ bindsym --locked XF86AudioPrev exec playerctl previous
 
 bindsym $mod+Ctrl+m exec pavucontrol
 
-exec swaybg -i ~/Pictures/wallpapers/dark-forest.jpg
+#exec swaybg -i ~/Pictures/wallpapers/dark-forest.jpg
+#exec ~/.azotebg
+
 exec xrdb ~/.Xdefaults
 workspace $ws4
