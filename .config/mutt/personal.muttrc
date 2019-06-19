@@ -8,4 +8,4 @@ set mailcap_path = "~/.mailcap"
 set signature = ".signature-gmail
 set text_flowed
 
-alias kolloquium patrick.schratz@uni-jena.de,geoinf@listserv.uni-jena.de,kai.heckel@uni-jena.de,rosemarie.mendler@uni-jena.de,msc_geoinf_15@listserv.uni-jena.de,msc_geoinf_16@listserv.uni-jena.de,msc_geoinf_17@listserv.uni-jena.de,msc_geoinf_18@listserv.uni-jena.de,msc_geoinf_19@listserv.uni-jena.de,lestup@bgc-jena.mpg.de,mflach@bgc-jena.mpg.de,christian.pfeifer@think-jena.de,jurquiza@bgc-jena.mpg.de,physgeo@uni-jena.de,wigeo@uni-jena.de
+alias kolloquium geoinf@listserv.uni-jena.de,kai.heckel@uni-jena.de,rosemarie.mendler@uni-jena.de,msc_geoinf_15@listserv.uni-jena.de,msc_geoinf_16@listserv.uni-jena.de,msc_geoinf_17@listserv.uni-jena.de,msc_geoinf_18@listserv.uni-jena.de,msc_geoinf_19@listserv.uni-jena.de,lestup@bgc-jena.mpg.de,mflach@bgc-jena.mpg.de,christian.pfeifer@think-jena.de,jurquiza@bgc-jena.mpg.de,physgeo@uni-jena.de,wigeo@uni-jena.de
