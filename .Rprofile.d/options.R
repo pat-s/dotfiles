@@ -29,6 +29,8 @@ if(interactive() && Sys.info()[["sysname"]] == "Linux" && Sys.getenv("DISPLAY") 
 }
 
 options(
+    usethis.protocol = "ssh",
+
     browser = "reload_html",
 
     help_type = "html",
