@@ -1,5 +1,3 @@
-" from https://www.circuidipity.com/neovim/
-" bj
 
 set termguicolors
 
@@ -159,6 +157,8 @@ vnoremap <leader>P "+P
     Plug 'itspriddle/vim-stripper'
     " Simplified copy/paste
     Plug 'svermeulen/vim-easyclip'
+    " align rows
+    Plug 'junegunn/vim-easy-align'
     " Easy commenting
     Plug 'tpope/vim-commentary'
     " Github
@@ -263,7 +263,7 @@ vnoremap <leader>P "+P
       let g:vimtex_view_general_options_latexmk = '--unique'
       let g:vimtex_toc_config = {
             \ 'fold_enable': '1',
-            \ 'tocdepth': '1',
+            \ 'tocdepth': '2',
             \ 'fold_level_start': '-1',
             \ 'resize': '0',
             \ 'layer_status': {
