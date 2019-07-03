@@ -20,7 +20,8 @@ x-scheme-handler/http=userapp-Firefox-TVVY1Z.desktop;
 x-scheme-handler/https=userapp-Firefox-TVVY1Z.desktop;
 x-scheme-handler/magnet=torrent.desktop;
 x-scheme-handler/mailto=mail.desktop;
-x-scheme-handler/tg=bettergram.desktop;
+x-scheme-handler/tg=bettergram.desktop
+x-scheme-handler/mailspring=mailspring.desktop
 
 [Added Associations]
 application/vnd.oasis.opendocument.text=libreoffice-writer.desktop;
