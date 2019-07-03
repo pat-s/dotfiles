@@ -60,7 +60,8 @@ bindsym $mod+Tab		    workspace back_and_forth
 # application launcher
 bindsym $mod+space  exec    $menurofi
 bindsym $mod+F1     exec    st -e fish -c 'nnn'
-bindsym $mod+F2     exec    cd ~/Downloads && st -n 'neomutt' -e fish -c 'neomutt'
+# bbindsym $mod+F2     exec    cd ~/Downloads && st -n 'neomutt' -e fish -c 'neomutt'
+bindsym $mod+F2     exec    mailspring
 bindsym $mod+F3     exec    firefox
 bindsym $mod+F4     exec    st -e fish -c 'tmuxinator start arch'
 bindsym $mod+F5     exec    rstudio
@@ -158,7 +159,7 @@ set $ws3 3:
 set $ws4 4:
 set $ws5 5:
 set $ws6 6:
-set $ws7 7:vscode
+set $ws7 7:zotero
 set $ws8 8:📔
 set $ws9 9:
 
@@ -183,17 +184,15 @@ bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
-
-# Move focused container to workspace
-bindsym $mod+Ctrl+1 move container to workspace $ws1
-bindsym $mod+Ctrl+2 move container to workspace $ws2
-bindsym $mod+Ctrl+3 move container to workspace $ws3
-bindsym $mod+Ctrl+4 move container to workspace $ws4
-bindsym $mod+Ctrl+5 move container to workspace $ws5
-bindsym $mod+Ctrl+6 move container to workspace $ws6
-bindsym $mod+Ctrl+7 move container to workspace $ws7
-bindsym $mod+Ctrl+8 move container to workspace $ws8
-bindsym $mod+Ctrl+9 move container to workspace $ws9
+bindsym $mod+Ctrl+1 workspace $ws11
+bindsym $mod+Ctrl+2 workspace $ws12
+bindsym $mod+Ctrl+3 workspace $ws13
+bindsym $mod+Ctrl+4 workspace $ws14
+bindsym $mod+Ctrl+5 workspace $ws15
+bindsym $mod+Ctrl+6 workspace $ws16
+bindsym $mod+Ctrl+7 workspace $ws17
+bindsym $mod+Ctrl+8 workspace $ws18
+bindsym $mod+Ctrl+9 workspace $ws19
 
 # Move to workspace with focused container
 bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
@@ -213,6 +212,7 @@ bindsym $mod+Ctrl+less move workspace to output left
 # Open applications on specific workspaces
 assign [instance="nnn"]         $ws1
 assign [instance="neomutt"]     $ws2
+assign [instance="mailspring"]  $ws2
 assign [instance="tmux"]        $ws4
 assign [class="RStudio"]        $ws5
 assign [class="Slack"]          $ws6
@@ -285,7 +285,7 @@ exec "exec /usr/bin/insync start"
 exec dropbox
 exec slack
 exec notion-app
-exec "st -n 'neomutt' -e fish -c 'neomutt'"
+#exec "st -n 'neomutt' -e fish -c 'neomutt'"
 exec "st -n 'nnn' -e fish -c 'nnn'"
 exec "st -n 'tmux' -e fish -c 'tmuxinator start arch'"
 exec rstudio
