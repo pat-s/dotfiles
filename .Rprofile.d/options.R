@@ -28,6 +28,13 @@ if(interactive() && Sys.info()[["sysname"]] == "Linux" && Sys.getenv("DISPLAY") 
                                      paste0('StartTxtBrowser("w3m", "', u, '")')))
 }
 
+# tibble > data.frame
+if (interactive() && "tibble" %in% rownames(utils::installed.packages())) {
+  print.data.frame = function(x, ...) {
+    tibble:::print.tbl(tibble::as_tibble(x), ...)
+  }
+}
+
 options(
     usethis.protocol = "ssh",
 
