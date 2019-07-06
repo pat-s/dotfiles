@@ -3,9 +3,9 @@
     "position": "top",
     "height": 30,
 
-    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-left": ["sway/workspaces", "sway/mode", "tray"],
     "modules-center": ["sway/window"],
-    "modules-right": ["tray", "custom/spotify", "custom/weather", "custom/mail", "cpu", "memory", "custom/storage", "backlight", "pulseaudio", "network", "idle_inhibitor", "battery", "clock"],
+    "modules-right": [spotify", "custom/weather", "custom/mail", "cpu", "memory", "custom/storage", "backlight", "pulseaudio", "network", "idle_inhibitor", "battery", "clock"],
     "sway/mode": {
         "format": " {}"
     },
@@ -122,6 +122,7 @@
         "interval": 5
     },
     "tray": {
-        "icon-size": 18
+        "icon-size": 18,
+        "spacing"  : 11
     }
 }
