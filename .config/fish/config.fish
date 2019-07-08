@@ -67,6 +67,7 @@ set -gx SUDO_ASKPASS "~/.scripts/tools/dmenupass"
 #set -gx QT_WAYLAND_FORCE_DPI "physical"
 set -gx MOZ_ENABLE_WAYLAND "1"
 set -gx QT_QPA_PLATFORMTHEME "qt5ct"
+set -gx QT_AUTO_SCREEN_SCALE_FACTOR "1"
 
 # adds `~/.scripts` and all subdirectories to $PATH
 set -e fish_user_paths
@@ -106,3 +107,10 @@ set -gx R_HOME "/usr/lib64/R"
 # vi mode
 fish_vi_key_bindings
 cat ~/.cache/wal/sequences
+
+# rt
+# fish
+
+if test -d ~/R/x86_64-pc-linux-gnu-library/3.6/rt/bin
+    set -gx PATH $HOME/R/x86_64-pc-linux-gnu-library/3.6/rt/bin $PATH
+end
