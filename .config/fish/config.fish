@@ -68,10 +68,11 @@ set -gx SUDO_ASKPASS "~/.scripts/tools/dmenupass"
 set -gx MOZ_ENABLE_WAYLAND "1"
 set -gx QT_QPA_PLATFORMTHEME "qt5ct"
 set -gx QT_AUTO_SCREEN_SCALE_FACTOR "1"
+set -gx GTK_THEME "Arc-Darker"
 
 # adds `~/.scripts` and all subdirectories to $PATH
 set -e fish_user_paths
-set -U fish_user_paths ~/.scripts/sway/ ~/git/nnn/scripts/nlaunch ~/.scripts/i3cmds/  ~/.scripts/tools ~/.local/bin ~/git/nnn/plugins ~/.scripts/R $fish_user_paths
+set -U fish_user_paths ~/.scripts/sway/ ~/git/nnn/scripts/nlaunch ~/.scripts/i3cmds/  ~/.scripts/tools ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.gem/ruby/*/bin $fish_user_paths
 
 #####
 # nnn
@@ -114,3 +115,4 @@ cat ~/.cache/wal/sequences
 if test -d ~/R/x86_64-pc-linux-gnu-library/3.6/rt/bin
     set -gx PATH $HOME/R/x86_64-pc-linux-gnu-library/3.6/rt/bin $PATH
 end
+
