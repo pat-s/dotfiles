@@ -65,6 +65,7 @@ bindsym $mod+F2     exec    mailspring
 bindsym $mod+F3     exec    firefox
 bindsym $mod+F4     exec    st -e fish -c 'tmuxinator start arch'
 bindsym $mod+F5     exec    rstudio
+bindsym $mod+F6     exec    networkmanager_dmenu
 
 bindsym $mod+F9		exec    dmenumount
 bindsym $mod+F10	exec    dmenuumount
@@ -401,8 +402,8 @@ set $default_border none
 # Brightness buttons laptop (via brightnessctl)
 #bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 #bindsym XF86MonBrightnessUp exec brightnessctl set +5%
-bindsym --locked XF86MonBrightnessUp exec light -A 10
-bindsym --locked XF86MonBrightnessDown exec light -U 10
+bindsym --locked XF86MonBrightnessUp exec light -A 05
+bindsym --locked XF86MonBrightnessDown exec light -U 05
 
 #####################
 # remove title bar
@@ -429,6 +430,14 @@ bindsym $mod+Ctrl+m exec pavucontrol
 
 #exec swaybg -i ~/Pictures/wallpapers/dark-forest.jpg
 #exec ~/.azotebg
+
+# set gtk theme
+# https://github.com/swaywm/sway/wiki/GTK-3-settings-on-Wayland
+# import-settings -> ~/.config/.scripts/sway/import-settings
+exec_always import-gsettings \
+    gtk-theme:gtk-theme-name \
+    icon-theme:gtk-icon-theme-name \
+    cursor-theme:gtk-cursor-theme-name
 
 exec xrdb ~/.Xdefaults
 workspace $ws4
