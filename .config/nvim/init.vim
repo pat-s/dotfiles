@@ -294,7 +294,7 @@ vnoremap <leader>P "+P
 
     Plug 'brooth/far.vim'
       let g:far#window_layout = 'tab'
-      let g:far#source = 'rg'
+      "let g:far#source = 'acknvim'
 
   """ Themes
   "Plug 'dracula/vim', { 'as': 'dracula' }

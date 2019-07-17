@@ -116,3 +116,7 @@ if test -d ~/R/x86_64-pc-linux-gnu-library/3.6/rt/bin
     set -gx PATH $HOME/R/x86_64-pc-linux-gnu-library/3.6/rt/bin $PATH
 end
 
+
+if status \-\-is\-interactive
+    keychain \-\-eval \-\-quiet \-Q id_rsa | source
+end

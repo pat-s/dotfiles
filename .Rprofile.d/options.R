@@ -13,19 +13,7 @@ grDevices::X11.options(width = 4.5, height = 4, ypos = 0,
 
 if (grepl("mlr", getwd()) || grepl("paradox", getwd())) {
   options(styler.addins_style_transformer = "mlr_style()")
-}
-library("usethis")
-
-# And add this to your `~/.Rprofile` if you want to use `w3m`, a text based web
-# browser, to navigate through R docs after `help.start()` when you cannot run a
-# graphical web browser (e.g. when you are in the Linux console):
-
-if(interactive() && Sys.info()[["sysname"]] == "Linux" && Sys.getenv("DISPLAY") == ""){
-  if(Sys.getenv("TMUX") != "")
-    options(browser = function(u) system(paste0("tmux new-window 'w3m ", u, "'")))
-  else if(Sys.getenv("NVIMR_TMPDIR") != "")
-    options(browser = function(u) .C("nvimcom_msg_to_nvim",
-                                     paste0('StartTxtBrowser("w3m", "', u, '")')))
+  library("usethis")
 }
 
 # tibble > data.frame
@@ -38,9 +26,6 @@ if (interactive() && "tibble" %in% rownames(utils::installed.packages())) {
 options(
     usethis.protocol = "ssh",
 
-    browser = "reload_html",
-
-    help_type = "html",
     # styler
     # styler.addins.style = "mlr_style",
 
