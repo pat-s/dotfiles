@@ -313,29 +313,29 @@ vnoremap <leader>P "+P
 
     " R
 
-    Plug 'jalvesaq/Nvim-R'
-
-      vmap <Space> <Plug>RDSendSelection
-
-      nmap <Space> <Plug>RDSendLine
-      nmap <LocalLeader>rl :RLoadPackage<CR>
-      nmap <LocalLeader>rd :RDocumentPackage<CR>
-      autocmd FileType r noremap <buffer> <LocalLeader>dd :RDocumentPackage<cr>
-      autocmd FileType r noremap <buffer> <LocalLeader>ll :RLoadPackage<cr>
-      let g:r_indent_align_args = 0
-      let R_assign=2
-
-      let R_app = "radian"
-
-      let R_cmd = "R"
-
-      let R_hl_term = 0
-
-      let R_bracketed_paste = 1
-      let R_nvimpager = 'no'
-      let g:R_close_term = 1                    " Close terminal buffer after R quited
-      let g:R_in_buffer = 1                     " Run R in Vim/Neovim built in terminal emulator
-      let g:rout_follow_colorscheme = 1         " R output is highlighted
+"    Plug 'jalvesaq/Nvim-R'
+"
+"      vmap <Space> <Plug>RDSendSelection
+"
+"      nmap <Space> <Plug>RDSendLine
+"      nmap <LocalLeader>rl :RLoadPackage<CR>
+"      nmap <LocalLeader>rd :RDocumentPackage<CR>
+"      autocmd FileType r noremap <buffer> <LocalLeader>dd :RDocumentPackage<cr>
+"      autocmd FileType r noremap <buffer> <LocalLeader>ll :RLoadPackage<cr>
+"      let g:r_indent_align_args = 0
+"      let R_assign=2
+"
+"      let R_app = "radian"
+"
+"      let R_cmd = "R"
+"
+"      let R_hl_term = 0
+"
+"      let R_bracketed_paste = 1
+"      let R_nvimpager = 'no'
+"      let g:R_close_term = 1                    " Close terminal buffer after R quited
+"      let g:R_in_buffer = 1                     " Run R in Vim/Neovim built in terminal emulator
+"      let g:rout_follow_colorscheme = 1         " R output is highlighted
 
       "let R_objbr_place = 'console,below'
 
@@ -438,9 +438,9 @@ vnoremap <leader>P "+P
 
 call plug#end()
 
-      autocmd FileType r if string(g:SendCmdToR) == "function('SendCmdToR_fake')" | call StartR("R") | endif
-      autocmd FileType rmd if string(g:SendCmdToR) == "function('SendCmdToR_fake')" | call StartR("R") | endif
-      autocmd VimLeave * if exists("g:SendCmdToR") && string(g:SendCmdToR) != "function('SendCmdToR_fake')" | call RQuit("nosave") | endif
+"      autocmd FileType r if string(g:SendCmdToR) == "function('SendCmdToR_fake')" | call StartR("R") | endif
+"      autocmd FileType rmd if string(g:SendCmdToR) == "function('SendCmdToR_fake')" | call StartR("R") | endif
+"      autocmd VimLeave * if exists("g:SendCmdToR") && string(g:SendCmdToR) != "function('SendCmdToR_fake')" | call RQuit("nosave") | endif
 
 colorscheme gruvbox
 
