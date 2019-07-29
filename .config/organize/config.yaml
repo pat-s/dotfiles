@@ -113,7 +113,7 @@ rules:
 
   - folders:
       - ~/Downloads
-      - ~/gdrive/00-inbox
+      - ~/gdrive/Dokumente/00-inbox
     filters:
       - Filename:
           contains: 'Lohnschein'
@@ -123,7 +123,7 @@ rules:
 
   - folders:
       - ~/Downloads
-      - ~/gdrive/00-inbox
+      - ~/gdrive/Dokumente/00-inbox
     filters:
       - Filename:
           contains: ['Lohnabrechnung', 'LMU']
