@@ -26,6 +26,7 @@ if (interactive() && "tibble" %in% rownames(utils::installed.packages())) {
 options(
     usethis.protocol = "ssh",
 
+    Ncpus = parallel::detectCores(),
     # styler
     # styler.addins.style = "mlr_style",
 
