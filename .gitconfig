@@ -1,0 +1,14 @@
+[user]
+	email = patrick.schratz@gmail.com
+	name = pat-s
+[color]
+	ui = auto
+[fetch]
+	prune = true
+[credential]
+	helper = /usr/bin/pass-git-helper
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
