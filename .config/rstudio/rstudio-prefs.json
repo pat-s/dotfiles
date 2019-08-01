@@ -37,6 +37,7 @@
     "terminal_path": "/bin/st",
     "busy_detection": "never",
     "custom_shell_command": "/bin/fish",
-    "editor_theme": "rscodeio",
-    "save_files_before_build": true
+    "editor_theme": "Solarized Light",
+    "save_files_before_build": true,
+    "global_theme": "classic"
 }
