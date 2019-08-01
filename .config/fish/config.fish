@@ -72,7 +72,7 @@ set -gx GTK_THEME "Arc-Darker"
 
 # adds `~/.scripts` and all subdirectories to $PATH
 set -e fish_user_paths
-set -U fish_user_paths ~/.scripts/sway/ ~/git/nnn/scripts/nlaunch ~/.scripts/i3cmds/  ~/.scripts/tools ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.gem/ruby/*/bin $fish_user_paths
+set -U fish_user_paths ~/.scripts/nnn ~/.scripts/sway/ ~/git/nnn/scripts/nlaunch ~/.scripts/i3cmds/  ~/.scripts/tools ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.gem/ruby/*/bin $fish_user_paths
 
 #####
 # nnn
