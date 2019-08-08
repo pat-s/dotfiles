@@ -4,5 +4,5 @@ if (interactive()) {
 library("colorout")
 #library("rcourses")
 library("gert")
-library(prettynumbers)
+library("pak")
 library(teamtools)
