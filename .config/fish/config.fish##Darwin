@@ -15,6 +15,9 @@ abbr scf "nvim ~/.config/sway/config"
 abbr ncf "nvim ~/.config/nvim/init.vim"
 abbr paper2 "nvim ~/git/2019-feature-selection/code/98-paper/journal/manuscript.tex"
 
+abbr vpnc "/opt/cisco/anyconnect/bin/vpn connect vpn.uni-jena.de"
+abbr vpnd "/opt/cisco/anyconnect/bin/vpn disconnect vpn.uni-jena.de"
+
 #####
 # Git
 #####
