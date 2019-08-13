@@ -15,7 +15,7 @@ abbr scf "nvim ~/.config/sway/config"
 abbr ncf "nvim ~/.config/nvim/init.vim"
 abbr paper2 "nvim ~/git/2019-feature-selection/code/98-paper/journal/manuscript.tex"
 
-abbr vpnc "/opt/cisco/anyconnect/bin/vpn connect vpn.uni-jena.de"
+abbr vpnc "/opt/cisco/anyconnect/bin/vpn connect vpn.uni-jena.de -s < ~/.credentials"
 abbr vpnd "/opt/cisco/anyconnect/bin/vpn disconnect vpn.uni-jena.de"
 
 #####
@@ -63,6 +63,7 @@ set -gx MYVIMRC "~/.config/nvim/init.vim"
 set -gx R_HOME "/usr/local/lib/R"
 set -gx LANG "en_US.UTF-8"
 set -gx LC_ALL "en_US.UTF-8"
+set -gx GPG_TTY "'(tty)'"
 
 # adds `~/.scripts` and all subdirectories to $PATH
 set -e fish_user_paths
