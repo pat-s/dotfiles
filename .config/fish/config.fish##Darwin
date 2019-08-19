@@ -81,14 +81,11 @@ set -gx NNN_RESTRICT_NAV_OPEN "1"
 set -gx NNN_TRASH "1"
 set -gx NNN_CONTEXT_COLORS  "1234"
 set -gx NNN_SCRIPT "/home/pjs/.scripts/nnn"
-set -gx NNN_COPIER '~/.scripts/nnn/copy-sel-to-clipboard'
+set -gx NNN_COPIER "~/.scripts/nnn/copy-sel-to-clipboard"
 
 #####
 # misc
 #####
-
-# aur auto vote
-set -gx AUR_AUTO_VOTE_PASSWORD "aI479rsAPyUZ72IQy"
 
 # fish
 abbr fr "omf reload"
