@@ -36,8 +36,14 @@
     "editor_keybindings": "vim",
     "terminal_path": "/bin/st",
     "busy_detection": "never",
-    "custom_shell_command": "/bin/fish",
-    "editor_theme": "Solarized Light",
+    "editor_theme": "rscodeio",
     "save_files_before_build": true,
-    "global_theme": "classic"
+    "pdf_previewer": "none",
+    "show_invisibles": true,
+    "rmd_chunk_output_inline": false,
+    "show_rmd_render_command": true,
+    "real_time_spellchecking": true,
+    "show_hidden_files": true,
+    "rmd_viewer_type": "pane",
+    "custom_shell_command": "/usr/local/bin/fish"
 }
