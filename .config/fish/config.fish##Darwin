@@ -13,7 +13,7 @@ abbr fcf "nvim ~/.config/fish/config.fish"
 abbr vcf "nvim ~/.config/nvim/init.vim"
 abbr scf "nvim ~/.config/sway/config"
 abbr ncf "nvim ~/.config/nvim/init.vim"
-abbr paper2 "nvim ~/git/2019-feature-selection/code/98-paper/journal/manuscript.tex"
+abbr paper2 "nvim ~/git/phd/2019-feature-selection/code/98-paper/ieee/ieee-manuscript.tex"
 
 abbr vpnc "/opt/cisco/anyconnect/bin/vpn connect vpn.uni-jena.de -s < ~/.credentials"
 abbr vpnd "/opt/cisco/anyconnect/bin/vpn disconnect vpn.uni-jena.de"
@@ -49,7 +49,8 @@ abbr bup "brew upgrade"
 #####
 
 abbr --add mux "tmuxinator"
-abbr ms "tmuxinator start"
+abbr mss "/opt/cisco/anyconnect/bin/vpn connect vpn.uni-jena.de -s < ~/.credentials && tmuxinator start servers"
+abbr msc "/opt/cisco/anyconnect/bin/vpn disconnect vpn.uni-jena.de && tmuxinator stop servers"
 
 #####
 # default env vars
@@ -60,7 +61,7 @@ set -gx EDITOR "nvim"
 set -gx BROWSER "firefox"
 set -gx BIB "~/Documents/Bibliography.bib"
 set -gx MYVIMRC "~/.config/nvim/init.vim"
-set -gx R_HOME "/usr/local/lib/R"
+set -gx R_HOME "/Library/Frameworks/R.framework/Resources"
 set -gx LANG "en_US.UTF-8"
 set -gx LC_ALL "en_US.UTF-8"
 set -gx GPG_TTY "'(tty)'"
@@ -73,7 +74,7 @@ set -U fish_user_paths ~/.scripts/tools /usr/local/lib/ruby/gems/*/bin /usr/loca
 # nnn
 #####
 
-set -gx NNN_BMS "d:~/Downloads;g:~/git;c:~/.config/nnn/edi;f:/mnt/cluster/home/patrick/papers/2019-feature-selection;m:~/.config/nnn/mccoy;r:/home/pjs/git/rcourses;p:/mnt/cluster/home/patrick/papers/2018-model-comparison;a:~/.config/nnn/mars/"
+set -gx NNN_BMS "d:~/Downloads;g:~/git;c:~/.config/nnn/edi;f:~/.config/nnn/edi/papers/2019-feature-selection;r:/home/pjs/git/rcourses;p:~/.config/nnn/edi/papers/2018-model-comparison;a:~/.config/nnn/mars/"
 set -gx NNN_CP_MV_PROG "1"
 #set -gx NNN_USE_EDITOR "1"
 set -gx NNN_OPS_PROG "1"
@@ -81,7 +82,7 @@ set -gx NNN_RESTRICT_NAV_OPEN "1"
 set -gx NNN_TRASH "1"
 set -gx NNN_CONTEXT_COLORS  "1234"
 set -gx NNN_SCRIPT "/home/pjs/.scripts/nnn"
-set -gx NNN_COPIER "~/.scripts/nnn/copy-sel-to-clipboard"
+set -gx NNN_COPIER "/Users/pjs/.scripts/nnn/copy-sel-to-clipboard"
 
 #####
 # misc
@@ -105,3 +106,4 @@ end
 #    keychain \-\-eval \-\-quiet \-Q id_rsa | source
 #end
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+set -gx HOMEBREW_GITHUB_API_TOKEN 64e9310dc085dda288afdd8b731c17357d125082
