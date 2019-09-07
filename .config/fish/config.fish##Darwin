@@ -68,7 +68,7 @@ set -gx GPG_TTY "'(tty)'"
 
 # adds `~/.scripts` and all subdirectories to $PATH
 set -e fish_user_paths
-set -U fish_user_paths ~/.scripts/tools /usr/local/lib/ruby/gems/*/bin /usr/local/opt/ruby/bin ~/.scripts/nnn ~/.scripts/sway/ ~/git/nnn/scripts/nlaunch ~/.scripts/i3cmds/  ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.gem/ruby/*/bin $fish_user_paths
+set -U fish_user_paths ~/usr/local/sbin /.scripts/tools /usr/local/lib/ruby/gems/*/bin /usr/local/opt/ruby/bin ~/.scripts/nnn ~/.scripts/sway/ ~/git/nnn/scripts/nlaunch ~/.scripts/i3cmds/  ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.gem/ruby/*/bin $fish_user_paths
 
 #####
 # nnn
@@ -101,9 +101,3 @@ if test -d ~/R/x86_64-pc-linux-gnu-library/3.6/rt/bin
     set -gx PATH $HOME/R/x86_64-pc-linux-gnu-library/3.6/rt/bin $PATH
 end
 
-
-#if status \-\-is\-interactive
-#    keychain \-\-eval \-\-quiet \-Q id_rsa | source
-#end
-set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
-set -gx HOMEBREW_GITHUB_API_TOKEN 64e9310dc085dda288afdd8b731c17357d125082

@@ -5,8 +5,8 @@
 	ui = auto
 [fetch]
 	prune = true
-[credential]
-	helper = /usr/bin/pass-git-helper
+#[credential]
+#	helper = /usr/bin/pass-git-helper
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
