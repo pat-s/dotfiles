@@ -2,7 +2,7 @@ if (interactive()) {
   suppressMessages(require(usethis))
 }
 library("colorout")
-#library("rcourses")
+##library("rcourses")
 library("gert")
-library("pak")
+#library("pak")
 library(teamtools)
