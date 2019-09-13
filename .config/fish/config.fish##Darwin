@@ -29,6 +29,15 @@ abbr gunst "git reset HEAD"
 abbr gdiff "git diff"
 abbr gs "git status"
 
+####
+# python
+####
+
+abbr py35 "/usr/local/opt/python35/bin/python3.5"
+abbr py36 "/usr/local/opt/python35/bin/python3.6"
+abbr py "python"
+abbr py3 "python3"
+
 #####
 # yadm
 #####
