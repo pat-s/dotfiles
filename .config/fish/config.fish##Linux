@@ -26,6 +26,10 @@ abbr gunst "git reset HEAD"
 abbr gdiff "git diff"
 abbr gs "git status"
 
+# pacman
+abbr t "trizen"
+abbr tup "trizen -Syu"
+
 #####
 # yadm
 #####
@@ -50,6 +54,11 @@ abbr msc "tmuxinator stop servers"
 set -gx TERM "xterm-256color"
 set -gx EDITOR "nvim"
 set -gx BROWSER "firefox"
+set -gx BROWSER "env GDK_BACKEND=wayland firefox"
+set -gx MOZ_ENABLE_WAYLAND "1"
+set -gx QT_QPA_PLATFORMTHEME "qt5ct"
+set -gx QT_AUTO_SCREEN_SCALE_FACTOR "1"
+set -gx GTK_THEME "Arc-Darker"
 set -gx BIB "~/Documents/Bibliography.bib"
 set -gx MYVIMRC "~/.config/nvim/init.vim"
 set -gx R_HOME "/Library/Frameworks/R.framework/Resources"
@@ -79,6 +88,10 @@ set -gx NNN_COPIER "/Users/pjs/.scripts/nnn/copy-sel-to-clipboard"
 # misc
 #####
 
+
+# aur auto vote
+set -gx AUR_AUTO_VOTE_PASSWORD "aI479rsAPyUZ72IQy"
+
 # fish
 abbr fr "omf reload"
 
@@ -92,3 +105,7 @@ if test -d ~/R/x86_64-pc-linux-gnu-library/3.6/rt/bin
     set -gx PATH $HOME/R/x86_64-pc-linux-gnu-library/3.6/rt/bin $PATH
 end
 
+# keychain ssh credential helper
+if status --is-interactive
+    keychain --eval --quiet -Q id_rsa | source
+end
