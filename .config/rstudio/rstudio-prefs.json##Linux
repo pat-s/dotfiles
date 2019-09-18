@@ -45,5 +45,5 @@
     "real_time_spellchecking": true,
     "show_hidden_files": true,
     "rmd_viewer_type": "pane",
-    "custom_shell_command": "/usr/local/bin/fish"
+    "custom_shell_command": "/usr/bin/fish"
 }
