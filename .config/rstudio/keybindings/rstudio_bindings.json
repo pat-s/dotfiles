@@ -1,0 +1,6 @@
+{
+    "goToFileFunction": "Ctrl+P",
+    "insertPipeOperator": "Alt+A",
+    "restartR": "Ctrl+R",
+    "activateTerminal": "Ctrl+3"
+}
