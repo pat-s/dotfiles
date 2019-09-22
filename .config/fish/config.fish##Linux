@@ -51,6 +51,7 @@ abbr msc "tmuxinator stop servers"
 # default env vars
 #####
 
+set -gx HOME "/home/pjs"
 set -gx TERM "xterm-256color"
 set -gx EDITOR "nvim"
 set -gx BROWSER "firefox"
@@ -82,7 +83,7 @@ set -gx NNN_RESTRICT_NAV_OPEN "1"
 set -gx NNN_TRASH "1"
 set -gx NNN_CONTEXT_COLORS  "1234"
 set -gx NNN_SCRIPT "/home/pjs/.scripts/nnn"
-set -gx NNN_COPIER "/Users/pjs/.scripts/nnn/copy-sel-to-clipboard"
+set -gx NNN_COPIER "/home/pjs/.scripts/nnn/copy-sel-to-clipboard"
 
 #####
 # misc
