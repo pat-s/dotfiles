@@ -1,1 +1,1 @@
-/home/pjs/.config/fish/config.fish##Linux
+/Users/pjs/.config/fish/config.fish##Darwin
