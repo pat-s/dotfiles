@@ -1,16 +1,1 @@
-
-#CXXFLAGS=-O3 -mtune=native -march=native -Wno-unused-variable -Wno-unused-function
-
-#CXXFLAGS=-O3 -mtune=native -march=native -Wno-unused-variable -Wno-unused-function -DBOOST_PHOENIX_NO_VARIADIC_EXPRESSION
-
-CXX_STD = CXX14
-
-# Eddelbuettel blog
-VER=
-CCACHE=ccache
-CC=$(CCACHE) gcc$(VER)
-CXX=$(CCACHE) g++$(VER)
-C11=$(CCACHE) g++$(VER)
-C14=$(CCACHE) g++$(VER)
-FC=$(CCACHE) gfortran$(VER)
-F77=$(CCACHE) gfortran$(VER)
+/Users/pjs/.R/Makevars##Darwin
