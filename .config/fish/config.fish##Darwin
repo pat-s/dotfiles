@@ -89,7 +89,7 @@ set -gx NNN_CP_MV_PROG "1"
 set -gx NNN_OPS_PROG "1"
 set -gx NNN_RESTRICT_NAV_OPEN "1"
 set -gx NNN_TRASH "1"
-set -gx NNN_CONTEXT_COLORS  "1234"
+set -gx NNN_CONTEXT_COLORS  "62354"
 set -gx NNN_SCRIPT "/home/pjs/.scripts/nnn"
 set -gx NNN_COPIER "/Users/pjs/.scripts/nnn/copy-sel-to-clipboard"
 
