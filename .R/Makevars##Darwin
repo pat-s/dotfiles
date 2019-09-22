@@ -6,8 +6,8 @@ CCACHE=ccache
 
 # https://github.com/Rdatatable/data.table/wiki/Installation#openmp-enabled-compiler-for-mac
 LLVM_LOC = /usr/local/opt/llvm
-CC=$(CCACHE)$(LLVM_LOC)/bin/clang -fopenmp
-CXX=$(CCACHE)$(LLVM_LOC)/bin/clang++ -fopenmp
+CC=$(LLVM_LOC)/bin/clang -fopenmp
+CXX=$(LLVM_LOC)/bin/clang++ -fopenmp
 # -O3 should be faster than -O2 (default) level optimisation ..
 CFLAGS=-g -O3 -Wall -pedantic -std=gnu99 -mtune=native -pipe
 CXXFLAGS=-g -O3 -Wall -pedantic -std=c++11 -mtune=native -pipe
