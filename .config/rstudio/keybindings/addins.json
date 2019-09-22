@@ -1,9 +1,11 @@
 {
-    "styler::style_active_file": "Ctrl+Shift+S",
+    "styler::style_active_file": "Ctrl+Alt+S",
     "compareWith::addin_project": "Ctrl+G",
     "drake::rs_addin_loadd": "Ctrl+L",
     "addmins::insert_dashes": "Ctrl+8",
     "drake::rs_addin_r_outdated": "Ctrl+Shift+O",
     "drake::rs_addin_r_vis_drake_graph": "Ctrl+Shift+V",
-    "drake::rs_addin_r_make": "Ctrl+Shift+W"
+    "drake::rs_addin_r_make": "Ctrl+Alt+W",
+    "styler::style_active_pkg": "",
+    "styler::style_selection": ""
 }
