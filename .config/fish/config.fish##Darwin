@@ -58,8 +58,8 @@ abbr bup "brew upgrade"
 #####
 
 abbr --add mux "tmuxinator"
-abbr mss "/opt/cisco/anyconnect/bin/vpn connect vpn.uni-jena.de -s < ~/.credentials && tmuxinator start servers"
-abbr msc "/opt/cisco/anyconnect/bin/vpn disconnect vpn.uni-jena.de && tmuxinator stop servers"
+abbr mss "/opt/cisco/anyconnect/bin/vpn connect vpn.uni-jena.de -s < ~/.credentials && tmuxinator start edi"
+abbr msc "/opt/cisco/anyconnect/bin/vpn disconnect vpn.uni-jena.de && tmuxinator stop edi"
 
 #####
 # default env vars

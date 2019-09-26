@@ -1,6 +1,6 @@
 # /home/pjs/.config/tmuxinator/servers.yml
 
-name: servers
+name: edi
 root: ~/
 
 # Optional tmux socket
@@ -43,29 +43,19 @@ root: ~/
 # post: tmux -CC attach -t servers
 
 windows:
-  - jupiter:
+  - edi:
       #layout: 8bd0,207x59,0,0{141x59,0,0,29,65x59,142,0[65x29,142,0,33,65x29,142,30,38]}
       layout: 71d2,319x81,0,0{197x81,0,0[197x40,0,0,6,197x40,0,41,17],121x81,198,0[121x40,198,0,15,121x40,198,41,18]}]
       panes:
         -
-          - ssh jupiter
+          - ssh edi
+          - htop
         -
-          - ssh jupiter
+          - ssh edi
+          - byobu
         -
-          - ssh jupiter
+          - ssh edi
         -
-          - ssh jupiter
-  - mars:
-      #layout: 8bd0,207x59,0,0{141x59,0,0,29,65x59,142,0[65x29,142,0,33,65x29,142,30,38]}
-      layout: 71d2,319x81,0,0{197x81,0,0[197x40,0,0,6,197x40,0,41,17],121x81,198,0[121x40,198,0,15,121x40,198,41,18]}]
-      panes:
-        -
-          - ssh mars
-        -
-          - ssh mars
-        -
-          - ssh mars
-        -
-          - ssh mars
-
+          - ssh edi
+          - byobu
 
