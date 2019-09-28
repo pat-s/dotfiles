@@ -448,8 +448,6 @@ colorscheme gruvbox
 
     " found' messages
 
-    set shortmess+=c
-
     " ale shortcut
     nmap <F8> <Plug>(ale_fix)
 

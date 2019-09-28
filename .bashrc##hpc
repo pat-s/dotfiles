@@ -6,35 +6,34 @@ export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput se
 HISTSIZE= HISTFILESIZE= # Infinite history.
 
 export PATH=/opt/pandoc/:~/.local/bin/:$PATH
-
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-
-# because of conflicting leftovers of a gdal source installation we need to define the LD Path manually
-export LD_PRELOAD=/opt/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/gdal-2.3.3-5664dlptnq3x6d55wcu6qzgnxohrijda/lib/libgdal.so.20
-
+# export R_INSTALL_STAGED=FALSE
 
 export SPACK_ROOT=/opt/spack
 . $SPACK_ROOT/share/spack/setup-env.sh
-export TERM="xterm"
 
-spack load gcc@7.3.0
-spack load neovim@0.3.4
-spack load geos@3.6.2
-spack load proj@5.0.1
-spack load udunits2@2.2.24 %gcc@7.3.0
-spack load /5664dlp #gdal
-spack load git
-spack load byobu
-# spack load /yln6jru #libpng@1.6.34
-spack load /zknfwan # zlib@1.2.11
-# spack load /bhqmibn # cairo
-# spack load /iigl23u # cairo r@3.5.1
-spack load ccache
+module use /opt/spack/share/spack/modules/linux-centos7-x86_64/
+spack load /o3uv2jk
+spack load /tsvynsq # neovim
+spack load /7klqklq # ccache
+spack load /x5e5mnz # byobu
+spack load /2rbxot4 # gdal 3.0.1
+# spack load /vbgkeil # gdal 2.4.2
+spack load /hn6gflr # geos 3.7.2
+#spack load /i25e6py # proj 6.1.0
+spack load /az6mkj5 # proj 5.2.0
+#spack load /3skzcql # proj 4.9.2
+spack load /yuybfrv # zlib
+spack load /gwikytn # openblas 0.3.7
+spack load /zqkxl74 # curl
 
-alias paper1="cd ~/papers/2018-model-comparison/ && spack load r@3.5.1 && radian"
-alias paper2="cd ~/papers/2019-feature-selection/ && export R_HOME=/opt/R/3.5.2/lib64/R && radian"
+alias r352="export R_HOME=/opt/R/3.5.2/lib64/R && radian"
+alias r353="export R_HOME=/opt/R/3.5.3/lib64/R && radian"
+alias r360="export R_HOME=/opt/R/3.6.0/lib64/R && radian"
+alias r361="export R_HOME=/opt/R/3.6.1/lib64/R && radian"
 
+alias paper1="cd ~/papers/2018-model-comparison/ && r351"
+alias paper2="cd ~/papers/2019-feature-selection/ && spack load udunits2 && r352"
+
+LMOD_COLORIZE="YES"
 alias r="radian"
 
-cd /
