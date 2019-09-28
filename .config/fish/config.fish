@@ -1,1 +1,0 @@
-/home/pjs/.config/fish/config.fish##Linux
