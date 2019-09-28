@@ -2,14 +2,17 @@
 # e.g. ~/.config/fish/functions/n.fish
 # or, add the lines to the 'config.fish' file.
 
-export NNN_TMPFILE="/tmp/nnn"
-
 function n --description 'support nnn quit and change directory'
-        nnn $argv
+    if test -n "$XDG_CONFIG_HOME"
+        set -x NNN_TMPFILE "$XDG_CONFIG_HOME/nnn/.lastd"
+    else
+        set -x NNN_TMPFILE "$HOME/.config/nnn/.lastd"
+    end
 
-        if test -e $NNN_TMPFILE
-                source $NNN_TMPFILE
-                rm $NNN_TMPFILE
-        end
+    nnn $argv
+
+    if test -e $NNN_TMPFILE
+        source $NNN_TMPFILE
+        rm $NNN_TMPFILE
+    end
 end
-

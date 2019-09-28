@@ -1,0 +1,14 @@
+{
+    "goToFileFunction": "Ctrl+P",
+    "insertPipeOperator": "Ctrl+O",
+    "restartR": "Ctrl+R",
+    "activateTerminal": "Ctrl+3",
+    "browseAddins": "",
+    "closeProject": "",
+    "closeTerminal": "",
+    "sendTerminalToEditor": "",
+    "newTerminal": "Ctrl+4",
+    "nextTerminal": "Ctrl+5",
+    "previousTerminal": "Ctrl+6",
+    "clearPlots": ""
+}
