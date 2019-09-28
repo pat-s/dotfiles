@@ -1,3 +1,1 @@
-if (interactive()) {
-  suppressMessages(require(usethis))
-}
+/home/patrick/.Rprofile.d/load-at-start.R##hpc
