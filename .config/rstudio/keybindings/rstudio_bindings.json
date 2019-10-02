@@ -10,5 +10,6 @@
     "newTerminal": "Ctrl+4",
     "nextTerminal": "Ctrl+5",
     "previousTerminal": "Ctrl+6",
-    "clearPlots": ""
+    "clearPlots": "",
+    "activateVcs": "Ctrl+7"
 }
