@@ -1,1 +1,1 @@
-startup::startup()
+try(startup::startup())
