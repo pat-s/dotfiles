@@ -1,1 +1,1 @@
-/Users/pjs/.config/fish/config.fish##Darwin
+/home/patrick/.config/fish/config.fish##hpc
