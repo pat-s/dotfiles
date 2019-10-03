@@ -7,6 +7,7 @@ abbr r "radian"
 # edit configs
 abbr fcf "nvim ~/.config/fish/config.fish"
 abbr vcf "nvim ~/.config/nvim/init.vim"
+abbr dlog2 "nvim ~/papers/2019-feature-selection/log/drake.log"
 
 #####
 # Git
