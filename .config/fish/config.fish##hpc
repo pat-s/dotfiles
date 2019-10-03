@@ -59,7 +59,3 @@ abbr fr "omf reload"
 # vi mode
 fish_vi_key_bindings
 
-# keychain ssh credential helper
-if status --is-interactive
-    keychain --eval --quiet -Q id_rsa | source
-end
