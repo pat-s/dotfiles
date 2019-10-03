@@ -5,34 +5,35 @@ export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput se
 
 HISTSIZE= HISTFILESIZE= # Infinite history.
 
-export PATH=/opt/pandoc/:~/.local/bin/:$PATH
-# export R_INSTALL_STAGED=FALSE
+export PATH=~/.local/bin:$PATH
 
 export SPACK_ROOT=/opt/spack
 . $SPACK_ROOT/share/spack/setup-env.sh
 
-module use /opt/spack/share/spack/modules/linux-centos7-x86_64/
-spack load /o3uv2jk
-spack load /tsvynsq # neovim
-spack load /7klqklq # ccache
-spack load /x5e5mnz # byobu
-spack load /2rbxot4 # gdal 3.0.1
-# spack load /vbgkeil # gdal 2.4.2
-spack load /hn6gflr # geos 3.7.2
-#spack load /i25e6py # proj 6.1.0
-spack load /az6mkj5 # proj 5.2.0
-#spack load /3skzcql # proj 4.9.2
-spack load /yuybfrv # zlib
-spack load /gwikytn # openblas 0.3.7
-spack load /zqkxl74 # curl
+module load gcc-9.2.0-gcc-4.8.5-o3uv2jk \
+  neovim-0.3.4-gcc-9.2.0-tsvynsq \
+  ccache-3.3.4-gcc-9.2.0-7klqklq \
+  byobu-5.127-gcc-9.2.0-x5e5mnz \
+  gdal-3.0.1-gcc-9.2.0-2rbxot4 \
+  geos-3.7.2-gcc-9.2.0-hn6gflr \
+  proj-5.2.0-gcc-9.2.0-az6mkj5 \
+  zlib-1.2.11-gcc-9.2.0-yuybfrv \
+  openblas-0.3.7-gcc-9.2.0-gwikytn \
+  curl-7.63.0-gcc-9.2.0-zqkxl74 \
+  git-2.21.0-gcc-9.2.0-hhkbkhg \
+  pandoc-2.7.3-gcc-9.2.0-tlzhs7d \
+  udunits2-2.2.24-gcc-9.2.0-lbs7534
 
-alias r352="export R_HOME=/opt/R/3.5.2/lib64/R && radian"
-alias r353="export R_HOME=/opt/R/3.5.3/lib64/R && radian"
-alias r360="export R_HOME=/opt/R/3.6.0/lib64/R && radian"
-alias r361="export R_HOME=/opt/R/3.6.1/lib64/R && radian"
+alias r344="export R_HOME=/opt/spack/opt/spack/linux-centos7-x86_64/gcc-9.2.0/r-3.4.4-rzhfe5glzycgamye6qlrvsnetronftpw/rlib/R && radian"
+alias r350="export R_HOME=/opt/spack/opt/spack/linux-centos7-x86_64/gcc-9.2.0/r-3.5.0-qpdg7ahjfznh5ivoj4eetzbr3bf4cad7/rlib/R && radian"
+alias r351="export R_HOME=/opt/spack/opt/spack/linux-centos7-x86_64/gcc-9.2.0/r-3.5.1-rjchaiabtobk76x2th2ukxsstyk2lnoo/rlib/R && radian"
+alias r352="export R_HOME=/opt/spack/opt/spack/linux-centos7-x86_64/gcc-9.2.0/r-3.5.2-ikmvwxzm4redzk5rhubfjjwzkoaskfbl/rlib/R && radian"
+alias r353="export R_HOME=/opt/spack/opt/spack/linux-centos7-x86_64/gcc-9.2.0/r-3.5.3-g6smxppqwljnukmag23jfixrd5vabxcd/rlib/R && radian"
+alias r360="export R_HOME=/opt/spack/opt/spack/linux-centos7-x86_64/gcc-9.2.0/r-3.6.0-fn2ixao7s2mrvweuhhkceptmew6pgqra/rlib/R && radian"
+alias r361="export R_HOME=/opt/spack/opt/spack/linux-centos7-x86_64/gcc-9.2.0/r-3.6.1-cfrumokg7m7jx4acgu7pwg5suhcngj35/rlib/R && radian"
 
 alias paper1="cd ~/papers/2018-model-comparison/ && r351"
-alias paper2="cd ~/papers/2019-feature-selection/ && spack load udunits2 && r352"
+alias paper2="cd ~/papers/2019-feature-selection && r352"
 
 LMOD_COLORIZE="YES"
 alias r="radian"
