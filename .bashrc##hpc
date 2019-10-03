@@ -22,7 +22,9 @@ module load gcc-9.2.0-gcc-4.8.5-o3uv2jk \
   curl-7.63.0-gcc-9.2.0-zqkxl74 \
   git-2.21.0-gcc-9.2.0-hhkbkhg \
   pandoc-2.7.3-gcc-9.2.0-tlzhs7d \
-  udunits2-2.2.24-gcc-9.2.0-lbs7534
+  udunits2-2.2.24-gcc-9.2.0-lbs7534 \
+  python-3.7.4-gcc-9.2.0-ln5ubn3 \
+  fish-3.0.0-gcc-9.2.0-gdyab6r
 
 alias r344="export R_HOME=/opt/spack/opt/spack/linux-centos7-x86_64/gcc-9.2.0/r-3.4.4-rzhfe5glzycgamye6qlrvsnetronftpw/rlib/R && radian"
 alias r350="export R_HOME=/opt/spack/opt/spack/linux-centos7-x86_64/gcc-9.2.0/r-3.5.0-qpdg7ahjfznh5ivoj4eetzbr3bf4cad7/rlib/R && radian"
