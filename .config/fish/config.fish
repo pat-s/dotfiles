@@ -1,1 +1,1 @@
-/home/patrick/.config/fish/config.fish##hpc
+/home/pjs/.config/fish/config.fish##Linux

@@ -4,7 +4,7 @@
 abbr mymount 'bash ~/mymount.sh'
 abbr servers 'bash ~/tilix_all.sh'
 abbr R 'R --no-save'
-abbr r "radian"
+abbr r "export R_HOME=/usr/lib64/R && radian"
 abbr git-sub-up "git submodule update --remote --merge"
 abbr imp "impressive -c memory -t WipeLeft -ff --noclicks --nowheel --fade"
 
@@ -44,8 +44,8 @@ abbr ys "yadm status"
 #####
 
 abbr --add mux "tmuxinator"
-abbr mss "tmuxinator start servers"
-abbr msc "tmuxinator stop servers"
+abbr mss "tmuxinator start edi && tmuxinator start edi"
+abbr msc "tmuxinator stop edi && tmuxinator stop edi"
 
 #####
 # default env vars
