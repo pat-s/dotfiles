@@ -8,8 +8,9 @@
     "closeTerminal": "",
     "sendTerminalToEditor": "",
     "newTerminal": "Ctrl+4",
-    "nextTerminal": "Ctrl+5",
-    "previousTerminal": "Ctrl+6",
+    "nextTerminal": "Ctrl+6",
+    "previousTerminal": "Ctrl+5",
     "clearPlots": "",
-    "activateVcs": "Ctrl+7"
+    "activateVcs": "Ctrl+7",
+    "layoutZoomConsolePane": "Ctrl+Ü"
 }

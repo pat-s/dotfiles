@@ -43,8 +43,8 @@
     "rmd_chunk_output_inline": false,
     "show_rmd_render_command": true,
     "real_time_spellchecking": true,
-    "show_hidden_files": true,
     "rmd_viewer_type": "pane",
     "custom_shell_command": "/usr/bin/fish",
-    "source_with_echo": true
+    "rmd_preferred_template_path": "/home/pjs/R/x86_64-pc-linux-gnu-library/3.6/pinp/rmarkdown/templates/pdf",
+    "default_latex_program": "XeLaTeX"
 }
