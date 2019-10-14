@@ -1,1 +1,1 @@
-/home/patrick/.bashrc##hpc
+/Users/pjs/.bashrc##Darwin

@@ -55,6 +55,7 @@ windows:
           - byobu
         -
           - ssh edi
+          - fish
         -
           - ssh edi
           - byobu
