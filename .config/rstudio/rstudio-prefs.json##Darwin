@@ -38,11 +38,13 @@
     "busy_detection": "never",
     "editor_theme": "Mojave Dark",
     "save_files_before_build": true,
-    "pdf_previewer": "none",
+    "pdf_previewer": "system",
     "show_invisibles": true,
     "rmd_chunk_output_inline": false,
     "show_rmd_render_command": true,
     "show_hidden_files": true,
     "rmd_viewer_type": "pane",
-    "custom_shell_command": "/usr/local/bin/fish"
+    "custom_shell_command": "/usr/local/bin/fish",
+    "source_with_echo": true,
+    "default_project_location": "~"
 }
