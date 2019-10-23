@@ -46,5 +46,7 @@
     "rmd_viewer_type": "pane",
     "custom_shell_command": "/usr/local/bin/fish",
     "source_with_echo": true,
-    "default_project_location": "~"
+    "default_project_location": "~",
+    "git_exe_path": "/usr/local/bin/git",
+    "svn_exe_path": "/usr/local/bin/svn"
 }

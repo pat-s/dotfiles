@@ -7,5 +7,6 @@
     "drake::rs_addin_r_vis_drake_graph": "Ctrl+Shift+V",
     "drake::rs_addin_r_make": "Ctrl+Alt+W",
     "styler::style_active_pkg": "",
-    "styler::style_selection": ""
+    "styler::style_selection": "",
+    "xaringan::inf_mr": "Ctrl+M"
 }
