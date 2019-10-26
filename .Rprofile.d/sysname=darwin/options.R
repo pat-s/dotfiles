@@ -10,7 +10,7 @@ options(
 )
 options(reprex.styler = TRUE) # use styler indention when doing a reprex
 
-if (grepl("mlr", getwd()) || grepl("paradox", getwd())) {
+if (grepl("mlr", getwd()) || grepl("paradox", getwd()) || grepl("ParamHelpers", getwd())) {
   options(styler.addins_style_transformer = "mlr_style()")
   library("usethis")
 }
