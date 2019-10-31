@@ -25,6 +25,8 @@ if (interactive() && "tibble" %in% rownames(utils::installed.packages())) {
 options(
     Ncpus = 10,
     usethis.protocol = "ssh",
+    install.packages.compile.from.source = "always",
+    pkgType = "source",
 
     # styler
     # styler.addins.style = "mlr_style",
