@@ -10,7 +10,7 @@ options(
 )
 options(reprex.styler = TRUE) # use styler indention when doing a reprex
 
-if (grepl("mlr", getwd()) || grepl("paradox", getwd()) || grepl("ParamHelpers", getwd())) {
+if (grepl("mlr", getwd()) || grepl("paradox", getwd())) {
   options(styler.addins_style_transformer = "mlr_style()")
   library("usethis")
 }
@@ -26,7 +26,7 @@ options(
     Ncpus = 10,
     usethis.protocol = "ssh",
     install.packages.compile.from.source = "always",
-    pkgType = "source",
+    install.packages.check.source = "no",
 
     # styler
     # styler.addins.style = "mlr_style",
