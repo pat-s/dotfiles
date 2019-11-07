@@ -1,1 +1,0 @@
-/home/pjs/.bashrc##Linux
