@@ -1,1 +1,1 @@
-/Users/pjs/.bashrc##Darwin
+/home/pjs/.bashrc##Linux
