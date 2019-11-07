@@ -1,16 +1,14 @@
-
-#CXXFLAGS=-O3 -mtune=native -march=native -Wno-unused-variable -Wno-unused-function
-
-#CXXFLAGS=-O3 -mtune=native -march=native -Wno-unused-variable -Wno-unused-function -DBOOST_PHOENIX_NO_VARIADIC_EXPRESSION
-
 CXX_STD = CXX14
 
-# Eddelbuettel blog
-VER=
-CCACHE=ccache
-CC=$(CCACHE) gcc$(VER)
-CXX=$(CCACHE) g++$(VER)
-C11=$(CCACHE) g++$(VER)
-C14=$(CCACHE) g++$(VER)
-FC=$(CCACHE) gfortran$(VER)
-F77=$(CCACHE) gfortran$(VER)
+CXX=ccache g++
+CXX11=ccache g++
+CXX14=ccache g++
+CC=ccache gcc
+C11=ccache gcc
+C14=ccache gcc
+FC=ccache gfortran
+F77=ccache gfortran
+
+## -O3 should be faster than -O2 (default) level optimisation ..
+CFLAGS=-g -O3 -Wall -pedantic -std=gnu99 -mtune=native -pipe
+CXXFLAGS=-g -O3 -Wall -pedantic -std=c++11 -mtune=native -pipe
