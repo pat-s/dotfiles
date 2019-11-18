@@ -2,4 +2,4 @@
 PATH="/usr/local/clang7/bin:${PATH}"
 # clang: end
 
-R_TRAVIS=".org"
+#R_TRAVIS=".org"
