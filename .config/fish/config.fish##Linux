@@ -25,6 +25,7 @@ abbr gc "git commit -m"
 abbr gunst "git reset HEAD"
 abbr gdiff "git diff"
 abbr gs "git status"
+abbr gpbranches "bash git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
 
 # pacman
 abbr t "trizen"
@@ -38,6 +39,15 @@ abbr ya "yadm add"
 abbr yc "yadm commit -m '"
 abbr yp "yadm push"
 abbr ys "yadm status"
+
+#####
+# R
+#####
+
+abbr r36 'export R_HOME="/opt/R/3.6.1/lib64/R" && radian'
+abbr r35 'export R_HOME="/opt/R/3.5.3/lib64/R" && export R_LIBS_USER="~/R/x86_64-pc-linux-gnu-library/3.5" && radian'
+
+abbr rup 'R -e "remotes::update_packages(ask = FALSE)"'
 
 #####
 # tmux
@@ -62,10 +72,11 @@ set -gx QT_AUTO_SCREEN_SCALE_FACTOR "1"
 set -gx GTK_THEME "Arc-Darker"
 set -gx BIB "~/Documents/Bibliography.bib"
 set -gx MYVIMRC "~/.config/nvim/init.vim"
-set -gx R_HOME "/Library/Frameworks/R.framework/Resources"
 set -gx LANG "en_US.UTF-8"
 set -gx LC_ALL "en_US.UTF-8"
 set -gx GPG_TTY "'(tty)'"
+set -gx LD_LIBRARY_PATH "/usr/lib64/R/lib:/lib:/usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server"
+#set -gx R_HOME "/usr/lib64/R"
 
 # adds `~/.scripts` and all subdirectories to $PATH
 set -e fish_user_paths
