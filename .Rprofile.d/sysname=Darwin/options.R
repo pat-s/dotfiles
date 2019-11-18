@@ -25,9 +25,8 @@ if (interactive() && "tibble" %in% rownames(utils::installed.packages())) {
 options(
     Ncpus = 10,
     usethis.protocol = "ssh",
-
-    # styler
-    # styler.addins.style = "mlr_style",
+    install.packages.check.source = "no",
+    pkgType = "source",
 
     # see https://help.farbox.com/pygments.html
     # for a list of supported color schemes, default scheme is "native"
