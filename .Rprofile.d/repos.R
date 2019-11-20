@@ -2,5 +2,6 @@
 
 options(repos = structure(c(CRAN = "https://ftp.fau.de/cran"#,
 #                            BioCsoft = "https://bioconductor.org/packages/3.7/bioc"
-)
-))
+)))
+options(repos = BiocManager::repositories())
+
