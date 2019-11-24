@@ -30,6 +30,13 @@ abbr gdiff "git diff"
 abbr gs "git status"
 
 ####
+# R
+####
+
+abbr rup 'R -e "remotes::update_packages(ask = FALSE)"'
+abbr mlr3up 'R -e "mlr3verse::mlr3verse_update()"'
+
+####
 # python
 ####
 
