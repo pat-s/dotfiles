@@ -23,7 +23,8 @@ abbr vpnd "/opt/cisco/anyconnect/bin/vpn disconnect vpn.uni-jena.de"
 #####
 
 abbr ga "git add"
-abbr gp "git push"
+abbr ph "git push"
+abbr pu "git pull"
 abbr gc "git commit -m"
 abbr gunst "git reset HEAD"
 abbr gdiff "git diff"
@@ -51,7 +52,8 @@ abbr py3 "python3"
 
 abbr ya "yadm add"
 abbr yc "yadm commit -m '"
-abbr yp "yadm push"
+abbr yph "yadm push"
+abbr ypu "yadm pull"
 abbr ys "yadm status"
 
 ####
