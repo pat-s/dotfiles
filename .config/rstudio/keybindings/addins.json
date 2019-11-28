@@ -8,5 +8,6 @@
     "drake::rs_addin_r_make": "Ctrl+Alt+W",
     "styler::style_active_pkg": "",
     "styler::style_selection": "",
-    "xaringan::inf_mr": "Ctrl+M"
+    "xaringan::inf_mr": "Ctrl+M",
+    "styler::set_style_transformers": ""
 }

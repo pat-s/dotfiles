@@ -12,8 +12,11 @@
     "previousTerminal": "Ctrl+5",
     "clearPlots": "",
     "activateVcs": "Ctrl+7",
-    "layoutZoomConsolePane": "Ctrl+Ü",
     "switchToTab": "Ctrl+T",
     "lastTab": "Ctrl+PageDown",
-    "nextTab": "Ctrl+PageUp"
+    "nextTab": "Ctrl+PageUp",
+    "layoutZoomVcs": "Ctrl+Shift+4",
+    "layoutZoomCurrentPane": "Ctrl+0",
+    "layoutZoomHistory": "",
+    "layoutZoomPlots": "Ctrl+Shift+5"
 }
