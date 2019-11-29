@@ -34,8 +34,13 @@ abbr gs "git status"
 # R
 ####
 
+abbr install-rdev 'bash ~/.scripts/unix/install-rdev.sh'
 abbr rup 'R -e "remotes::update_packages(ask = FALSE)"'
 abbr mlr3up 'R -e "mlr3verse::mlr3verse_update()"'
+abbr r34 'export R_HOME=/Library/Frameworks/R.framework/Versions/3.4/Resources && radian'
+abbr r35 'export R_HOME=/Library/Frameworks/R.framework/Versions/3.5/Resources && radian'
+abbr r36 'export R_HOME=/Library/Frameworks/R.framework/Versions/3.6/Resources && radian'
+abbr r40 'export R_HOME=/Library/Frameworks/R.framework/Versions/4.0/Resources && radian'
 
 ####
 # python

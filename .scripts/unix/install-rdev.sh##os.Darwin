@@ -1,0 +1,4 @@
+wget https://mac.r-project.org/el-capitan/R-devel/R-devel-el-capitan-sa-x86_64.tar.gz
+sudo tar fvxz R*.tar.gz -C /
+rm R-devel-el-capitan-sa-x86_64.tar.gz
+
