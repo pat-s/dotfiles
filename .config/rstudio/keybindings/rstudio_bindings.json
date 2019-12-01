@@ -18,5 +18,9 @@
     "layoutZoomVcs": "Ctrl+Shift+4",
     "layoutZoomCurrentPane": "Ctrl+0",
     "layoutZoomHistory": "",
-    "layoutZoomPlots": "Ctrl+Shift+5"
+    "layoutZoomPlots": "Ctrl+Shift+5",
+    "loadWorkspace": "",
+    "reloadPlumberAPI": "",
+    "toggleToolbar": "Ctrl+J",
+    "toggleTabKeyMovesFocus": "Ctrl+K"
 }
