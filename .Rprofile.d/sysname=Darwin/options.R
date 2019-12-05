@@ -26,5 +26,6 @@ options(
     Ncpus = 10,
     usethis.protocol = "ssh",
     install.packages.check.source = "no",
-    pkgType = "source"
+    pkgType = "source",
+    precommit.executable = "/usr/local/bin/pre-commit"
 )

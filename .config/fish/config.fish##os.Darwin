@@ -106,6 +106,7 @@ set -gx NNN_TRASH "1"
 set -gx NNN_CONTEXT_COLORS  "62354"
 set -gx NNN_SCRIPT "/home/pjs/.scripts/nnn"
 set -gx NNN_COPIER "/Users/pjs/.scripts/nnn/copy-sel-to-clipboard"
+set -gx NNN_SSHFS_OPTS "sshfs -o reconnect,idmap=user"
 
 #####
 # misc
@@ -124,3 +125,4 @@ if test -d ~/R/x86_64-pc-linux-gnu-library/3.6/rt/bin
     set -gx PATH $HOME/R/x86_64-pc-linux-gnu-library/3.6/rt/bin $PATH
 end
 
+ulimit -n 1024
