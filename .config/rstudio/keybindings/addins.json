@@ -1,5 +1,5 @@
 {
-    "styler::style_active_file": "Ctrl+Alt+S",
+    "styler::style_active_file": "Ctrl+Y",
     "compareWith::addin_project": "Ctrl+G",
     "drake::rs_addin_loadd": "@",
     "addmins::insert_dashes": "Ctrl+8",
