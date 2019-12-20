@@ -46,8 +46,10 @@ abbr r40 'export R_HOME=/Library/Frameworks/R.framework/Versions/4.0/Resources &
 # python
 ####
 
-abbr py35 "/usr/local/opt/python35/bin/python3.5"
-abbr py36 "/usr/local/opt/python35/bin/python3.6"
+abbr py35 "/usr/local/opt/python@3.5/bin/python3.5"
+abbr py36 "/usr/local/opt/python@3.6/bin/python3.6"
+abbr py37 "/usr/local/opt/python@3.7/bin/python3.7"
+abbr py38 "/usr/local/opt/python@3.8/bin/python3.8"
 abbr py "python"
 abbr py3 "python3"
 
