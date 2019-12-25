@@ -164,7 +164,6 @@
     "publish_ca_bundle": "",
     "terminal_local_echo": true,
     "terminal_websockets": true,
-    "terminal_auto_close": true,
     "terminal_track_environment": true,
     "busy_whitelist": [
         "tmux",
@@ -177,5 +176,7 @@
     "typing_status_delay_ms": 2000,
     "reduced_motion": false,
     "tab_key_move_focus": false,
-    "toolbar_visible": true
+    "toolbar_visible": true,
+    "jobs_tab_visibility": "shown",
+    "rmd_preferred_template_path": "/Users/pjs/Library/R/3.6/library/pinp/rmarkdown/templates/pdf"
 }
