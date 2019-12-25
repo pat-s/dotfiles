@@ -49,6 +49,7 @@ windows:
       panes:
         -
           - ssh edi
+          - fish
           - htop
         -
           - ssh edi
