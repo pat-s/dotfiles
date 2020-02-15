@@ -1,7 +1,7 @@
 # /home/pjs/.config/tmuxinator/mlr.yml
 
 name: mlr
-root: ~/git/mlr
+root: ~/git/mlr-org
 
 # Optional tmux socket
 # socket_name: foo
@@ -28,7 +28,7 @@ root: ~/git/mlr
 # tmux_options: -f ~/.tmux.mac.conf
 
 # Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
-# tmux_command: byobu
+tmux_command: byobu
 
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
 # startup_window: editor
@@ -43,10 +43,21 @@ attach: true
 # post: tmux -CC attach -t arch
 
 windows:
-  - nvim:
+  - mlr:
       layout: main
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
-        - nvim
+        -
+          - cd mlr
+          - nvim
+  - mlr3:
+      layout: main
+      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
+      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
+      # synchronize: after
+      panes:
+        -
+          - cd mlr3
+          - nvim
