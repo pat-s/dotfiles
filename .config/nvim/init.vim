@@ -95,6 +95,8 @@ endif " has autocmd
 
   map <Enter> o<ESC>
 
+" Buffer overview
+  map <leader>b :BufExplorer<CR>
 
 " Disables automatic commenting on newline:
 
@@ -141,6 +143,9 @@ vnoremap <leader>P "+P
     " Specify a directory for Plugs
     call plug#begin('~/.local/share/nvim/plugged')
 
+    " Buffer handling
+    Plug 'jlanzarotta/bufexplorer'
+
     Plug 'mboughaba/i3config.vim'
 
     Plug 'Shougo/neosnippet.vim'
@@ -186,6 +191,24 @@ vnoremap <leader>P "+P
             \ '<c-t>': 'tab split',
             \ '<c-x>': 'split',
             \ '<c-v>': 'vsplit' }
+    " Floating window (neovim)
+    function! s:layout()
+      let buf = nvim_create_buf(v:false, v:true)
+
+      let height = &lines - (float2nr(&lines / 3))
+      let width = float2nr(&columns - (&columns * 2 / 3))
+
+      let opts = {
+            \ 'relative': 'editor',
+            \ 'row': 2,
+            \ 'col': 8,
+            \ 'width': width,
+            \ 'height': height
+            \ }
+
+      call nvim_open_win(buf, v:true, opts)
+    endfunction
+    let g:nnn#layout = 'call ' . string(function('<SID>layout')) . '()'
 
     Plug 'w0rp/ale'
       "let g:ale_linters = {
