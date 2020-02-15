@@ -1,7 +1,7 @@
 {
     "styler::style_active_file": "Ctrl+Y",
     "compareWith::addin_project": "Ctrl+G",
-    "drake::rs_addin_loadd": "@",
+    "drake::rs_addin_loadd": "Ctrl+K",
     "addmins::insert_dashes": "Ctrl+8",
     "drake::rs_addin_r_outdated": "Ctrl+Shift+O",
     "drake::rs_addin_r_vis_drake_graph": "Ctrl+Shift+V",
@@ -9,5 +9,6 @@
     "styler::style_active_pkg": "",
     "styler::style_selection": "",
     "xaringan::inf_mr": "Ctrl+M",
-    "styler::set_style_transformers": ""
+    "styler::set_style_transformers": "",
+    "browse::browse": "Ctrl+B"
 }

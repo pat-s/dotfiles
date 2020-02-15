@@ -22,5 +22,10 @@
     "loadWorkspace": "",
     "reloadPlumberAPI": "",
     "toggleToolbar": "Ctrl+J",
-    "toggleTabKeyMovesFocus": "Ctrl+K"
+    "toggleTabKeyMovesFocus": "Ctrl+K",
+    "addCursorBelow": "Ctrl+Alt+Down",
+    "addCursorAbove": "Ctrl+Alt+Up",
+    "yankAfterCursor": "",
+    "yankBeforeCursor": "Ctrl+U",
+    "executeCodeWithoutMovingCursor": "Alt+Enter"
 }
