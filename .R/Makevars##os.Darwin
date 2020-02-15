@@ -1,14 +1,42 @@
+# from https://github.com/Rdatatable/data.table/wiki/Installation#openmp-enabled-compiler-for-mac
+
+#LLVM_LOC = /usr/local/opt/llvm
+#CC=$(LLVM_LOC)/bin/clang -fopenmp
+#CXX=$(LLVM_LOC)/bin/clang++ -fopenmp
+
+## -O3 should be faster than -O2 (default) level optimisation ..
+#CFLAGS=-g -O3 -Wall -pedantic -std=gnu99 -mtune=native -pipe
+#CXXFLAGS=-g -O3 -Wall -pedantic -std=c++11 -mtune=native -pipe
+#CXXFLAGS=-I/usr/local/opt/llvm/include
+#LDFLAGS=-L/usr/local/opt/gettext/lib -L$(LLVM_LOC)/lib -Wl,-rpath,$(LLVM_LOC)/lib
+#CPPFLAGS=-I/usr/local/opt/gettext/include -I$(LLVM_LOC)/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
+
+# from https://github.com/rmacoslib/r-macos-rtools
+
+#CXX_STD = CXX14
+#CC=ccache /usr/local/clang7/bin/clang
+#CC11=ccache /usr/local/clang7/bin/clang
+#CC14=ccache /usr/local/clang7/bin/clang
+#CXX=ccache /usr/local/clang7/bin/clang++
+#CXX11=ccache /usr/local/clang7/bin/clang++
+#CXX14=ccache /usr/local/clang7/bin/clang++
+
+## clang: start
+#CFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
+#CCFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
+#CXXFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
+## clang: end
+
+
+# gcc approach
 CXX_STD = CXX14
 
-CC=ccache /usr/local/clang7/bin/clang
-CC11=ccache /usr/local/clang7/bin/clang
-CC14=ccache /usr/local/clang7/bin/clang
-CXX=ccache /usr/local/clang7/bin/clang++
-CXX11=ccache /usr/local/clang7/bin/clang++
-CXX14=ccache /usr/local/clang7/bin/clang++
-
-# clang: start
-CFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
-CCFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
-CXXFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
-# clang: end
+CC=ccache /usr/local/bin/gcc-9
+CC11=ccache /usr/local/bin/gcc-9
+CC14=ccache /usr/local/bin/gcc-9
+CXX=ccache /usr/local/bin/g++-9
+CXX11=ccache /usr/local/bin/g++-9
+CXX14=ccache /usr/local/bin/g++-9
+# -O3 should be faster than -O2 (default) level optimisation ..
+CFLAGS=-g -O3 -Wall -pedantic -std=gnu99 -mtune=native -pipe
+CXXFLAGS=-g -O3 -Wall -pedantic -std=c++11 -mtune=native -pipe
