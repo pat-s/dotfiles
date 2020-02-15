@@ -5,4 +5,5 @@
 .ssh/keys/aur
 .ssh/keys/aur.pub
 .smbcredentials.txt
+.credentials
 
