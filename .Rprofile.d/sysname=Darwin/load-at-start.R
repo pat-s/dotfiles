@@ -5,5 +5,6 @@ if (interactive()) {
   suppressMessages(require(fledge))
   suppressMessages(require(remotes))
   suppressMessages(require(prettycode))
+  suppressMessages(require(browse))
 }
 
