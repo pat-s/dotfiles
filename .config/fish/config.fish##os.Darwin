@@ -64,6 +64,7 @@ abbr yc "yadm commit -m '"
 abbr yph "yadm push"
 abbr ypu "yadm pull"
 abbr ys "yadm status"
+abbr yd "yadm diff"
 
 ####
 # homebrew
@@ -123,6 +124,9 @@ set -gx NNN_SSHFS "sshfs -o reconnect,idmap=user"
 
 # py-organize-tool
 set -gx ORGANIZE_CONFIG ".config/organize/config.yaml"
+
+set -x GPG_TTY (tty)
+set -x SSH_AUTH_SOCK ~/.gnupg/S.gpg-agent.ssh
 
 # fish
 abbr fr "omf reload"
