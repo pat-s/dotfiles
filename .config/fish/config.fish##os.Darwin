@@ -1,24 +1,24 @@
 # abbreviations
 #####
 
-abbr mymount 'bash ~/mymount.sh'
-abbr servers 'bash ~/tilix_all.sh'
-abbr R 'R --no-save'
-abbr r "radian"
-abbr git-sub-up "git submodule update --remote --merge"
-abbr imp "impressive -c memory -t WipeLeft -ff --noclicks --nowheel --fade"
-abbr n "n -xe"
-abbr vi "nvim"
+alias mymount 'bash ~/mymount.sh'
+alias servers 'bash ~/tilix_all.sh'
+alias R 'R --no-save'
+alias r "radian"
+alias git-sub-up "git submodule update --remote --merge"
+alias imp "impressive -c memory -t WipeLeft -ff --noclicks --nowheel --fade"
+alias n "n -xe"
+alias vi "nvim"
 
 # edit configs
-abbr fcf "nvim ~/.config/fish/config.fish"
-abbr vcf "nvim ~/.config/nvim/init.vim"
-abbr scf "nvim ~/.config/sway/config"
-abbr ncf "nvim ~/.config/nvim/init.vim"
-abbr paper2 "nvim ~/git/phd/2019-feature-selection/code/98-paper/ieee/ieee-manuscript.tex"
+alias fcf "nvim ~/.config/fish/config.fish"
+alias vcf "nvim ~/.config/nvim/init.vim"
+alias scf "nvim ~/.config/sway/config"
+alias ncf "nvim ~/.config/nvim/init.vim"
+alias paper2 "nvim ~/git/phd/2019-feature-selection/code/98-paper/ieee/ieee-manuscript.tex"
 
-abbr vpnc "/opt/cisco/anyconnect/bin/vpn connect vpn.uni-jena.de -s < ~/.credentials"
-abbr vpnd "/opt/cisco/anyconnect/bin/vpn disconnect vpn.uni-jena.de"
+alias vpnc "/opt/cisco/anyconnect/bin/vpn connect vpn.uni-jena.de -s < ~/.credentials"
+alias vpnd "/opt/cisco/anyconnect/bin/vpn disconnect vpn.uni-jena.de"
 
 #####
 # Git
@@ -30,63 +30,64 @@ abbr pu "git pull"
 abbr gc "git commit -m"
 abbr gunst "git reset HEAD"
 abbr gdiff "git diff"
-abbr gs "git status"
+abbr gst "git status"
+abbr gs "git switch"
 
 ####
 # R
 ####
 
-abbr install-rdev 'bash ~/.scripts/unix/install-rdev.sh'
-abbr rup 'R -e "remotes::update_packages(ask = FALSE)"'
-abbr mlr3up 'R -e "mlr3verse::mlr3verse_update()"'
-abbr r34 'export R_HOME=/Library/Frameworks/R.framework/Versions/3.4/Resources && radian'
-abbr r35 'export R_HOME=/Library/Frameworks/R.framework/Versions/3.5/Resources && radian'
-abbr r36 'export R_HOME=/Library/Frameworks/R.framework/Versions/3.6/Resources && radian'
-abbr r40 'export R_HOME=/Library/Frameworks/R.framework/Versions/4.0/Resources && radian'
+alias install-rdev 'bash ~/.scripts/unix/install-rdev.sh'
+alias rup 'R -e "remotes::update_packages(ask = FALSE)"'
+alias mlr3up 'R -e "mlr3verse::mlr3verse_update()"'
+alias r34 'export R_DEV=false && export R_HOME=/Library/Frameworks/R.framework/Versions/3.4/Resources && radian'
+alias r35 'export R_DEV=false && export R_HOME=/Library/Frameworks/R.framework/Versions/3.5/Resources && radian'
+alias r36 'export R_DEV=false && export R_HOME=/Library/Frameworks/R.framework/Versions/3.6/Resources && radian'
+alias r40 'export R_DEV=true && export R_HOME=/Library/Frameworks/R.framework/Versions/4.0/Resources && radian'
 
 ####
 # python
 ####
 
-abbr py35 "/usr/local/opt/python@3.5/bin/python3.5"
-abbr py36 "/usr/local/opt/python@3.6/bin/python3.6"
-abbr py37 "/usr/local/opt/python@3.7/bin/python3.7"
-abbr py38 "/usr/local/opt/python@3.8/bin/python3.8"
-abbr py "python"
-abbr py3 "python3"
+alias py35 "/usr/local/opt/python@3.5/bin/python3.5"
+alias py36 "/usr/local/opt/python@3.6/bin/python3.6"
+alias py37 "/usr/local/opt/python@3.7/bin/python3.7"
+alias py38 "/usr/local/opt/python@3.8/bin/python3.8"
+alias py "python"
+alias py3 "python3"
 
 #####
 # yadm
 #####
 
-abbr ya "yadm add"
-abbr yc "yadm commit -m '"
-abbr yph "yadm push"
-abbr ypu "yadm pull"
-abbr ys "yadm status"
-abbr yd "yadm diff"
+alias ya "yadm add"
+alias yc "yadm commit -m "
+alias yph "yadm push"
+alias ypu "yadm pull"
+alias ys "yadm status"
+alias yd "yadm diff"
 
 ####
 # homebrew
 ####
 
-abbr bup "brew upgrade && brew cleanup"
+alias bup "brew upgrade && brew cleanup"
 
 ####
 # mlr
 ####
 
-abbr mlr "cd ~/git/mlr-org/mlr && nvim"
+alias mlr "cd ~/git/mlr-org/mlr && nvim"
 
 #####
 # tmux
 #####
 
 abbr --add mux "tmuxinator"
-abbr mss "/opt/cisco/anyconnect/bin/vpn connect vpn.uni-jena.de -s < ~/.credentials && tmuxinator start edi"
-abbr mssu "tmuxinator start edi"
-abbr msc "/opt/cisco/anyconnect/bin/vpn disconnect vpn.uni-jena.de && tmuxinator stop edi"
-abbr mscu "tmuxinator stop edi"
+alias mss "/opt/cisco/anyconnect/bin/vpn connect vpn.uni-jena.de -s < ~/.credentials && tmuxinator start edi"
+alias mssu "tmuxinator start edi"
+alias msc "/opt/cisco/anyconnect/bin/vpn disconnect vpn.uni-jena.de && tmuxinator stop edi"
+alias mscu "tmuxinator stop edi"
 
 #####
 # default env vars
@@ -129,7 +130,7 @@ set -x GPG_TTY (tty)
 set -x SSH_AUTH_SOCK ~/.gnupg/S.gpg-agent.ssh
 
 # fish
-abbr fr "omf reload"
+alias fr "omf reload"
 
 # vi mode
 fish_vi_key_bindings

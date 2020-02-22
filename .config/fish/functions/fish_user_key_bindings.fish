@@ -6,3 +6,5 @@ function fish_user_key_bindings
   bind \ctc peco_todoist_close
   bind \ctd peco_todoist_delete
 end
+
+bind -M insert \cf accept-autosuggestion
