@@ -2,5 +2,6 @@
     "modifyNumberUp": "Alt+Shift+Up",
     "modifyNumberDown": "Alt+Shift+Down",
     "gotopagedown": "PageDown|Ctrl+V",
-    "gotopageup": "PageUp"
+    "gotopageup": "PageUp",
+    "golinedown": "Down|"
 }

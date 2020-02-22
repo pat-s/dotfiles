@@ -13,8 +13,8 @@
     "clearPlots": "",
     "activateVcs": "Ctrl+7",
     "switchToTab": "Ctrl+T",
-    "lastTab": "Ctrl+PageDown",
-    "nextTab": "Ctrl+PageUp",
+    "lastTab": "Ctrl+9",
+    "nextTab": "Ctrl+M",
     "layoutZoomVcs": "Ctrl+Shift+4",
     "layoutZoomCurrentPane": "Ctrl+0",
     "layoutZoomHistory": "",
@@ -27,5 +27,10 @@
     "addCursorAbove": "Ctrl+Alt+Up",
     "yankAfterCursor": "",
     "yankBeforeCursor": "Ctrl+U",
-    "executeCodeWithoutMovingCursor": "Alt+Enter"
+    "executeCodeWithoutMovingCursor": "Alt+Enter",
+    "previousTab": "Ctrl+N",
+    "firstTab": "Ctrl+Shift+!",
+    "openProjectInNewWindow": "Shift+Cmd+O",
+    "closeAllTerminals": "Alt+Shift+S"
 }
+
