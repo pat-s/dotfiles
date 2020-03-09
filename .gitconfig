@@ -1,6 +1,7 @@
 [user]
 	email = patrick.schratz@gmail.com
 	name = pat-s
+	signingkey = BE2167750633FE1BEA664E548D4E0C3649536FDC
 [color]
 	ui = auto
 [fetch]
@@ -16,3 +17,5 @@
 	helper = cache
 [gpg]
 	program = /usr/local/bin/gpg
+[tag]
+	forceSignAnnotated = true
