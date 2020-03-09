@@ -14,12 +14,12 @@
 # from https://github.com/rmacoslib/r-macos-rtools
 
 ifeq "$(R_DEV)" "true"
-  CC    =ccache /usr/local/clang8/bin/clang
-  CC11  =ccache /usr/local/clang8/bin/clang
-  CC14  =ccache /usr/local/clang8/bin/clang
-  CXX   =ccache /usr/local/clang8/bin/clang++
-  CXX11 =ccache /usr/local/clang8/bin/clang++
-  CXX14 =ccache /usr/local/clang8/bin/clang++
+  CC    =ccache /usr/local/clang7/bin/clang
+  CC11  =ccache /usr/local/clang7/bin/clang
+  CC14  =ccache /usr/local/clang7/bin/clang
+  CXX   =ccache /usr/local/clang7/bin/clang++
+  CXX11 =ccache /usr/local/clang7/bin/clang++
+  CXX14 =ccache /usr/local/clang7/bin/clang++
   F77   =ccache /usr/local/gfortran/bin/gfortran
 else
   CC    =ccache /usr/local/clang7/bin/clang

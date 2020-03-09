@@ -3,5 +3,7 @@
     "modifyNumberDown": "Alt+Shift+Down",
     "gotopagedown": "PageDown|Ctrl+V",
     "gotopageup": "PageUp",
-    "golinedown": "Down|"
+    "golinedown": "Down|",
+    "touppercase": "",
+    "del": "Delete||Shift+Delete"
 }

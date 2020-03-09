@@ -26,5 +26,8 @@ options(
     usethis.protocol = "ssh",
     install.packages.check.source = "no",
     pkgType = "source",
-    precommit.executable = "/usr/local/bin/pre-commit"
+    precommit.executable = "/usr/local/bin/pre-commit",
+    startup.check.options.ignore = "stringsAsFactors"
 )
+
+if (as.numeric(version$major) >= 4) options(stringsAsFactors = FALSE)

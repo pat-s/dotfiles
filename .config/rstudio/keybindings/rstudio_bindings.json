@@ -26,11 +26,12 @@
     "addCursorBelow": "Ctrl+Alt+Down",
     "addCursorAbove": "Ctrl+Alt+Up",
     "yankAfterCursor": "",
-    "yankBeforeCursor": "Ctrl+U",
+    "yankBeforeCursor": "",
     "executeCodeWithoutMovingCursor": "Alt+Enter",
     "previousTab": "Ctrl+N",
-    "firstTab": "Ctrl+Shift+!",
+    "firstTab": "Ctrl+Shift+1",
     "openProjectInNewWindow": "Shift+Cmd+O",
-    "closeAllTerminals": "Alt+Shift+S"
+    "closeAllTerminals": "Alt+Shift+S",
+    "activatePackages": "",
+    "layoutZoomSource": ""
 }
-
