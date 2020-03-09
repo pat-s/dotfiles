@@ -7,7 +7,7 @@ alias R 'R --no-save'
 alias r "radian"
 alias git-sub-up "git submodule update --remote --merge"
 alias imp "impressive -c memory -t WipeLeft -ff --noclicks --nowheel --fade"
-alias n "n -xe"
+abbr n "n -x"
 alias vi "nvim"
 
 # edit configs
@@ -32,6 +32,8 @@ abbr gunst "git reset HEAD"
 abbr gdiff "git diff"
 abbr gst "git status"
 abbr gs "git switch"
+abbr gmm "git merge master"
+abbr gsm "git switch master"
 
 ####
 # R
@@ -40,10 +42,10 @@ abbr gs "git switch"
 alias install-rdev 'bash ~/.scripts/unix/install-rdev.sh'
 alias rup 'R -e "remotes::update_packages(ask = FALSE)"'
 alias mlr3up 'R -e "mlr3verse::mlr3verse_update()"'
-alias r34 'export R_DEV=false && export R_HOME=/Library/Frameworks/R.framework/Versions/3.4/Resources && radian'
-alias r35 'export R_DEV=false && export R_HOME=/Library/Frameworks/R.framework/Versions/3.5/Resources && radian'
-alias r36 'export R_DEV=false && export R_HOME=/Library/Frameworks/R.framework/Versions/3.6/Resources && radian'
-alias r40 'export R_DEV=true && export R_HOME=/Library/Frameworks/R.framework/Versions/4.0/Resources && radian'
+alias r34 'export R_DEV=false && radian'
+alias r35 'export R_DEV=false && radian'
+alias r36 'export R_DEV=false && radian'
+alias r40 'export R_DEV=true  && radian'
 
 ####
 # python
@@ -105,7 +107,7 @@ set -gx GPG_TTY "'(tty)'"
 
 # adds `~/.scripts` and all subdirectories to $PATH
 set -e fish_user_paths
-set -U fish_user_paths ~/usr/local/sbin /.scripts/tools /usr/local/lib/ruby/gems/*/bin /usr/local/opt/ruby/bin ~/.scripts/nnn ~/.scripts/sway/ ~/git/nnn/scripts/nlaunch ~/.scripts/i3cmds/  ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.gem/ruby/*/bin $fish_user_paths
+set -U fish_user_paths /usr/local/bin ~/usr/local/sbin /.scripts/tools /usr/local/lib/ruby/gems/*/bin /usr/local/opt/ruby/bin ~/.scripts/nnn ~/.scripts/sway/ ~/git/nnn/scripts/nlaunch ~/.scripts/i3cmds/  ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.gem/ruby/*/bin $fish_user_paths
 
 #####
 # nnn
@@ -118,6 +120,7 @@ set -gx NNN_TRASH "1"
 set -gx NNN_COLORS  "62354"
 set -gx NNN_SCRIPT "/home/pjs/.scripts/nnn"
 set -gx NNN_SSHFS "sshfs -o reconnect,idmap=user"
+set -gx NNN_PLUG 'o:-fzopen;c:fzcd;k:-pskill'
 
 #####
 # misc
@@ -143,3 +146,7 @@ if test -d ~/R/x86_64-pc-linux-gnu-library/3.6/rt/bin
 end
 
 ulimit -n 1024
+
+# wting/autojump
+[ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
+
