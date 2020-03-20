@@ -2,6 +2,7 @@
 	email = patrick.schratz@gmail.com
 	name = pat-s
 	signingkey = BE2167750633FE1BEA664E548D4E0C3649536FDC
+	github = pat-s
 [color]
 	ui = auto
 [fetch]
