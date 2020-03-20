@@ -30,4 +30,7 @@ options(
     startup.check.options.ignore = "stringsAsFactors"
 )
 
-if (as.numeric(version$major) >= 4) options(stringsAsFactors = FALSE)
+if (as.numeric(version$major) >= 4) {
+  options(stringsAsFactors = FALSE)
+  Sys.setenv("R_DEV" = TRUE)
+}
