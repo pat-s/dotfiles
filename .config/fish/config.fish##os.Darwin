@@ -16,6 +16,7 @@ alias vcf "nvim ~/.config/nvim/init.vim"
 alias scf "nvim ~/.config/sway/config"
 alias ncf "nvim ~/.config/nvim/init.vim"
 alias paper2 "nvim ~/git/phd/2019-feature-selection/code/98-paper/ieee/ieee-manuscript.tex"
+abbr rmrf "rm -rf"
 
 alias vpnc "/opt/cisco/anyconnect/bin/vpn connect vpn.uni-jena.de -s < ~/.credentials"
 alias vpnd "/opt/cisco/anyconnect/bin/vpn disconnect vpn.uni-jena.de"
@@ -34,6 +35,8 @@ abbr gst "git status"
 abbr gs "git switch"
 abbr gmm "git merge master"
 abbr gsm "git switch master"
+abbr grh "git reset --hard origin/master"
+abbr gr "git restore"
 
 ####
 # R
@@ -45,7 +48,7 @@ alias mlr3up 'R -e "mlr3verse::mlr3verse_update()"'
 alias r34 'export R_DEV=false && radian'
 alias r35 'export R_DEV=false && radian'
 alias r36 'export R_DEV=false && radian'
-alias r40 'export R_DEV=true  && radian'
+alias r40 'export R_DEV=TRUE  && radian'
 
 ####
 # python
@@ -96,6 +99,7 @@ alias mscu "tmuxinator stop edi"
 #####
 
 set -gx TERM "xterm-256color"
+set -gx USER "pjs"
 set -gx EDITOR "nvim"
 set -gx BROWSER "firefox"
 set -gx BIB "~/Documents/Bibliography.bib"
