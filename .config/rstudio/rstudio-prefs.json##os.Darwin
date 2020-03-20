@@ -37,7 +37,7 @@
     "editor_keybindings": "vim",
     "terminal_path": "/bin/st",
     "busy_detection": "never",
-    "editor_theme": "Crimson Editor",
+    "editor_theme": "base16 Tomorrow {rsthemes}",
     "save_files_before_build": true,
     "pdf_previewer": "system",
     "show_invisibles": true,
