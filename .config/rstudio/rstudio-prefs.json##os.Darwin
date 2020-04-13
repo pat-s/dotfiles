@@ -7,20 +7,22 @@
             "TabSet2"
         ],
         "tabSet1": [
-            "History",
-            "Connections",
             "Presentation"
         ],
         "tabSet2": [
             "Environment",
+            "History",
             "Files",
             "Plots",
             "Packages",
             "Help",
             "Build",
             "VCS",
-            "Tutorial",
             "Viewer"
+        ],
+        "hiddenTabSet": [
+            "Connections",
+            "Tutorial"
         ],
         "console_left_on_top": false,
         "console_right_on_top": true
@@ -37,7 +39,7 @@
     "editor_keybindings": "vim",
     "terminal_path": "/bin/st",
     "busy_detection": "never",
-    "editor_theme": "base16 Tomorrow {rsthemes}",
+    "editor_theme": "base16 Gruvbox dark, pale {rsthemes}",
     "save_files_before_build": true,
     "pdf_previewer": "system",
     "show_invisibles": true,
@@ -47,9 +49,15 @@
     "rmd_viewer_type": "pane",
     "custom_shell_command": "/usr/local/bin/fish",
     "source_with_echo": true,
-    "default_project_location": "~",
+    "default_project_location": "~/git/mlr-org",
     "default_latex_program": "XeLaTeX",
-    "jobs_tab_visibility": "shown",
+    "jobs_tab_visibility": "closed",
     "rmd_preferred_template_path": "/Users/pjs/Library/R/3.6/library/pinp/rmarkdown/templates/pdf",
-    "tab_multiline_completion": true
+    "tab_multiline_completion": true,
+    "show_indent_guides": true,
+    "style_diagnostics": true,
+    "terminal_track_environment": false,
+    "check_for_updates": false,
+    "code_completion_characters": 2,
+    "code_completion_delay": 50
 }

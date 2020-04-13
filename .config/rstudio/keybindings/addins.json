@@ -10,5 +10,7 @@
     "styler::style_selection": "",
     "xaringan::inf_mr": "",
     "styler::set_style_transformers": "",
-    "browse::browse": "Ctrl+B"
+    "browse::browse": "Ctrl+B",
+    "raddins::reload_project": "Cmd+R",
+    "raddins::open_github": "Shift+Cmd+G"
 }
