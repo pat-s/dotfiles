@@ -39,5 +39,6 @@
     "activateHelp": "",
     "activateHistory": "",
     "buildAll": "Ctrl+Shift+I",
-    "activateFiles": "Ctrl+E"
+    "activateFiles": "Ctrl+E",
+    "activateEnvironment": "Ctrl+G"
 }
