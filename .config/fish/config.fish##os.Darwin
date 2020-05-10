@@ -4,7 +4,7 @@
 alias mymount 'bash ~/mymount.sh'
 alias servers 'bash ~/tilix_all.sh'
 alias R 'R --no-save'
-alias r "radian"
+alias r "r40"
 alias git-sub-up "git submodule update --remote --merge"
 alias imp "impressive -c memory -t WipeLeft -ff --noclicks --nowheel --fade"
 abbr n "n -x"
@@ -37,18 +37,22 @@ abbr gmm "git merge master"
 abbr gsm "git switch master"
 abbr grh "git reset --hard origin/master"
 abbr gr "git restore"
+abbr gbd "git branch -D"
 
 ####
 # R
 ####
 
+alias rs 'rswitch'
 alias install-rdev 'bash ~/.scripts/unix/install-rdev.sh'
+alias install-rmac 'bash ~/.scripts/unix/install-r-mac4.sh'
 alias rup 'R -e "remotes::update_packages(ask = FALSE)"'
 alias mlr3up 'R -e "mlr3verse::mlr3verse_update()"'
-alias r34 'export R_DEV=false && radian'
-alias r35 'export R_DEV=false && radian'
-alias r36 'export R_DEV=false && radian'
-alias r40 'export R_DEV=TRUE  && radian'
+alias r34 'rswitch 3.4 && export R_36=TRUE && radian'
+alias r35 'rswitch 3.5 && export R_36=TRUE && radian'
+alias r36 'rswitch 3.6 && export R_36=TRUE && radian'
+alias r40 'rswitch 4.0 && export R_36=false && radian'
+alias rdev 'rswitch 4.1 && export R_36=false && radian'
 
 ####
 # python
@@ -77,6 +81,7 @@ alias yd "yadm diff"
 ####
 
 alias bup "brew upgrade && brew cleanup"
+alias rst "brew cask reinstall rstudio-daily"
 
 ####
 # mlr
@@ -111,7 +116,7 @@ set -gx GPG_TTY "'(tty)'"
 
 # adds `~/.scripts` and all subdirectories to $PATH
 set -e fish_user_paths
-set -U fish_user_paths /usr/local/bin ~/usr/local/sbin /.scripts/tools /usr/local/lib/ruby/gems/*/bin /usr/local/opt/ruby/bin ~/.scripts/nnn ~/.scripts/sway/ ~/git/nnn/scripts/nlaunch ~/.scripts/i3cmds/  ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.gem/ruby/*/bin $fish_user_paths
+set -U fish_user_paths /usr/local/opt/ccache/libexec /usr/local/bin ~/usr/local/sbin /.scripts/tools /usr/local/lib/ruby/gems/*/bin /usr/local/opt/ruby/bin ~/.scripts/nnn ~/.scripts/sway/ ~/git/nnn/scripts/nlaunch ~/.scripts/i3cmds/  ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.gem/ruby/*/bin $fish_user_paths
 
 #####
 # nnn
@@ -134,13 +139,16 @@ set -gx NNN_PLUG 'o:-fzopen;c:fzcd;k:-pskill'
 set -gx ORGANIZE_CONFIG ".config/organize/config.yaml"
 
 set -x GPG_TTY (tty)
-set -x SSH_AUTH_SOCK ~/.gnupg/S.gpg-agent.ssh
+#set -x SSH_AUTH_SOCK ~/.gnupg/S.gpg-agent.ssh
 
 # fish
 alias fr "omf reload"
 
 # vi mode
 fish_vi_key_bindings
+
+# disable radian coloring
+set -gx PROMPT_TOOLKIT_COLOR_DEPTH "DEPTH_4_BIT"
 
 # rt
 # fish
