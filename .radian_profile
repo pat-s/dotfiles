@@ -1,6 +1,6 @@
 # see https://help.farbox.com/pygments.html
 # for a list of supported color schemes, default scheme is "native"
-options(radian.color_scheme = "vs")
+options(radian.color_scheme = "monokai")
 
 # either  `"emacs"` (default) or `"vi"`.
 options(radian.editing_mode = "vi")
@@ -48,5 +48,6 @@ options(radian.enable_reticulate_prompt = TRUE)
 options(
   radian.escape_key_map = list(
     list(key = "-", value = " <- "),
-    list(key = "o", value = " %>% ")
+    list(key = "o", value = " %>% "),
+    list(key = "r", value = " startup::restart()\n ")
 ))
