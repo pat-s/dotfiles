@@ -1,29 +1,69 @@
 # clang: start
-CFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
-CCFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
-CXXFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
-CPPFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I/usr/local/include
+#CFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
+#CCFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
+#CXXFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
+#CPPFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
 
-SHLIB_CXXLDFLAGS+=-Wl,-rpath,${R_HOME}/lib ${R_HOME}/lib/libc++abi.1.dylib
-SHLIB_CXX14LDFLAGS+=-Wl,-rpath,${R_HOME}/lib ${R_HOME}/lib/libc++abi.1.dylib
+#CFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk -Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include -L/usr/local/opt/libomp/lib -lomp
+#CCFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk -Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include -L/usr/local/opt/libomp/lib -lomp
+#CXXFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk -Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include -L/usr/local/opt/libomp/lib -lomp
+#CPPFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk -Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include -L/usr/local/opt/libomp/lib -lomp
+
+CFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk
+CCFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk
+CXXFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk
+CPPFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk -I/usr/local/include -I/usr/local/lib
+
+#CFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+#CCFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+#CXXFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+#CPPFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+#SHLIB_CXXLDFLAGS+=-Wl,-rpath,${R_HOME}/lib ${R_HOME}/lib/libc++abi.1.dylib
+#SHLIB_CXX14LDFLAGS+=-Wl,-rpath,${R_HOME}/lib ${R_HOME}/lib/libc++abi.1.dylib
 # clang: end
 
-ifeq "$(R_DEV)" "TRUE"
-  CC    = ccache /usr/local/clang8/bin/clang
-  CC11  = ccache /usr/local/clang8/bin/clang
-  CC14  = ccache /usr/local/clang8/bin/clang
-  CXX   = ccache /usr/local/clang8/bin/clang++
-  CXX11 = ccache /usr/local/clang8/bin/clang++
-  CXX14 = ccache /usr/local/clang8/bin/clang++
-  F77   = ccache /usr/local/gfortran/bin/gfortran
+ifeq "$(R_36)" "TRUE"
+
+  CC      =  ccache /usr/local/clang7/bin/clang
+  CPP     =  ccache /usr/local/clang7/bin/clang
+  CXX     =  ccache /usr/local/clang7/bin/clang++
+  CXX11   =  ccache /usr/local/clang7/bin/clang++
+  CXX14   =  ccache /usr/local/clang7/bin/clang++
+  CXX17   =  ccache /usr/local/clang7/bin/clang++
+  F77     =  ccache /usr/local/gfortran/bin/gfortran
+  FC      =  ccache /usr/local/gfortran/bin/gfortran
+  MAKE    =  make -j8
+
 else
-  CC    = ccache /usr/local/clang7/bin/clang
-  CC11  = ccache /usr/local/clang7/bin/clang
-  CC14  = ccache /usr/local/clang7/bin/clang
-  CXX   = ccache /usr/local/clang7/bin/clang++
-  CXX11 = ccache /usr/local/clang7/bin/clang++
-  CXX14 = ccache /usr/local/clang7/bin/clang++
-  F77   = ccache /usr/local/gfortran/bin/gfortran
+
+  CXX_STD =  CXX11
+  CC      =  ccache clang
+  CPP     =  ccache clang
+  CXX     =  ccache clang++
+  CXX11   =  ccache clang++
+  CXX14   =  ccache clang++
+  CXX17   =  ccache clang++
+  F77     =  /usr/local/gfortran/bin/gfortran
+  FC      =  /usr/local/gfortran/bin/gfortran
+  MAKE    =  make -j8
+
+  #CC    = ccache /usr/local/opt/llvm/bin/clang
+  #CC11  = ccache /usr/local/opt/llvm/bin/clang
+  #CC14  = ccache /usr/local/opt/llvm/bin/clang
+  #CXX   = ccache /usr/local/opt/llvm/bin/clang++
+  #CXX11 = ccache /usr/local/opt/llvm/bin/clang++
+  #CXX14 = ccache /usr/local/opt/llvm/bin/clang++
+  #F77   =  ccache /usr/local/gfortran/bin/gfortran
+  #FC    =  ccache /usr/local/gfortran/bin/gfortran
+
+  #CC    =  /usr/local/bin/gcc-9
+  #CC11  =  /usr/local/bin/gcc-9
+  #CC14  =  /usr/local/bin/gcc-9
+  #CXX   =  /usr/local/bin/g++-9
+  #CXX11 =  /usr/local/bin/g++-9
+  #CXX14 =  /usr/local/bin/g++-9
+  #F77   =  /usr/local/gfortran/bin/gfortran
+  #FC    =  /usr/local/gfortran/bin/gfortran
 endif
 
 
