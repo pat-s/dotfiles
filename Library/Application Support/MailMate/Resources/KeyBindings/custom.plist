@@ -36,12 +36,12 @@
 	// Combo keys
 	"g" = {
 		"a" = ( "goToMailbox:", "ALL_MESSAGES" );
-		"s" = ( "goToMailbox:", "FLAGGED" );
+		"" = ( "goToMailbox:", "FLAGGED" );
 		// g then c	Go to 'Contacts'	Takes you to your Contacts list.
 		"d" = ( "goToMailbox:", "DRAFTS" );
 		"l" = "goToMailbox:";
 		"i" = ( "goToMailbox:", "INBOX" );
-		"t" = ( "goToMailbox:", "SENT" );
+		"s" = ( "goToMailbox:", "SENT" );
 	};
 
 	"*" = {
