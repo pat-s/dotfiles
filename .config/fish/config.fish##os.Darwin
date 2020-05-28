@@ -21,6 +21,8 @@ abbr rmrf "rm -rf"
 alias vpnc "/opt/cisco/anyconnect/bin/vpn connect vpn.uni-jena.de -s < ~/.credentials"
 alias vpnd "/opt/cisco/anyconnect/bin/vpn disconnect vpn.uni-jena.de"
 
+alias cynkra-time "Rscript ~/git/cynkra/time/patrick/preprocess.R"
+
 #####
 # Git
 #####
@@ -47,7 +49,6 @@ alias rs 'rswitch'
 alias install-rdev 'bash ~/.scripts/unix/install-rdev.sh'
 alias install-rmac 'bash ~/.scripts/unix/install-r-mac4.sh'
 alias rup 'R -e "remotes::update_packages(ask = FALSE)"'
-alias mlr3up 'R -e "mlr3verse::mlr3verse_update()"'
 alias r34 'rswitch 3.4 && export R_36=TRUE && radian'
 alias r35 'rswitch 3.5 && export R_36=TRUE && radian'
 alias r36 'rswitch 3.6 && export R_36=TRUE && radian'
@@ -64,6 +65,12 @@ alias py37 "/usr/local/opt/python@3.7/bin/python3.7"
 alias py38 "/usr/local/opt/python@3.8/bin/python3.8"
 alias py "python"
 alias py3 "python3"
+
+####
+# docker
+####
+
+alias dp "docker pull"
 
 #####
 # yadm
@@ -82,12 +89,9 @@ alias yd "yadm diff"
 
 alias bup "brew upgrade && brew cleanup"
 alias rst "brew cask reinstall rstudio-daily"
-
-####
-# mlr
-####
-
-alias mlr "cd ~/git/mlr-org/mlr && nvim"
+alias rst-ubuntu "wget https://www.rstudio.org/download/latest/daily/desktop/bionic/rstudio-latest-amd64.deb \
+  && sudo dpkg -i rstudio-latest-amd64.deb && rm rstudio-latest-amd64.deb"
+alias upd_all "brew upgrade && brew cu -y && brew cask reinstall rstudio-daily"
 
 #####
 # tmux
@@ -148,7 +152,7 @@ alias fr "omf reload"
 fish_vi_key_bindings
 
 # disable radian coloring
-set -gx PROMPT_TOOLKIT_COLOR_DEPTH "DEPTH_4_BIT"
+#set -gx PROMPT_TOOLKIT_COLOR_DEPTH "DEPTH_4_BIT"
 
 # rt
 # fish
