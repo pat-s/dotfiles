@@ -55,6 +55,9 @@ alias r36 'rswitch 3.6 && export R_36=TRUE && radian'
 alias r40 'rswitch 4.0 && export R_36=false && radian'
 alias rdev 'rswitch 4.1 && export R_36=false && radian'
 
+alias rfast 'export fastr=TRUE && /Library/Java/JavaVirtualMachines/graalvm-ce-java11-20.1.0/Contents/Home/bin/R'
+alias rafast 'set -gx R_HOME "/Library/Java/JavaVirtualMachines/graalvm-ce-java11-20.1.0/Contents/Home/languages/R" && radian'
+
 ####
 # python
 ####
@@ -93,6 +96,10 @@ alias rst-ubuntu "wget https://www.rstudio.org/download/latest/daily/desktop/bio
   && sudo dpkg -i rstudio-latest-amd64.deb && rm rstudio-latest-amd64.deb"
 alias upd_all "brew upgrade && brew cu -y && brew cask reinstall rstudio-daily"
 
+if test -f '(brew --prefix)'/bin/brew-file
+  source '(brew --prefix)'/bin/brew-file
+end
+
 #####
 # tmux
 #####
@@ -102,6 +109,7 @@ alias mss "/opt/cisco/anyconnect/bin/vpn connect vpn.uni-jena.de -s < ~/.credent
 alias mssu "tmuxinator start edi"
 alias msc "/opt/cisco/anyconnect/bin/vpn disconnect vpn.uni-jena.de && tmuxinator stop edi"
 alias mscu "tmuxinator stop edi"
+set -gx ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX "YES"
 
 #####
 # default env vars
@@ -117,10 +125,13 @@ set -gx R_HOME "/Library/Frameworks/R.framework/Resources"
 set -gx LANG "en_US.UTF-8"
 set -gx LC_ALL "en_US.UTF-8"
 set -gx GPG_TTY "'(tty)'"
+set -gx JAVA_HOME "/Library/Java/JavaVirtualMachines/graalvm-ce-java11-20.1.0/Contents/Home"
+set -gx GRAALVM_HOME "/Library/Java/JavaVirtualMachines/graalvm-ce-java11-20.1.0/Contents/Home/"
+set -gx GOMPLIB "/usr/local/Cellar/gcc@8/8.4.0_1/lib/gcc/8/libgomp.1.dylib"
 
 # adds `~/.scripts` and all subdirectories to $PATH
 set -e fish_user_paths
-set -U fish_user_paths /usr/local/opt/ccache/libexec /usr/local/bin ~/usr/local/sbin /.scripts/tools /usr/local/lib/ruby/gems/*/bin /usr/local/opt/ruby/bin ~/.scripts/nnn ~/.scripts/sway/ ~/git/nnn/scripts/nlaunch ~/.scripts/i3cmds/  ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.gem/ruby/*/bin $fish_user_paths
+set -U fish_user_paths /Library/Java/JavaVirtualMachines/graalvm-ce-java11-20.1.0/Contents/Home/bin /usr/local/opt/ccache/libexec /usr/local/bin ~/usr/local/sbin /.scripts/tools /usr/local/lib/ruby/gems/*/bin /usr/local/opt/ruby/bin ~/.scripts/nnn ~/.scripts/sway/ ~/git/nnn/scripts/nlaunch ~/.scripts/i3cmds/  ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.gem/ruby/*/bin $fish_user_paths
 
 #####
 # nnn
@@ -165,4 +176,10 @@ ulimit -n 1024
 
 # wting/autojump
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
+
+set -gx G_ENABLE_DIAGNOSTIC "1"
+set -gx GTK_THEME "Adwaita:dark"
+
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
