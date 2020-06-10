@@ -12,7 +12,13 @@
 CFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk
 CCFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk
 CXXFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk
-CPPFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk -I/usr/local/include -I/usr/local/lib
+# The two additions cause igraph install to fail
+#CPPFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk -I/usr/local/include -I/usr/local/lib
+#CPPFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk -I/usr/local/opt/jpeg/include
+## openmp support for R > 4.0
+CPPFLAGS += -I/usr/local/opt/libomp/include -Xclang -fopenmp
+LDFLAGS += -L/usr/local/opt/libomp/lib -lomp -L/usr/local/opt/jpeg/lib
+
 
 #CFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
 #CCFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
@@ -34,6 +40,8 @@ ifeq "$(R_36)" "TRUE"
   FC      =  ccache /usr/local/gfortran/bin/gfortran
   MAKE    =  make -j8
 
+else ifeq "$(fastr)" "TRUE"
+
 else
 
   CXX_STD =  CXX11
@@ -43,8 +51,8 @@ else
   CXX11   =  ccache clang++
   CXX14   =  ccache clang++
   CXX17   =  ccache clang++
-  F77     =  /usr/local/gfortran/bin/gfortran
-  FC      =  /usr/local/gfortran/bin/gfortran
+  F77     =  ccache /usr/local/gfortran/bin/gfortran
+  FC      =  ccache /usr/local/gfortran/bin/gfortran
   MAKE    =  make -j8
 
   #CC    = ccache /usr/local/opt/llvm/bin/clang
