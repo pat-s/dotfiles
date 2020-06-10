@@ -5,7 +5,7 @@
     "addmins::insert_dashes": "Ctrl+8",
     "drake::rs_addin_r_outdated": "Ctrl+Shift+O",
     "drake::rs_addin_r_vis_drake_graph": "Ctrl+Shift+V",
-    "drake::rs_addin_r_make": "Ctrl+Alt+W",
+    "drake::rs_addin_r_make": "",
     "styler::style_active_pkg": "",
     "styler::style_selection": "",
     "xaringan::inf_mr": "",
@@ -14,5 +14,10 @@
     "raddins::reload_project": "Cmd+R",
     "raddins::open_github": "Shift+Cmd+G",
     "raddins::view_object": "Ctrl+Shift+V",
-    "raddins::insert_dashes": "Ctrl+8"
+    "raddins::insert_dashes": "Ctrl+8",
+    "raddins::git_push": "Ctrl+Shift+P",
+    "raddins::git_add_current_file": "Ctrl+Shift+A",
+    "raddins::git_commit": "Ctrl+Shift+C",
+    "raddins::git_status": "Ctrl+Shift+S",
+    "raddins::git_commit_all": "Ctrl+Shift+X"
 }

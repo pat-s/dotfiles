@@ -5,13 +5,13 @@
     "activateTerminal": "Ctrl+3",
     "browseAddins": "",
     "closeProject": "",
-    "closeTerminal": "",
+    "closeTerminal": "Ctrl+7",
     "sendTerminalToEditor": "",
     "newTerminal": "Ctrl+T",
     "nextTerminal": "Ctrl+6",
     "previousTerminal": "Ctrl+5",
     "clearPlots": "",
-    "activateVcs": "Ctrl+7",
+    "activateVcs": "Ctrl+Shift+G",
     "switchToTab": "",
     "lastTab": "Ctrl+9",
     "nextTab": "Ctrl+M",
@@ -40,5 +40,7 @@
     "activateHistory": "",
     "buildAll": "Ctrl+Shift+I",
     "activateFiles": "Ctrl+E",
-    "activateEnvironment": "Ctrl+G"
+    "activateEnvironment": "Ctrl+Shift+E",
+    "switchFocusSourceConsole": "Ctrl+S",
+    "showCommandPalette": "Shift+Cmd+P"
 }
