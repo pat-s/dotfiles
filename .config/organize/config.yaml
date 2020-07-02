@@ -98,7 +98,7 @@ rules:
           contains: 'Kreditkartenabrechnung'
       - LastModified:
     actions:
-      - Move: ~/gdrive/Dokumente/Finanzen/DKB Bank/Kreditkartenabrechnungen/{lastmodified.year}/
+      - Move: ~/gdrive/Dokumente/Finanzen/Giro/Deutschland/DKB/Kreditkartenabrechnungen/{lastmodified.year}/
 
   - folders:
       - ~/Downloads
@@ -108,7 +108,7 @@ rules:
           contains: 'Kontoauszug'
       - LastModified:
     actions:
-      - Move: ~/gdrive/Dokumente/Finanzen/DKB Bank/Kontoauszüge/{lastmodified.year}/
+      - Move: ~/gdrive/Dokumente/Finanzen/Giro/Deutschland/DKB/Kontoauszüge/{lastmodified.year}/
 
 ##################################
 # Lohnabrechnungen
