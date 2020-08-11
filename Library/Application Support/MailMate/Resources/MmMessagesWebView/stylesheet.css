@@ -1,11 +1,19 @@
 /* html messages font */
 body {
-	font: 12pt "Helvetica";
+	font: 11pt "Helvetica";
     font-weight: 400;
 }
 
 /* text messages font */
 div[type="text"][subtype="plain"]
+{
+    font-family: "Helvetica";
+    font-size: 11pt;
+    font-weight: 300;
+}
+
+/* text messages font */
+div[type="text"][subtype="html"]
 {
     font-family: "Helvetica";
     font-size: 11pt;
