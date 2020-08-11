@@ -21,4 +21,6 @@
 [tag]
     #forceSignAnnotated = true
 [core]
-	autocrlf = true
+#	autocrlf = true
+[pull]
+	rebase = true
