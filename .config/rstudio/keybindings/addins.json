@@ -19,5 +19,6 @@
     "raddins::git_add_current_file": "Ctrl+Shift+A",
     "raddins::git_commit": "Ctrl+Shift+C",
     "raddins::git_status": "Ctrl+Shift+S",
-    "raddins::git_commit_all": "Ctrl+Shift+X"
+    "raddins::git_commit_all": "Ctrl+Shift+X",
+    "shrtcts::shortcut_01": "Cmd+5"
 }

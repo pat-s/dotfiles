@@ -25,7 +25,8 @@
             "Tutorial"
         ],
         "console_left_on_top": false,
-        "console_right_on_top": true
+        "console_right_on_top": true,
+        "additional_source_columns": 0
     },
     "posix_terminal_shell": "custom",
     "save_workspace": "never",
@@ -39,7 +40,7 @@
     "editor_keybindings": "vim",
     "terminal_path": "/bin/st",
     "busy_detection": "never",
-    "editor_theme": "base16 Gruvbox light, hard {rsthemes}",
+    "editor_theme": "base16 Gruvbox dark, pale {rsthemes}",
     "save_files_before_build": true,
     "pdf_previewer": "system",
     "rmd_chunk_output_inline": false,
@@ -49,8 +50,8 @@
     "custom_shell_command": "/usr/local/bin/fish",
     "default_project_location": "~/git/cynkra/admin",
     "default_latex_program": "XeLaTeX",
-    "jobs_tab_visibility": "closed",
-    "rmd_preferred_template_path": "/Users/pjs/Library/R/3.6/library/pinp/rmarkdown/templates/pdf",
+    "jobs_tab_visibility": "shown",
+    "rmd_preferred_template_path": "/Users/pjs/Library/R/4.0/library/rticles/rmarkdown/templates/joss_article",
     "tab_multiline_completion": true,
     "show_indent_guides": true,
     "style_diagnostics": true,
@@ -61,5 +62,8 @@
     "show_invisibles": true,
     "font_size_points": 9,
     "continue_comments_on_newline": true,
-    "margin_column": 100
+    "rainbow_parentheses": true,
+    "source_with_echo": true,
+    "scroll_past_end_of_document": true,
+    "help_font_size_points": 9
 }
