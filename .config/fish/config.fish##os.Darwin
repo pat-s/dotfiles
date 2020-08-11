@@ -48,7 +48,7 @@ abbr gbd "git branch -D"
 alias rs 'rswitch'
 alias install-rdev 'bash ~/.scripts/unix/install-rdev.sh'
 alias install-rmac 'bash ~/.scripts/unix/install-r-mac4.sh'
-alias rup 'R -e "remotes::update_packages(ask = FALSE)"'
+alias rup 'export UPDATE_R=true && R -e "remotes::update_packages(ask = FALSE)" && export UPDATE_R=""'
 alias r34 'rswitch 3.4 && export R_36=TRUE && radian'
 alias r35 'rswitch 3.5 && export R_36=TRUE && radian'
 alias r36 'rswitch 3.6 && export R_36=TRUE && radian'
