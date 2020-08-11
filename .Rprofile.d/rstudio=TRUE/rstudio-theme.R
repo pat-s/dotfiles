@@ -11,7 +11,7 @@ if (interactive() && requireNamespace("rsthemes", quietly = TRUE)) {
 
   # Whenever the R session restarts inside RStudio...
   setHook("rstudio.sessionInit", function(isNewSession) {
-    # Automatically choose the correct theme based on time of day
-    rsthemes::use_theme_auto(dark_start = "20:00", dark_end = "7:00")
+    rsthemes::use_theme_auto(lat = 47.37, lon = 8.54)
   }, action = "append")
 }
+

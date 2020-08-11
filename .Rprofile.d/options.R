@@ -21,6 +21,9 @@ if (interactive() && "tibble" %in% rownames(utils::installed.packages())) {
   }
 }
 
+# suppress rmarkdown vignettes warnings
+options(rmarkdown.html_vignette.check_title = FALSE)
+
 options(
     Ncpus = 10,
     usethis.protocol = "ssh",

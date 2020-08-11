@@ -9,15 +9,21 @@
 #CXXFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk -Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include -L/usr/local/opt/libomp/lib -lomp
 #CPPFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk -Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include -L/usr/local/opt/libomp/lib -lomp
 
+#wget -nv https://github.com/phracker/MacOSX-SDKs/releases/download/10.15/MacOSX10.13.sdk.tar.xz
+#tar fxz MacOSX10.13.sdk.tar.xz
+#sudo mv MacOSX10.13.sdk /Library/Developer/CommandLineTools/SDKs/
+#rm -rf MacOSX10.13*
+
 CFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk
-CCFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk
-CXXFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk
+#CCFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk
+#CXXFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk
 # The two additions cause igraph install to fail
 #CPPFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk -I/usr/local/include -I/usr/local/lib
 #CPPFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk -I/usr/local/opt/jpeg/include
 ## openmp support for R > 4.0
-CPPFLAGS += -I/usr/local/opt/libomp/include -Xclang -fopenmp
-LDFLAGS += -L/usr/local/opt/libomp/lib -lomp -L/usr/local/opt/jpeg/lib
+#CPPFLAGS += -I/usr/local/opt/libomp/include -Xclang -fopenmp
+#LDFLAGS += -L/usr/local/opt/libomp/lib -lomp -L/usr/local/opt/jpeg/lib
+LDFLAGS += -L/usr/local/opt/jpeg/lib
 
 
 #CFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
@@ -44,13 +50,13 @@ else ifeq "$(fastr)" "TRUE"
 
 else
 
-  CXX_STD =  CXX11
+  #CXX_STD =  CXX11
   CC      =  ccache clang
   CPP     =  ccache clang
-  CXX     =  ccache clang++
-  CXX11   =  ccache clang++
-  CXX14   =  ccache clang++
-  CXX17   =  ccache clang++
+  CXX     =  ccache clang++ -std=gnu++11
+  CXX11   =  ccache clang++ -std=gnu++11
+  CXX14   =  ccache clang++ -std=gnu++11
+  CXX17   =  ccache clang++ -std=gnu++11
   F77     =  ccache /usr/local/gfortran/bin/gfortran
   FC      =  ccache /usr/local/gfortran/bin/gfortran
   MAKE    =  make -j8
