@@ -8,7 +8,7 @@ options(
     Version = "0.0.0.9000"
   )
 )
-options(reprex.styler = TRUE) # use styler indention when doing a reprex
+options(reprex.style = TRUE) # use styler indention when doing a reprex
 
 if (grepl("mlr", getwd()) || grepl("paradox", getwd())) {
   options(styler.addins_style_transformer = "mlr_style()")
@@ -25,7 +25,7 @@ if (interactive() && "tibble" %in% rownames(utils::installed.packages())) {
 options(rmarkdown.html_vignette.check_title = FALSE)
 
 options(
-    Ncpus = 10,
+    Ncpus = 10L,
     usethis.protocol = "ssh",
     install.packages.check.source = "no",
     pkgType = "source",
