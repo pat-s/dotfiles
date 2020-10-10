@@ -1,4 +1,5 @@
 # abbreviations
+
 #####
 
 alias mymount 'bash ~/mymount.sh'
@@ -40,6 +41,7 @@ abbr gsm "git switch master"
 abbr grh "git reset --hard origin/master"
 abbr gr "git restore"
 abbr gbd "git branch -D"
+abbr gl "git log"
 
 ####
 # R
@@ -91,7 +93,7 @@ alias yd "yadm diff"
 ####
 
 alias bup "brew upgrade && brew cleanup"
-alias rst "brew cask reinstall rstudio-daily"
+alias rst "brew reinstall rstudio-daily"
 alias rst-ubuntu "wget https://www.rstudio.org/download/latest/daily/desktop/bionic/rstudio-latest-amd64.deb \
   && sudo dpkg -i rstudio-latest-amd64.deb && rm rstudio-latest-amd64.deb"
 alias upd_all "brew upgrade && brew cu -y && brew cask reinstall rstudio-daily"
@@ -142,6 +144,7 @@ set -gx NNN_OPS_PROG "1"
 set -gx NNN_RESTRICT_NAV_OPEN "1"
 set -gx NNN_TRASH "1"
 set -gx NNN_COLORS  "62354"
+set -gx NNN_FCOLORS 'c1e2272e006033f7c6d6abc4'
 set -gx NNN_SCRIPT "/home/pjs/.scripts/nnn"
 set -gx NNN_SSHFS "sshfs -o reconnect,idmap=user"
 set -gx NNN_PLUG 'o:-fzopen;c:fzcd;k:-pskill'
@@ -182,4 +185,12 @@ set -gx GTK_THEME "Adwaita:dark"
 
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/pjs/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/pjs/Downloads/google-cloud-sdk/path.fish.inc'; end
+set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+
+# GNU tools first in $PATH (overrides the native macOS ones!)
+set -g fish_user_paths "/usr/local/opt/grep/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin" $fish_user_paths
 
