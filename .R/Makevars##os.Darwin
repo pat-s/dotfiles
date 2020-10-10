@@ -14,7 +14,7 @@
 #sudo mv MacOSX10.13.sdk /Library/Developer/CommandLineTools/SDKs/
 #rm -rf MacOSX10.13*
 
-CFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk
+#CFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk
 #CCFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk
 #CXXFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk
 # The two additions cause igraph install to fail
@@ -22,14 +22,16 @@ CFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk
 #CPPFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk -I/usr/local/opt/jpeg/include
 ## openmp support for R > 4.0
 #CPPFLAGS += -I/usr/local/opt/libomp/include -Xclang -fopenmp
-#LDFLAGS += -L/usr/local/opt/libomp/lib -lomp -L/usr/local/opt/jpeg/lib
-LDFLAGS += -L/usr/local/opt/jpeg/lib
+#LDFLAGS += -L/usr/local/opt/libomp/lib -lomp
+LDFLAGS += -lomp
+#LDFLAGS += -L/usr/local/opt/jpeg/lib
 
 
-#CFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
-#CCFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
-#CXXFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
-#CPPFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+CFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -I/usr/local/include
+CCFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -I/usr/local/include
+CXXFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk  -I/usr/local/include
+CPPFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -I/usr/local/opt/libomp/include -Xclang -fopenmp
+#LDFLAGS+=-L/usr/local/opt/llvm/lib
 #SHLIB_CXXLDFLAGS+=-Wl,-rpath,${R_HOME}/lib ${R_HOME}/lib/libc++abi.1.dylib
 #SHLIB_CXX14LDFLAGS+=-Wl,-rpath,${R_HOME}/lib ${R_HOME}/lib/libc++abi.1.dylib
 # clang: end

@@ -20,5 +20,6 @@
     "raddins::git_commit": "Ctrl+Shift+C",
     "raddins::git_status": "Ctrl+Shift+S",
     "raddins::git_commit_all": "Ctrl+Shift+X",
-    "shrtcts::shortcut_01": "Cmd+5"
+    "shrtcts::shortcut_01": "Cmd+5",
+    "raddins::git_pull": "Alt+Shift+P"
 }

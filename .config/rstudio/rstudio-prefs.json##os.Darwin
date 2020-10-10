@@ -40,7 +40,7 @@
     "editor_keybindings": "vim",
     "terminal_path": "/bin/st",
     "busy_detection": "never",
-    "editor_theme": "base16 Gruvbox dark, pale {rsthemes}",
+    "editor_theme": "Horizon Dark {rsthemes}",
     "save_files_before_build": true,
     "pdf_previewer": "system",
     "rmd_chunk_output_inline": false,
@@ -48,7 +48,7 @@
     "show_hidden_files": true,
     "rmd_viewer_type": "pane",
     "custom_shell_command": "/usr/local/bin/fish",
-    "default_project_location": "~/git/cynkra/admin",
+    "default_project_location": "~/git/github",
     "default_latex_program": "XeLaTeX",
     "jobs_tab_visibility": "shown",
     "rmd_preferred_template_path": "/Users/pjs/Library/R/4.0/library/rticles/rmarkdown/templates/joss_article",
@@ -63,7 +63,14 @@
     "font_size_points": 9,
     "continue_comments_on_newline": true,
     "rainbow_parentheses": true,
-    "source_with_echo": true,
     "scroll_past_end_of_document": true,
-    "help_font_size_points": 9
+    "help_font_size_points": 9,
+    "toolbar_visible": false,
+    "new_proj_git_init": true,
+    "disabled_aria_live_announcements": [
+        "console_cleared",
+        "console_log",
+        "console_command",
+        "warning_bar"
+    ]
 }
