@@ -128,8 +128,6 @@ cask "appcleaner"
 cask "bartender"
 cask "bettertouchtool"
 cask "ccleaner"
-cask "clean-me"
-cask "cleanmymac"
 cask "cyberduck"
 cask "docker"
 cask "dropbox"
@@ -151,21 +149,15 @@ cask "karabiner-elements"
 cask "keycastr"
 cask "krisp"
 cask "libreoffice"
-cask "logitech-options"
-cask "loom"
 cask "mailmate"
 cask "mattermost"
-cask "meld"
 cask "microsoft-teams"
-cask "mountain-duck"
-cask "nextcloud"
 cask "notion"
 cask "openconnect-gui"
 cask "paragon-ntfs"
 cask "parallels"
 cask "pdf-expert"
 cask "portfolioperformance"
-cask "presentation"
 cask "qgis"
 cask "refined-github-safari"
 cask "rstudio-daily"
@@ -181,16 +173,9 @@ cask "zappy"
 cask "zoomus"
 cask "zotero"
 mas "Cardhop", id: 1290358394
-mas "CopyClip", id: 1020812363
 mas "Dashlane", id: 552383089
 mas "DuckDuckGo Privacy Essentials", id: 1482920575
-mas "GarageBand", id: 682658836
 mas "Grammarly for Safari", id: 1462114288
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
-mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Pocket", id: 568494494
 mas "Todoist", id: 585829637
 mas "WhatFont", id: 1437138382
-mas "Xcode", id: 497799835
