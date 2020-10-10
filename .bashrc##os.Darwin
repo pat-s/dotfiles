@@ -11,3 +11,7 @@ export PATH=~/.local/bin:$PATH
 
 # added by travis gem
 [ -f /Users/pjs/.travis/travis.sh ] && source /Users/pjs/.travis/travis.sh
+
+
+export PATH="/usr/local/opt/grep/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin:$PATH"
+
