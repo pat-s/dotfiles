@@ -2,7 +2,7 @@
 
 #####
 
-alias mymount 'bash ~/mymount.sh'
+alias mount 'bash ~/mount.sh'
 alias servers 'bash ~/tilix_all.sh'
 alias R 'R --no-save'
 alias r "r40"
@@ -31,7 +31,8 @@ alias cynkra-time "Rscript ~/git/cynkra/time/patrick/preprocess.R"
 abbr ga "git add"
 abbr ph "git push"
 abbr pu "git pull"
-abbr gc "git commit -m"
+#abbr gc 'git commit -m '
+abbr gc 'git commit -m'
 abbr gunst "git reset HEAD"
 abbr gdiff "git diff"
 abbr gst "git status"
@@ -71,12 +72,6 @@ alias py38 "/usr/local/opt/python@3.8/bin/python3.8"
 alias py "python"
 alias py3 "python3"
 
-####
-# docker
-####
-
-alias dp "docker pull"
-
 #####
 # yadm
 #####
@@ -107,6 +102,7 @@ end
 #####
 
 abbr --add mux "tmuxinator"
+alias vpnjena "/opt/cisco/anyconnect/bin/vpn connect vpn.uni-jena.de -s < ~/.credentials"
 alias mss "/opt/cisco/anyconnect/bin/vpn connect vpn.uni-jena.de -s < ~/.credentials && tmuxinator start edi"
 alias mssu "tmuxinator start edi"
 alias msc "/opt/cisco/anyconnect/bin/vpn disconnect vpn.uni-jena.de && tmuxinator stop edi"
@@ -127,13 +123,14 @@ set -gx R_HOME "/Library/Frameworks/R.framework/Resources"
 set -gx LANG "en_US.UTF-8"
 set -gx LC_ALL "en_US.UTF-8"
 set -gx GPG_TTY "'(tty)'"
-set -gx JAVA_HOME "/Library/Java/JavaVirtualMachines/graalvm-ce-java11-20.1.0/Contents/Home"
-set -gx GRAALVM_HOME "/Library/Java/JavaVirtualMachines/graalvm-ce-java11-20.1.0/Contents/Home/"
+#set -gx JAVA_HOME "/Library/Java/JavaVirtualMachines/graalvm-ce-java11-20.1.0/Contents/Home"
+set -e JAVA_HOME
+#set -gx GRAALVM_HOME "/Library/Java/JavaVirtualMachines/graalvm-ce-java11-20.1.0/Contents/Home/"
 set -gx GOMPLIB "/usr/local/Cellar/gcc@8/8.4.0_1/lib/gcc/8/libgomp.1.dylib"
 
 # adds `~/.scripts` and all subdirectories to $PATH
 set -e fish_user_paths
-set -U fish_user_paths /Library/Java/JavaVirtualMachines/graalvm-ce-java11-20.1.0/Contents/Home/bin /usr/local/opt/ccache/libexec /usr/local/bin ~/usr/local/sbin /.scripts/tools /usr/local/lib/ruby/gems/*/bin /usr/local/opt/ruby/bin ~/.scripts/nnn ~/.scripts/sway/ ~/git/nnn/scripts/nlaunch ~/.scripts/i3cmds/  ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.gem/ruby/*/bin $fish_user_paths
+set -U fish_user_paths /usr/local/opt/ccache/libexec /usr/local/bin ~/usr/local/sbin /.scripts/tools /usr/local/lib/ruby/gems/*/bin /usr/local/opt/ruby/bin ~/.scripts/nnn ~/.scripts/sway/ ~/git/nnn/scripts/nlaunch ~/.scripts/i3cmds/  ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.gem/ruby/*/bin $fish_user_paths
 
 #####
 # nnn
@@ -147,7 +144,20 @@ set -gx NNN_COLORS  "62354"
 set -gx NNN_FCOLORS 'c1e2272e006033f7c6d6abc4'
 set -gx NNN_SCRIPT "/home/pjs/.scripts/nnn"
 set -gx NNN_SSHFS "sshfs -o reconnect,idmap=user"
-set -gx NNN_PLUG 'o:-fzopen;c:fzcd;k:-pskill'
+set -gx NNN_PLUG 'i:imgview;d:dragdrop;j:autojump;o:-fzopen;c:fzcd;k:-pskill;p:preview-tui'
+set --export NNN_FIFO "/tmp/nnn.fifo"
+alias ls "nnn -e"
+
+####
+# docker
+####
+
+abbr dl "docker logs"
+abbr dls "docker ps -a"
+abbr dsa "docker container stop (docker container list -q)"
+abbr dsp "docker system prune"
+abbr dcp "docker container prune"
+abbr dsh "docker exec -it"
 
 #####
 # misc
@@ -166,7 +176,7 @@ alias fr "omf reload"
 fish_vi_key_bindings
 
 # disable radian coloring
-#set -gx PROMPT_TOOLKIT_COLOR_DEPTH "DEPTH_4_BIT"
+set -gx PROMPT_TOOLKIT_COLOR_DEPTH "DEPTH_4_BIT"
 
 # rt
 # fish
@@ -192,5 +202,8 @@ if [ -f '/Users/pjs/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/pjs/D
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 
 # GNU tools first in $PATH (overrides the native macOS ones!)
-set -g fish_user_paths "/usr/local/opt/grep/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin" $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/make/libexec/gnubin:/usr/local/opt/grep/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin" $fish_user_paths
 
+# Drone
+export DRONE_SERVER=https://drone.cynkra.dev
+export DRONE_TOKEN=GMWyKyN9FN18VBy9g3sRonRvLBFZRopZ

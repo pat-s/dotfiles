@@ -1,7 +1,7 @@
 # abbreviations
 #####
 
-abbr mymount 'bash ~/mymount.sh'
+abbr mount 'bash ~/mount.sh'
 abbr servers 'bash ~/tilix_all.sh'
 abbr R 'R --no-save'
 abbr r "export R_HOME=/usr/lib64/R && radian"
