@@ -1,12 +1,12 @@
-#if (interactive()) {
-#  suppressMessages(require(usethis))
-#  suppressMessages(require(teamtools))
-#  suppressMessages(require(reprex))
-#  suppressMessages(require(fledge))
-#  suppressMessages(require(remotes))
-#  suppressMessages(require(prettycode))
-#  suppressMessages(require(browse))
-#}
+if (interactive()) {
+  suppressMessages(require(usethis))
+  suppressMessages(require(teamtools))
+  suppressMessages(require(reprex))
+  suppressMessages(require(fledge))
+  suppressMessages(require(remotes))
+  suppressMessages(require(prettycode))
+  suppressMessages(require(browse))
+}
 #if (requireNamespace("prompt", quietly = TRUE)) {
 #  prompt::set_prompt(prompt::prompt_git)
 #}

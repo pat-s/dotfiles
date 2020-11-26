@@ -23,14 +23,15 @@
 ## openmp support for R > 4.0
 #CPPFLAGS += -I/usr/local/opt/libomp/include -Xclang -fopenmp
 #LDFLAGS += -L/usr/local/opt/libomp/lib -lomp
-LDFLAGS += -lomp
+#LDFLAGS += -lomp
 #LDFLAGS += -L/usr/local/opt/jpeg/lib
 
 
-CFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -I/usr/local/include
-CCFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -I/usr/local/include
-CXXFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk  -I/usr/local/include
-CPPFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -I/usr/local/opt/libomp/include -Xclang -fopenmp
+#CFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -I/usr/local/include
+#CCFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -I/usr/local/include
+#CXXFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk  -I/usr/local/include
+#CPPFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
+#CPPFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -I/usr/local/opt/libomp/include -Xclang -fopenmp
 #LDFLAGS+=-L/usr/local/opt/llvm/lib
 #SHLIB_CXXLDFLAGS+=-Wl,-rpath,${R_HOME}/lib ${R_HOME}/lib/libc++abi.1.dylib
 #SHLIB_CXX14LDFLAGS+=-Wl,-rpath,${R_HOME}/lib ${R_HOME}/lib/libc++abi.1.dylib
@@ -54,7 +55,7 @@ else
 
   #CXX_STD =  CXX11
   CC      =  ccache clang
-  CPP     =  ccache clang
+  #CPP     =  ccache clang
   CXX     =  ccache clang++ -std=gnu++11
   CXX11   =  ccache clang++ -std=gnu++11
   CXX14   =  ccache clang++ -std=gnu++11

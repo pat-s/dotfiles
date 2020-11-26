@@ -10,7 +10,6 @@ if (interactive() && requireNamespace("rsthemes", quietly = TRUE)) {
   rsthemes::set_theme_dark("base16 Gruvbox dark, pale {rsthemes}") # dark theme
   rsthemes::set_theme_dark("Horizon Dark {rsthemes}") # dark theme
 
-
   # Whenever the R session restarts inside RStudio...
   setHook("rstudio.sessionInit", function(isNewSession) {
     rsthemes::use_theme_auto(lat = 47.37, lon = 8.54)
