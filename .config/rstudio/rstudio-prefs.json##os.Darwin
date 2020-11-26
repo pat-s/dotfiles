@@ -1,20 +1,18 @@
 {
     "panes": {
         "quadrants": [
-            "Source",
-            "TabSet1",
             "Console",
-            "TabSet2"
+            "Source",
+            "TabSet2",
+            "TabSet1"
         ],
         "tabSet1": [
             "Presentation"
         ],
         "tabSet2": [
             "Environment",
-            "History",
             "Files",
             "Plots",
-            "Connections",
             "Packages",
             "Help",
             "Build",
@@ -22,11 +20,13 @@
             "Viewer"
         ],
         "hiddenTabSet": [
+            "History",
+            "Connections",
             "Tutorial"
         ],
-        "console_left_on_top": false,
+        "console_left_on_top": true,
         "console_right_on_top": true,
-        "additional_source_columns": 0
+        "additional_source_columns": 1
     },
     "posix_terminal_shell": "custom",
     "save_workspace": "never",
@@ -51,7 +51,7 @@
     "default_project_location": "~/git/github",
     "default_latex_program": "XeLaTeX",
     "jobs_tab_visibility": "shown",
-    "rmd_preferred_template_path": "/Users/pjs/Library/R/4.0/library/rticles/rmarkdown/templates/joss_article",
+    "rmd_preferred_template_path": "/Users/pjs/Library/R/4.0/library/rticles/rmarkdown/templates/joss",
     "tab_multiline_completion": true,
     "show_indent_guides": true,
     "style_diagnostics": true,
@@ -65,7 +65,6 @@
     "rainbow_parentheses": true,
     "scroll_past_end_of_document": true,
     "help_font_size_points": 9,
-    "toolbar_visible": false,
     "new_proj_git_init": true,
     "disabled_aria_live_announcements": [
         "console_cleared",

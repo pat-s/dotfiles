@@ -42,5 +42,6 @@
     "activateFiles": "Ctrl+E",
     "activateEnvironment": "Ctrl+Shift+E",
     "switchFocusSourceConsole": "Ctrl+S",
-    "showCommandPalette": "Shift+Cmd+P"
+    "showCommandPalette": "Shift+Cmd+P",
+    "focusSourceColumnSeparator": ""
 }
