@@ -7,7 +7,7 @@ root: ~/git/tic
 # socket_name: foo
 
 # Runs before everything. Use it to start daemons etc.
-# pre: sudo /etc/rc.d/mysqld start
+# pre: sudo /etc/rc.d/sqld start
 
 # Project hooks
 # Runs on project start, always
