@@ -6,3 +6,4 @@
 .ssh/keys/aur.pub
 .smbcredentials.txt
 .credentials
+/Users/pjs/.docker/config.json
