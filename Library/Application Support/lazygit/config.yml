@@ -1,0 +1,14 @@
+gui:
+  showFileTree: true
+  theme:
+    lightTheme: true
+    activeBorderColor:
+      - black
+      - bold
+    inactiveBorderColor:
+      - black
+    selectedLineBgColor:
+      - reverse
+    selectedRangeBgColor:
+      - reverse
+notARepository: 'skip'
