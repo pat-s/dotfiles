@@ -114,7 +114,7 @@ set -gx ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX "YES"
 #####
 
 set -gx TERM "xterm-256color"
-set -gx USER "pjs"
+#set -gx USER "pjs"
 set -gx EDITOR "nvim"
 set -gx BROWSER "firefox"
 set -gx BIB "~/Documents/Bibliography.bib"
@@ -136,13 +136,13 @@ set -U fish_user_paths /usr/local/opt/ccache/libexec /usr/local/bin ~/usr/local/
 # nnn
 #####
 
-set -gx NNN_BMS "d:~/Downloads;g:~/git;c:~/.config/nnn/edi;f:~/.config/nnn/edi/papers/2019-feature-selection;r:/home/pjs/git/rcourses;p:~/.config/nnn/edi/papers/2018-model-comparison;a:~/.config/nnn/mars/"
+#set -gx NNN_BMS "d:~/Downloads;g:~/git;c:~/.config/nnn/edi;f:~/.config/nnn/edi/papers/2019-feature-selection;r:/home/pjs/git/rcourses;p:~/.config/nnn/edi/papers/2018-model-comparison;a:~/.config/nnn/mars/"
 set -gx NNN_OPS_PROG "1"
 set -gx NNN_RESTRICT_NAV_OPEN "1"
 set -gx NNN_TRASH "1"
 set -gx NNN_COLORS  "62354"
 set -gx NNN_FCOLORS 'c1e2272e006033f7c6d6abc4'
-set -gx NNN_SCRIPT "/home/pjs/.scripts/nnn"
+#set -gx NNN_SCRIPT "/home/pjs/.scripts/nnn"
 set -gx NNN_SSHFS "sshfs -o reconnect,idmap=user"
 set -gx NNN_PLUG 'i:imgview;d:dragdrop;j:autojump;o:-fzopen;c:fzcd;k:-pskill;p:preview-tui'
 set --export NNN_FIFO "/tmp/nnn.fifo"
@@ -205,5 +205,12 @@ set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/make/libexec/gnubin:/usr/local/opt/grep/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin" $fish_user_paths
 
 # Drone
-export DRONE_SERVER=https://drone.cynkra.dev
-export DRONE_TOKEN=GMWyKyN9FN18VBy9g3sRonRvLBFZRopZ
+export DRONE_SERVER=https://drone.cynkra.com
+export DRONE_TOKEN=RsksV4J8MZC5kdI5yh6V3ehvhMNfJbqz
+
+# The next line updates PATH for the Google Cloud SDK.
+#if [ -f '/Users/pjs/google-cloud-sdk/path.fish.inc' ]; . '/Users/pjs/google-cloud-sdk/path.fish.inc'; end
+
+# GPG
+gpgconf --launch gpg-agent
+
