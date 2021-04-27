@@ -1,10 +1,21 @@
+# R
+.Renviron
 .Renviron.d/envs.R
 .Renviron.d/Github_PAT.R
+
+# ssh
 .ssh/id_rsa
 .ssh/id_rsa.pub
 .ssh/keys/aur
 .ssh/keys/aur.pub
 .ssh/config
+
+# samba
 .smbcredentials.txt
 .credentials
-/Users/pjs/.docker/config.json
+
+# docker
+.docker/config.json
+
+mount.sh
+mymount.sh

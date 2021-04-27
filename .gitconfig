@@ -1,6 +1,7 @@
 [user]
 	email = patrick.schratz@gmail.com
 	name = pat-s
+	signingkey = 1EF78925
     #signingkey = BE2167750633FE1BEA664E548D4E0C3649536FDC
     #github = pat-s
 [color]
@@ -19,8 +20,13 @@
 [gpg]
     #program = /usr/local/bin/gpg
 [tag]
+	gpgSign = true
     #forceSignAnnotated = true
 [core]
 #	autocrlf = true
 [pull]
-	rebase = true
+	rebase = false
+[init]
+	defaultBranch = main
+[commit]
+	gpgSign = true
