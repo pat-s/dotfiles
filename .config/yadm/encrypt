@@ -4,6 +4,7 @@
 .ssh/id_rsa.pub
 .ssh/keys/aur
 .ssh/keys/aur.pub
+.ssh/config
 .smbcredentials.txt
 .credentials
 /Users/pjs/.docker/config.json
