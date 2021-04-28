@@ -82,6 +82,8 @@ alias yph "yadm push"
 alias ypu "yadm pull"
 alias ys "yadm status"
 alias yd "yadm diff"
+alias yaa "yadm add -u"
+alias yaac "yadm add -u && yadm commit -m 'update dotfiles' && yadm push"
 
 ####
 # homebrew

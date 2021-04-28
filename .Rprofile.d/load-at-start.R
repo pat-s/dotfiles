@@ -1,4 +1,5 @@
-if (interactive()) {
+# only load on macOS, not on RStudio Server
+if (interactive() && Sys.info()[["sysname"]] == "Darwin") {
   suppressMessages(require(usethis))
   suppressMessages(require(teamtools))
   suppressMessages(require(reprex))
