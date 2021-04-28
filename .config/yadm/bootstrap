@@ -47,5 +47,11 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 nvim --cmd '' -c 'PlugInstall' -c 'qa!'
 
 ### fish ------------------------------------
-curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-fisher upgrade
+fish_installed=$(which fish 2>/dev/null || echo FALSE)
+if [ "$fish_installed" != "FALSE" ]; then
+  curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+  fisher upgrade
+else
+  echo "fish shell not installed, skipping bootstrap actions"
+fi
+
