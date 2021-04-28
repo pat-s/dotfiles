@@ -61,7 +61,6 @@ abbr msc "tmuxinator stop edi && tmuxinator stop edi"
 # default env vars
 #####
 
-set -gx HOME "/home/pjs"
 set -gx TERM "xterm-256color"
 set -gx EDITOR "nvim"
 set -gx BROWSER "firefox"
@@ -86,15 +85,15 @@ set -U fish_user_paths ~/usr/local/sbin /.scripts/tools /usr/local/lib/ruby/gems
 # nnn
 #####
 
-set -gx NNN_BMS "d:~/Downloads;g:~/git;c:~/.config/nnn/edi;f:~/.config/nnn/edi/papers/2019-feature-selection;r:/home/pjs/git/rcourses;p:~/.config/nnn/edi/papers/2018-model-comparison;a:~/.config/nnn/mars/"
+set -gx NNN_BMS "d:~/Downloads;g:~/git;c:~/.config/nnn/edi;f:~/.config/nnn/edi/papers/2019-feature-selection;r:$HOME/git/rcourses;p:~/.config/nnn/edi/papers/2018-model-comparison;a:~/.config/nnn/mars/"
 set -gx NNN_CP_MV_PROG "1"
 #set -gx NNN_USE_EDITOR "1"
 set -gx NNN_OPS_PROG "1"
 set -gx NNN_RESTRICT_NAV_OPEN "1"
 set -gx NNN_TRASH "1"
 set -gx NNN_CONTEXT_COLORS  "62354"
-set -gx NNN_SCRIPT "/home/pjs/.scripts/nnn"
-set -gx NNN_COPIER "/home/pjs/.scripts/nnn/copy-sel-to-clipboard"
+set -gx NNN_SCRIPT "$HOME/.scripts/nnn"
+set -gx NNN_COPIER "/home/$HOME/.scripts/nnn/copy-sel-to-clipboard"
 
 #####
 # misc
