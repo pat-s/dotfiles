@@ -49,7 +49,7 @@ nvim --cmd '' -c 'PlugInstall' -c 'qa!'
 ### fish ------------------------------------
 fish_installed=$(which fish 2>/dev/null || echo FALSE)
 if [ "$fish_installed" != "FALSE" ]; then
-  curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+  fish -c 'curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher'
   fisher upgrade
 else
   echo "fish shell not installed, skipping bootstrap actions"

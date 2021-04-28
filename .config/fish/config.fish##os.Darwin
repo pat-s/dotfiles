@@ -104,6 +104,7 @@ end
 abbr --add mux "tmuxinator"
 alias vpnjena "/opt/cisco/anyconnect/bin/vpn connect vpn.uni-jena.de -s < ~/.credentials"
 alias mss "/opt/cisco/anyconnect/bin/vpn connect vpn.uni-jena.de -s < ~/.credentials && tmuxinator start edi"
+alias mssalt "cat .credentials | sudo openconnect -b -u bi28yuv@uni-jena.de --passwd-on-stdin vpn.uni-jena.de"
 alias mssu "tmuxinator start edi"
 alias msc "/opt/cisco/anyconnect/bin/vpn disconnect vpn.uni-jena.de && tmuxinator stop edi"
 alias mscu "tmuxinator stop edi"
@@ -196,9 +197,6 @@ set -gx GTK_THEME "Adwaita:dark"
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/pjs/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/pjs/Downloads/google-cloud-sdk/path.fish.inc'; end
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 
 # GNU tools first in $PATH (overrides the native macOS ones!)
@@ -209,7 +207,7 @@ export DRONE_SERVER=https://drone.cynkra.com
 export DRONE_TOKEN=RsksV4J8MZC5kdI5yh6V3ehvhMNfJbqz
 
 # The next line updates PATH for the Google Cloud SDK.
-#if [ -f '/Users/pjs/google-cloud-sdk/path.fish.inc' ]; . '/Users/pjs/google-cloud-sdk/path.fish.inc'; end
+if [ -f '$HOME/google-cloud-sdk/path.fish.inc' ]; . '$HOME/google-cloud-sdk/path.fish.inc'; end
 
 # GPG
 gpgconf --launch gpg-agent
