@@ -39,7 +39,7 @@
     "warn_variable_defined_but_not_used": true,
     "editor_keybindings": "vim",
     "busy_detection": "never",
-    "editor_theme": "Flat White {rsthemes}",
+    "editor_theme": "Yule RStudio {rsthemes}",
     "save_files_before_build": true,
     "pdf_previewer": "system",
     "rmd_chunk_output_inline": false,

@@ -4,11 +4,14 @@ if (interactive() && requireNamespace("rsthemes", quietly = TRUE)) {
   #rsthemes::set_theme_light("Flat White {rsthemes}")  # light theme
   #rsthemes::set_theme_light("base16 Tomorrow {rsthemes}")  # light theme
   #rsthemes::set_theme_light("base16 Gruvbox light, hard {rsthemes}")  # light theme
-  rsthemes::set_theme_light("Flat White {rsthemes}")  # light theme
+  #rsthemes::set_theme_light("Flat White {rsthemes}")  # light theme
+  rsthemes::set_theme_light("Textmate (default)")  # light theme
+
 
   #rsthemes::set_theme_dark("Mojave Dark") # dark theme
-  rsthemes::set_theme_dark("base16 Gruvbox dark, pale {rsthemes}") # dark theme
-  rsthemes::set_theme_dark("Horizon Dark {rsthemes}") # dark theme
+  #rsthemes::set_theme_dark("base16 Gruvbox dark, pale {rsthemes}") # dark theme
+  #rsthemes::set_theme_dark("Horizon Dark {rsthemes}") # dark theme
+  rsthemes::set_theme_dark("Yule RStudio {rsthemes}") # dark theme
 
   # Whenever the R session restarts inside RStudio...
   setHook("rstudio.sessionInit", function(isNewSession) {
