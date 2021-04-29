@@ -1,10 +1,10 @@
 {
     "panes": {
         "quadrants": [
-            "Console",
             "Source",
-            "TabSet2",
-            "TabSet1"
+            "TabSet1",
+            "Console",
+            "TabSet2"
         ],
         "tabSet1": [
             "Presentation"
@@ -26,7 +26,7 @@
         ],
         "console_left_on_top": true,
         "console_right_on_top": true,
-        "additional_source_columns": 1
+        "additional_source_columns": 0
     },
     "posix_terminal_shell": "custom",
     "save_workspace": "never",
@@ -39,7 +39,6 @@
     "warn_variable_defined_but_not_used": true,
     "editor_keybindings": "vim",
     "busy_detection": "never",
-    "editor_theme": "Yule RStudio {rsthemes}",
     "save_files_before_build": true,
     "pdf_previewer": "system",
     "rmd_chunk_output_inline": false,
@@ -69,5 +68,6 @@
         "console_log",
         "console_command",
         "warning_bar"
-    ]
+    ],
+    "initial_working_directory": "~"
 }
