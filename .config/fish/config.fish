@@ -185,3 +185,7 @@ set -x GPG_TTY (tty)
 #set -x SSH_AUTH_SOCK ~/.gnupg/S.gpg-agent.ssh
 gpgconf --launch gpg-agent
 
+set unamestr (uname)
+if [ $unamestr = "Darwin" ]
+  gpgconf --launch gpg-agent
+end
