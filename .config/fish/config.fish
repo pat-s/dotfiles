@@ -183,7 +183,6 @@ if [ -f '$HOME/google-cloud-sdk/path.fish.inc' ]; . '$HOME/google-cloud-sdk/path
 ### GPG
 set -x GPG_TTY (tty)
 #set -x SSH_AUTH_SOCK ~/.gnupg/S.gpg-agent.ssh
-gpgconf --launch gpg-agent
 
 set unamestr (uname)
 if [ $unamestr = "Darwin" ]
