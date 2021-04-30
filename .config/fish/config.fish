@@ -22,6 +22,8 @@ abbr rmrf "rm -rf"
 alias vpnc "/opt/cisco/anyconnect/bin/vpn connect vpn.uni-jena.de -s < ~/.credentials"
 alias vpnd "/opt/cisco/anyconnect/bin/vpn disconnect vpn.uni-jena.de"
 
+alias ockill "sudo killall -SIGINT openconnect && tmuxinator stop edi"
+
 alias vpnsnf "sudo openfortivpn -c ~/.config/openfortivpn/snf"
 
 #####

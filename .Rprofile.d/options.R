@@ -11,7 +11,7 @@ options(
 options(reprex.style = TRUE) # use styler indention when doing a reprex
 
 if (grepl("mlr", getwd()) || grepl("paradox", getwd())) {
-  options(styler.addins_style_transformer = "mlr_style()")
+  options(styler.addins_style_transformer = "styler.mlr::mlr_style()")
 }
 
 # tibble > data.frame
