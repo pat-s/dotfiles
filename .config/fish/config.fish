@@ -176,6 +176,8 @@ set -g fish_user_paths "/usr/local/opt/make/libexec/gnubin:/usr/local/opt/grep/l
 ### Drone
 export DRONE_SERVER=https://drone.cynkra.com
 export DRONE_TOKEN=RsksV4J8MZC5kdI5yh6V3ehvhMNfJbqz
+abbr drone-down 'exo vm stop -f drone'
+abbr drone-up 'exo vm start drone'
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '$HOME/google-cloud-sdk/path.fish.inc' ]; . '$HOME/google-cloud-sdk/path.fish.inc'; end
