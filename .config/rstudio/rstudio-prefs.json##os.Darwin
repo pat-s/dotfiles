@@ -69,5 +69,6 @@
         "console_command",
         "warning_bar"
     ],
-    "initial_working_directory": "~"
+    "initial_working_directory": "~",
+    "editor_theme": "Yule RStudio {rsthemes}"
 }

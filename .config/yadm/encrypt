@@ -17,5 +17,6 @@
 # docker
 .docker/config.json
 
-mount.sh
-mymount.sh
+# GPG
+.gnupg/private.key
+
