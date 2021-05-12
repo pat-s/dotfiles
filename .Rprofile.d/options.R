@@ -15,11 +15,11 @@ if (grepl("mlr", getwd()) || grepl("paradox", getwd())) {
 }
 
 # tibble > data.frame
-if (interactive() && "tibble" %in% rownames(utils::installed.packages())) {
-  print.data.frame = function(x, ...) {
-    tibble:::print.tbl(tibble::as_tibble(x), ...)
-  }
-}
+#if (interactive() && "tibble" %in% rownames(utils::installed.packages())) {
+#  print.data.frame = function(x, ...) {
+#    tibble:::print.tbl_df(tibble::as_tibble(x), ...)
+#  }
+#}
 
 # suppress rmarkdown vignettes warnings
 options(rmarkdown.html_vignette.check_title = FALSE)

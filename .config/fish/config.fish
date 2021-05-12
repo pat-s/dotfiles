@@ -23,6 +23,7 @@ alias vpnc "/opt/cisco/anyconnect/bin/vpn connect vpn.uni-jena.de -s < ~/.creden
 alias vpnd "/opt/cisco/anyconnect/bin/vpn disconnect vpn.uni-jena.de"
 
 alias ockill "sudo killall -SIGINT openconnect && tmuxinator stop edi"
+alias sonicwallkill "sudo killall -SIGINT startct.sh"
 
 alias vpnsnf "sudo openfortivpn -c ~/.config/openfortivpn/snf"
 
@@ -67,6 +68,12 @@ alias py38 "/usr/local/opt/python@3.8/bin/python3.8"
 alias py39 "/usr/local/opt/python@3.9/bin/python3.9"
 alias py "python"
 alias py3 "python3"
+
+###
+# terraform
+###
+
+alias tf "terraform"
 
 #####
 # yadm
