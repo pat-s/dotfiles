@@ -143,7 +143,6 @@ set -gx NNN_FCOLORS 'c1e2272e006033f7c6d6abc4'
 set -gx NNN_SSHFS "sshfs -o reconnect,idmap=user"
 set -gx NNN_PLUG 'i:imgview;d:dragdrop;j:autojump;o:-fzopen;c:fzcd;k:-pskill;p:preview-tui'
 set --export NNN_FIFO "/tmp/nnn.fifo"
-alias ls "nnn -e"
 
 ####
 # docker

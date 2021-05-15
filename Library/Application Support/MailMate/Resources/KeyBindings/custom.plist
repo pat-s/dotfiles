@@ -32,6 +32,7 @@
 	"J"	= "moveDownAndModifySelection:";
 	"K"	= "moveUpAndModifySelection:";
 	"Z"	= "redo:";
+    "O" = "toggleOnlineStateOfAllAccounts:";
 
 	// Combo keys
 	"g" = {
