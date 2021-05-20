@@ -3,7 +3,7 @@
 #####
 
 alias R 'R --no-save'
-alias r "r40"
+alias r "r41"
 alias git-sub-up "git submodule update --remote --merge"
 alias imp "impressive -c memory -t WipeLeft -ff --noclicks --nowheel --fade"
 abbr n "n -x"
@@ -55,7 +55,8 @@ alias install-rdev 'bash ~/.scripts/unix/install-rdev.sh'
 alias install-rmac 'bash ~/.scripts/unix/install-r-mac4.sh'
 alias rup 'export UPDATE_R=true && R -e "remotes::update_packages(ask = FALSE)" && export UPDATE_R=""'
 alias r40 'rswitch 4.0 && export R_36=false && radian'
-alias rdev 'rswitch 4.1 && export R_36=false && radian'
+alias r41 'rswitch 4.1 && export R_36=false && radian'
+alias rdev 'rswitch 4.2 && export R_36=false && radian'
 
 ####
 # python
@@ -74,6 +75,7 @@ alias py3 "python3"
 ###
 
 alias tf "terraform"
+alias tfa "terraform apply"
 
 #####
 # yadm

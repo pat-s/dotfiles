@@ -40,7 +40,6 @@
     "editor_keybindings": "vim",
     "busy_detection": "never",
     "save_files_before_build": true,
-    "pdf_previewer": "system",
     "rmd_chunk_output_inline": false,
     "show_rmd_render_command": true,
     "show_hidden_files": true,
@@ -69,5 +68,6 @@
         "console_command",
         "warning_bar"
     ],
-    "initial_working_directory": "~"
+    "initial_working_directory": "~",
+    "find_panel_legacy_tab_sequence": true
 }

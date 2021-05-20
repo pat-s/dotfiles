@@ -12,7 +12,7 @@
     "previousTerminal": "Ctrl+5",
     "clearPlots": "",
     "activateVcs": "Ctrl+Shift+G",
-    "switchToTab": "",
+    "switchToTab": "Cmd+T",
     "lastTab": "Ctrl+9",
     "nextTab": "Ctrl+M",
     "layoutZoomVcs": "Ctrl+Shift+4",
