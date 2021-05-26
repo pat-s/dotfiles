@@ -40,11 +40,16 @@ echo "Updating the yadm repo origin URL"
 yadm remote set-url origin "git@github.com:pat-s/dotfiles.git"
 
 ### nvim -------------------------------
-# Install vim Plug
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-# install plugins
-nvim --cmd '' -c 'PlugInstall' -c 'qa!'
+nvim_installed=$(which nvim 2>/dev/null || echo FALSE)
+if [ "$nvim_installed" != "FALSE" ]; then
+  # Install vim Plug
+  sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  # install plugins
+  nvim --cmd '' -c 'PlugInstall' -c 'qa!'
+else
+  echo "nvim not installed, skipping bootstrap actions for nvim"
+fi
 
 ### fish ------------------------------------
 fish_installed=$(which fish 2>/dev/null || echo FALSE)

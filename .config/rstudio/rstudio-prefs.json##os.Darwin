@@ -55,7 +55,6 @@
     "check_for_updates": false,
     "code_completion_characters": 2,
     "code_completion_delay": 50,
-    "show_invisibles": true,
     "font_size_points": 9,
     "continue_comments_on_newline": true,
     "rainbow_parentheses": true,
