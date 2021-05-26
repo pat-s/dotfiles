@@ -226,11 +226,11 @@ vnoremap <leader>P "+P
 
     if has('nvim')
 
-      Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+      "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
     else
 
-      Plug 'Shougo/deoplete.nvim'
+      "Plug 'Shougo/deoplete.nvim'
 
       Plug 'roxma/nvim-yarp'
 
@@ -489,9 +489,9 @@ colorscheme gruvbox
     inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 
     " vimtex snippets https://jdhao.github.io/2019/03/26/nvim_latex_write_preview/
-    call deoplete#custom#var('omni', 'input_patterns', {
-          \ 'tex': g:vimtex#re#deoplete
-          \})
+    "call deoplete#custom#var('omni', 'input_patterns', {
+    "      \ 'tex': g:vimtex#re#deoplete
+    "      \})
 
 
 
