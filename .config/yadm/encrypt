@@ -20,3 +20,4 @@
 # GPG
 .gnupg/private.key
 
+test
