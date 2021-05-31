@@ -153,10 +153,11 @@ set --export NNN_FIFO "/tmp/nnn.fifo"
 abbr dl "docker logs"
 abbr dls "docker ps -a"
 abbr dsa "docker container stop (docker container list -q)"
-abbr dsp "docker system prune"
 abbr dip "docker image prune -y"
 abbr dcp "docker container prune -y"
 abbr dsh "docker exec -it"
+abbr dcop "docker-compose pull"
+abbr dcou "docker compose up -d"
 
 #####
 # misc
