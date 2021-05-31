@@ -163,6 +163,9 @@ abbr dcou "docker compose up -d"
 # misc
 #####
 
+# AWS ECR Login
+abbr awsecr "aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 222488041355.dkr.ecr.eu-central-1.amazonaws.com"
+
 ### py-organize-tool
 set -gx ORGANIZE_CONFIG ".config/organize/config.yaml"
 
