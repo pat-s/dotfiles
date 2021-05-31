@@ -1,1 +1,1 @@
-.bashrc##os.Darwin
+.bashrc##os.Linux
