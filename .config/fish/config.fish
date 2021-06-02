@@ -159,7 +159,7 @@ abbr dip "docker image prune -y"
 abbr dcp "docker container prune -y"
 abbr dsh "docker exec -it"
 abbr dcop "docker-compose pull"
-abbr dcou "docker compose up -d"
+abbr dcou "docker-compose up -d"
 
 #####
 # AWS
