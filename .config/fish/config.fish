@@ -179,6 +179,12 @@ set -gx ORGANIZE_CONFIG ".config/organize/config.yaml"
 ### fish
 alias fr "omf reload"
 
+# spack fish shell completion
+set hostnamelocal (hostname)
+if [ $hostnamelocal = "edi" ]
+  . /opt/spack/share/spack/setup-env.fish
+end
+
 # vi mode
 fish_vi_key_bindings
 
