@@ -68,5 +68,6 @@
         "warning_bar"
     ],
     "initial_working_directory": "~",
-    "find_panel_legacy_tab_sequence": true
+    "find_panel_legacy_tab_sequence": true,
+    "editor_theme": "Yule RStudio {rsthemes}"
 }

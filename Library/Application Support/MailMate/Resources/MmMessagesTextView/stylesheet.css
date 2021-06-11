@@ -2,3 +2,7 @@ body {
 	font: 12pt "Helvetica";
     font-weight: 300;
 }
+
+@media (prefers-color-scheme: dark) {
+
+}
