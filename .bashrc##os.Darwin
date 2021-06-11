@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# colors
+export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
+
+HISTSIZE= HISTFILESIZE= # Infinit history.
+
+alias git-remove-untracked='git fetch --prune && git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}" | xargs git branch -D'
+
+export PATH=~/.local/bin:$PATH
+
+# added by travis gem
+[ -f /Users/pjs/.travis/travis.sh ] && source /Users/pjs/.travis/travis.sh
+
+# overwrite mac internal tools by GNU tools (grep, sed, awk)
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/opt/make/libexec/gnubin:/usr/local/opt/grep/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin:/usr/local/Cellar/gawk/5.1.0/libexec/gnubin/awk:$PATH"
+
+. "$HOME/.cargo/env"
