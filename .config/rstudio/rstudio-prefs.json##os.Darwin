@@ -31,7 +31,6 @@
     "posix_terminal_shell": "custom",
     "save_workspace": "never",
     "highlight_selected_line": true,
-    "syntax_color_onsole": true,
     "highlight_r_function_calls": true,
     "auto_append_newline": true,
     "strip_trailing_whitespace": true,
@@ -68,6 +67,5 @@
         "warning_bar"
     ],
     "initial_working_directory": "~",
-    "find_panel_legacy_tab_sequence": true,
-    "editor_theme": "Yule RStudio {rsthemes}"
-}c
+    "find_panel_legacy_tab_sequence": true
+}
