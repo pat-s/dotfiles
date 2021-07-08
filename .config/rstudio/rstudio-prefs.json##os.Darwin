@@ -44,7 +44,7 @@
     "show_hidden_files": true,
     "rmd_viewer_type": "pane",
     "custom_shell_command": "/usr/local/bin/fish",
-    "default_project_location": "~/git/github",
+    "default_project_location": "~/cynkra/rstudio",
     "default_latex_program": "XeLaTeX",
     "jobs_tab_visibility": "shown",
     "tab_multiline_completion": true,
@@ -59,7 +59,6 @@
     "rainbow_parentheses": true,
     "scroll_past_end_of_document": true,
     "help_font_size_points": 9,
-    "new_proj_git_init": true,
     "disabled_aria_live_announcements": [
         "console_cleared",
         "console_log",
@@ -67,5 +66,7 @@
         "warning_bar"
     ],
     "initial_working_directory": "~",
-    "find_panel_legacy_tab_sequence": true
+    "find_panel_legacy_tab_sequence": true,
+    "pdf_previewer": "none",
+    "rmd_preferred_template_path": "/Users/pjs/Library/R/x86_64/4.1/library/rticles/rmarkdown/templates/copernicus"
 }
