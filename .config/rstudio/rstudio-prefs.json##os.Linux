@@ -30,7 +30,6 @@
     "highlight_r_function_calls": true,
     "editor_keybindings": "vim",
     "busy_detection": "never",
-    "pdf_previewer":"system",
     "show_invisibles": true,
     "rmd_chunk_output_inline": false,
     "show_rmd_render_command": true,
