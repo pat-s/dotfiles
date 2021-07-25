@@ -10,3 +10,4 @@ echo "$0" | grep "bash$" >/dev/null && [ -f ~/.bashrc ] && source "$HOME/.bashrc
 # also read .bashrc (only read if interactive and non-login by default)
 [[ -r ~/.bashrc ]] && . ~/.bashrc
 . "$HOME/.cargo/env"
+export PATH="/Users/pjs/.local/share/solana/install/active_release/bin:$PATH"

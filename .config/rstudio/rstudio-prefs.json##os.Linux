@@ -30,6 +30,7 @@
     "highlight_r_function_calls": true,
     "editor_keybindings": "vim",
     "busy_detection": "never",
+    "pdf_previewer": "system",
     "show_invisibles": true,
     "rmd_chunk_output_inline": false,
     "show_rmd_render_command": true,
@@ -45,5 +46,6 @@
     "font_size_points": 9,
     "jobs_tab_visibility": "shown",
     "server_editor_font_enabled": true,
-    "server_editor_font": "JetBrainsMono"
+    "server_editor_font": "JetBrainsMono",
+    "save_files_before_build": true
 }
