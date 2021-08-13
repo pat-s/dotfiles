@@ -12,9 +12,9 @@ async def main(connection):
             # Themes have space-delimited attributes, one of which will be light or dark.
             parts = theme.split(" ")
             if "dark" in parts:
-                preset = await iterm2.ColorPreset.async_get(connection, "Dark Background")
+                preset = await iterm2.ColorPreset.async_get(connection, "Smoooooth")
             else:
-                preset = await iterm2.ColorPreset.async_get(connection, "Light Background")
+                preset = await iterm2.ColorPreset.async_get(connection, "Tomorrow")
 
             # Update the list of all profiles and iterate over them.
             profiles=await iterm2.PartialProfile.async_query(connection)
