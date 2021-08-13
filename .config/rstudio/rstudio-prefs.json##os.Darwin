@@ -11,6 +11,7 @@
         ],
         "tabSet2": [
             "Environment",
+            "History",
             "Files",
             "Plots",
             "Packages",
@@ -20,7 +21,6 @@
             "Viewer"
         ],
         "hiddenTabSet": [
-            "History",
             "Connections",
             "Tutorial"
         ],

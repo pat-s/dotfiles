@@ -128,7 +128,7 @@ end
 
 abbr --add mux tmuxinator
 alias mss "/opt/cisco/anyconnect/bin/vpn connect vpn.uni-jena.de -s < ~/.credentials && tmuxinator start edi"
-alias mssalt "cat .credentials | sudo openconnect -b -u bi28yuv@uni-jena.de --passwd-on-stdin vpn.uni-jena.de && tmuxinator start edi"
+alias mssalt "cat .credentials | sudo openconnect -b -u bi28yuv@uni-jena.de --passwd-on-stdin --servercert pin-sha256:QTb6yqZ4mUVaL+9ImFdOz5UC9MsTHtXB44lXK3pxDPc= vpn.uni-jena.de && tmuxinator start edi"
 alias mssu "tmuxinator start edi"
 alias msc "/opt/cisco/anyconnect/bin/vpn disconnect vpn.uni-jena.de && tmuxinator stop edi"
 alias mscu "tmuxinator stop edi"
@@ -148,7 +148,8 @@ set -e JAVA_HOME
 
 # adds `~/.scripts` and all subdirectories to $PATH
 set -e fish_user_paths
-set -U fish_user_paths ~/.local/share/solana/install/active_release/bin ~/.cargo/bin /usr/local/opt/ccache/libexec /usr/local/bin ~/usr/local/sbin /.scripts/tools /usr/local/lib/ruby/gems/*/bin /usr/local/opt/ruby/bin ~/.scripts/nnn ~/git/nnn/scripts/nlaunch ~/.local/bin ~/git/nnn/plugins ~/.scripts/R $fish_user_paths
+set -U fish_user_paths ~/.local/share/solana/install/active_release/bin ~/.cargo/bin /usr/local/opt/ccache/libexec /usr/local/bin ~/usr/local/sbin /.scripts/tools  ~/.scripts/nnn ~/git/nnn/scripts/nlaunch ~/.local/bin ~/git/nnn/plugins ~/.scripts/R $fish_user_paths
+fish_add_path /usr/local/opt/ruby/bin
 
 #####
 # nnn
@@ -180,6 +181,12 @@ abbr dsh "docker exec -it"
 abbr dcop "docker-compose pull"
 abbr dcou "docker-compose up -d"
 abbr dex "docker exec -it"
+
+#####
+# k8s
+#####
+
+abbr k "kubectl"
 
 #####
 # AWS
