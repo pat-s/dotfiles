@@ -19,17 +19,17 @@ abbr rmrf "rm -rf"
 # unix
 ####
 
-set exa_installed '(which exa 2>/dev/null || echo FALSE)'
+set exa_installed (which exa 2>/dev/null || echo FALSE)
 if [ "$exa_installed" != FALSE ]
     alias ls "exa --long --header --icons --git"
 end
 
-set bat_installed '(which bat 2>/dev/null || echo FALSE)'
+set bat_installed (which bat 2>/dev/null || echo FALSE)
 if [ "$bat_installed" != FALSE ]
     alias cat "bat --theme Dracula --style 'changes,snip'"
 end
 
-set dust_installed '(which dust 2>/dev/null || echo FALSE)'
+set dust_installed (which dust 2>/dev/null || echo FALSE)
 if [ "$dust_installed" != FALSE ]
     alias du "dust"
 end
