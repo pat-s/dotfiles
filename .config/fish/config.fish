@@ -1,9 +1,15 @@
+set unamestr (uname)
 # abbreviations
 
 #####
 
 alias R 'R --no-save'
-alias r r41
+if [ $unamestr = Darwin ]
+  alias r r41
+else
+  alias r radian
+end
+
 alias git-sub-up "git submodule update --remote --merge"
 alias imp "impressive -c memory -t WipeLeft -ff --noclicks --nowheel --fade"
 abbr n "n -x"
@@ -74,7 +80,10 @@ alias install-rdev 'bash ~/.scripts/unix/install-rdev.sh'
 alias install-rmac 'bash ~/.scripts/unix/install-r-mac4.sh'
 alias rup 'export UPDATE_R=true && R -e "remotes::update_packages(ask = FALSE)" && export UPDATE_R=""'
 alias r40 'rswitch 4.0 && export R_36=false && radian'
-alias r41 'rswitch 4.1 && export R_36=false && radian'
+if [ $unamestr = Darwin ]
+    gpgconf --launch gpg-agent
+    alias r41 'rswitch 4.1 && export R_36=false && radian'
+end
 alias rdev 'rswitch 4.2 && export R_36=false && radian'
 
 ####
@@ -240,7 +249,6 @@ end
 set -x GPG_TTY (tty)
 #set -x SSH_AUTH_SOCK ~/.gnupg/S.gpg-agent.ssh
 
-set unamestr (uname)
 if [ $unamestr = Darwin ]
     gpgconf --launch gpg-agent
 end
