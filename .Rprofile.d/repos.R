@@ -5,6 +5,6 @@ if (Sys.info()[["sysname"]] == "Darwin") {
   )))
 } else if (Sys.info()[["nodename"]] == "parallels") {
   options(repos = structure(c(
-    CRAN = "https://packagemanager.rstudio.com/all/latest"
+    CRAN = "https://packagemanager.rstudio.com/all/__linux__/focal/latest"
   )))
 }
