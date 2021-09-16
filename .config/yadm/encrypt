@@ -20,4 +20,4 @@
 # GPG
 .gnupg/private.key
 
-test
+.circleci
