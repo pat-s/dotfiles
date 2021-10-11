@@ -54,6 +54,7 @@ alias vpnsnf "sudo openfortivpn -c ~/.config/openfortivpn/snf"
 
 #####
 # Git
+
 #####
 
 abbr ga "git add"
@@ -157,7 +158,7 @@ set -e JAVA_HOME
 
 # adds `~/.scripts` and all subdirectories to $PATH
 set -e fish_user_paths
-set -U fish_user_paths ~/.local/share/solana/install/active_release/bin ~/.cargo/bin /usr/local/opt/ccache/libexec /usr/local/bin ~/usr/local/sbin /.scripts/tools  ~/.scripts/nnn ~/git/nnn/scripts/nlaunch ~/.local/bin ~/git/nnn/plugins ~/.scripts/R $fish_user_paths
+set -U fish_user_paths ~/.local/share/solana/install/active_release/bin ~/.cargo/bin /usr/local/opt/ccache/libexec /usr/local/bin ~/usr/local/sbin /.scripts/tools  ~/.scripts/nnn ~/git/nnn/scripts/nlaunch ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.krew/bin ~/.kube/plugins/jordanwilson230 $fish_user_paths
 fish_add_path /usr/local/opt/ruby/bin
 
 #####
@@ -196,6 +197,9 @@ abbr dex "docker exec -it"
 #####
 
 abbr k "kubectl"
+abbr mk "minikube"
+abbr k8s-prod "aws eks update-kubeconfig --name cynkra-eks-prod --region eu-central-1"
+abbr k8s-dev "aws eks update-kubeconfig --name cynkra-eks-dev --region eu-central-1"
 
 #####
 # AWS
