@@ -21,3 +21,6 @@
 .gnupg/private.key
 
 .circleci
+
+# git
+.gitconfig
