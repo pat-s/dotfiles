@@ -10,6 +10,15 @@ else
   alias r radian
 end
 
+set nvim_installed (which nvim 2>/dev/null || echo FALSE)
+if [ "$nvim_installed" = FALSE ]
+    alias nvim "vim"
+    set -gx EDITOR vim
+else
+    set -gx EDITOR nvim
+end
+
+
 alias git-sub-up "git submodule update --remote --merge"
 alias imp "impressive -c memory -t WipeLeft -ff --noclicks --nowheel --fade"
 abbr n "n -x"
@@ -149,7 +158,6 @@ set -gx ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX YES
 #####
 
 set -gx TERM xterm-256color
-set -gx EDITOR nvim
 #set -gx R_HOME "/Library/Frameworks/R.framework/Resources"
 set -gx LANG "en_US.UTF-8"
 set -gx LC_ALL "en_US.UTF-8"

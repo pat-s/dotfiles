@@ -7,6 +7,7 @@
             "TabSet2"
         ],
         "tabSet1": [
+            "Presentations",
             "Presentation"
         ],
         "tabSet2": [
@@ -68,6 +69,5 @@
     "initial_working_directory": "~",
     "find_panel_legacy_tab_sequence": true,
     "pdf_previewer": "none",
-    "rmd_preferred_template_path": "/Users/pjs/Library/R/x86_64/4.1/library/rticles/rmarkdown/templates/copernicus",
-    "editor_theme": "Dracula"
+    "rmd_preferred_template_path": "/Users/pjs/Library/R/x86_64/4.1/library/rticles/rmarkdown/templates/copernicus"
 }
