@@ -206,8 +206,8 @@ abbr dex "docker exec -it"
 
 abbr k "kubectl"
 abbr mk "minikube"
-abbr k8s-prod "aws eks update-kubeconfig --name cynkra-eks-prod --region eu-central-1"
-abbr k8s-dev "aws eks update-kubeconfig --name cynkra-eks-dev --region eu-central-1"
+abbr k8s-prod "aws eks update-kubeconfig --name cynkra-eks-prod --region eu-central-1 --alias eks-prod"
+abbr k8s-dev "aws eks update-kubeconfig --name cynkra-eks-dev --region eu-central-1 --alias eks-dev"
 
 #####
 # AWS
