@@ -46,6 +46,5 @@
     "font_size_points": 9,
     "jobs_tab_visibility": "shown",
     "server_editor_font_enabled": true,
-    "server_editor_font": "JetBrainsMono",
-    "save_files_before_build": true
+    "server_editor_font": "JetBrainsMono"
 }

@@ -18,7 +18,7 @@
 [credential]
 	helper = cache
 [gpg]
-    program = /usr/local/bin/gpg
+    program = gpg
 [tag]
 	gpgSign = true
     #forceSignAnnotated = true
