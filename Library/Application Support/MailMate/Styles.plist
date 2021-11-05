@@ -1,0 +1,17 @@
+{   styles = (
+	{   type = keyword;
+			keyword = '\\Flagged';
+			color = "#00FF00";
+			fontStyle = "bold";
+		},
+		#{   type = mailbox;
+		#	color = "systemTealColor";
+		#	uuid = 'INBOX';
+		#},
+		{   /*disabled = ":true";*/
+			type = filter;
+			color = "#FF0000";
+			uuid = '0249F96D-9B86-452A-B34A-83D83B0125FE';
+		},
+	);
+}
