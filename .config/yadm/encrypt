@@ -25,3 +25,7 @@
 
 # git
 .gitconfig
+
+# aws
+.aws/config
+.aws/credentials

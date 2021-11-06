@@ -213,7 +213,7 @@ abbr k8s-dev "aws eks update-kubeconfig --name cynkra-eks-dev --region eu-centra
 # AWS
 #####
 
-set -gx AWS_DEFAULT_PROFILE cynkra-saml
+set -gx AWS_DEFAULT_PROFILE terraform
 # AWS ECR Login
 abbr awsecr "aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 222488041355.dkr.ecr.eu-central-1.amazonaws.com"
 
@@ -246,11 +246,20 @@ test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell
 # GNU tools first in $PATH (overrides the native macOS ones!)
 set -g fish_user_paths "/usr/local/opt/make/libexec/gnubin:/usr/local/opt/grep/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin" $fish_user_paths
 
-### Drone
+###
+# Drone
+###
 export DRONE_SERVER=https://drone.cynkra.com
 export DRONE_TOKEN=RsksV4J8MZC5kdI5yh6V3ehvhMNfJbqz
 abbr drone-down 'exo vm stop -f drone'
 abbr drone-up 'exo vm start drone'
+
+###
+# Vault
+###
+
+export VAULT_ADDR=https://vault.cynkra.link
+
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '$HOME/google-cloud-sdk/path.fish.inc' ]
