@@ -60,8 +60,8 @@ else
   CXX11   =  ccache clang++ -std=gnu++11
   CXX14   =  ccache clang++ -std=gnu++11
   CXX17   =  ccache clang++ -std=gnu++11
-  F77     =  ccache /usr/local/gfortran/bin/gfortran
-  FC      =  ccache /usr/local/gfortran/bin/gfortran
+  F77     =  ccache /opt/homebrew/bin/gfortran
+  FC      =  ccache /opt/homebrew/bin/gfortran
   MAKE    =  make -j8
 
   #CC    = ccache /usr/local/opt/llvm/bin/clang
