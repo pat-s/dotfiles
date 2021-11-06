@@ -29,3 +29,7 @@
 # aws
 .aws/config
 .aws/credentials
+
+# vpn
+.config/openfortivpn/snf
+.config/openfortivpn/e360
