@@ -37,6 +37,24 @@
 #SHLIB_CXX14LDFLAGS+=-Wl,-rpath,${R_HOME}/lib ${R_HOME}/lib/libc++abi.1.dylib
 # clang: end
 
+CFLAGS=-I/opt/homebrew/include
+CPPFLAGS=-I/opt/homebrew/include 
+CXXFLAGS=-I/opt/homebrew/include
+LDFLAGS+=-L/opt/homebrew/opt/jpeg/lib -L/opt/homebrew/opt/libpng/lib 
+#FLIBS=-L/usr/local/gfortran/lib/gcc/aarch64-apple-darwin20.2.0/11.1.0
+#FLIBS=-L/opt/homebrew/opt/gfortran/lib/gcc/11/gcc/aarch64-apple-darwin20
+#FLIBS=-L/opt/homebrew/opt/gfortran/lib
+#FLIBS=-L/opt/R/arm64/gfortran/lib
+
+CFLAGS   = -I/opt/homebrew/include
+CPPFLAGS = -I/opt/homebrew/include 
+CXXFLAGS = -I/opt/homebrew/include
+
+# R native
+FLIBS   = -L/opt/R/arm64/gfortran/lib
+F77     = /opt/R/arm64/gfortran/bin/gfortran
+FC      = /opt/R/arm64/gfortran/bin/gfortran
+
 ifeq "$(R_36)" "TRUE"
 
   CC      =  ccache /usr/local/clang7/bin/clang
@@ -56,31 +74,14 @@ else
   #CXX_STD =  CXX11
   CC      =  ccache clang
   #CPP     =  ccache clang
-  CXX     =  ccache clang++ -std=gnu++11
-  CXX11   =  ccache clang++ -std=gnu++11
-  CXX14   =  ccache clang++ -std=gnu++11
-  CXX17   =  ccache clang++ -std=gnu++11
-  F77     =  ccache /opt/homebrew/bin/gfortran
-  FC      =  ccache /opt/homebrew/bin/gfortran
+  CXX     =  ccache clang++ 
+  CXX11   =  ccache clang++ 
+  CXX14   =  ccache clang++ 
+  CXX17   =  ccache clang++ 
+  #F77     =  /opt/homebrew/bin/gfortran
+  #FC      =  /opt/homebrew/bin/gfortran
   MAKE    =  make -j8
 
-  #CC    = ccache /usr/local/opt/llvm/bin/clang
-  #CC11  = ccache /usr/local/opt/llvm/bin/clang
-  #CC14  = ccache /usr/local/opt/llvm/bin/clang
-  #CXX   = ccache /usr/local/opt/llvm/bin/clang++
-  #CXX11 = ccache /usr/local/opt/llvm/bin/clang++
-  #CXX14 = ccache /usr/local/opt/llvm/bin/clang++
-  #F77   =  ccache /usr/local/gfortran/bin/gfortran
-  #FC    =  ccache /usr/local/gfortran/bin/gfortran
-
-  #CC    =  /usr/local/bin/gcc-9
-  #CC11  =  /usr/local/bin/gcc-9
-  #CC14  =  /usr/local/bin/gcc-9
-  #CXX   =  /usr/local/bin/g++-9
-  #CXX11 =  /usr/local/bin/g++-9
-  #CXX14 =  /usr/local/bin/g++-9
-  #F77   =  /usr/local/gfortran/bin/gfortran
-  #FC    =  /usr/local/gfortran/bin/gfortran
 endif
 
 
