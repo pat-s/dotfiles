@@ -20,10 +20,16 @@ if (Sys.info()["sysname"] == "Darwin") {
     Ncpus = 10L,
     install.packages.check.source = "no",
     pkgType = "source",
-    precommit.executable = "/usr/local/bin/pre-commit",
     precommit.path_cp_config_from = "https://raw.githubusercontent.com/mlr-org/mlr/master/.pre-commit-config.yaml"
   )
 }
+
+if (Sys.info()["sysname"] == "Darwin" && Sys.info()[["machine"]] == "arm64") {
+    options(precommit.executable = "/opt/homebrew/bin/pre-commit")
+} else if (Sys.info()["sysname"] == "Darwin" && Sys.info()[["machine"]] == "x86_64") {
+      options(precommit.executable = "/usr/local/bin/pre-commit")
+}
+
 
 if (grepl("mlr", getwd()) || grepl("paradox", getwd())) {
   options(styler.addins_style_transformer = "styler.mlr::mlr_style()")

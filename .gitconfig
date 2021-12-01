@@ -23,6 +23,7 @@
 	gpgSign = true
     #forceSignAnnotated = true
 [core]
+	fileMode = false
 #	autocrlf = true
 [pull]
 	rebase = false

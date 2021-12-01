@@ -136,6 +136,7 @@ alias bup "brew upgrade && brew cleanup"
 alias rst "brew reinstall rstudio-daily"
 alias rst-ubuntu "wget https://www.rstudio.org/download/latest/daily/desktop/bionic/rstudio-latest-amd64.deb \
   && sudo dpkg -i rstudio-latest-amd64.deb && rm rstudio-latest-amd64.deb"
+set -gx HOMEBREW_NO_ENV_HINTS true
 
 if test -f '(brew --prefix)'/bin/brew-file
     source '(brew --prefix)'/bin/brew-file
@@ -166,7 +167,7 @@ set -e JAVA_HOME
 
 # adds `~/.scripts` and all subdirectories to $PATH
 set -e fish_user_paths
-set -U fish_user_paths Library/Python/3.9/bin /opt/homebrew/bin ~/.local/share/solana/install/active_release/bin ~/.cargo/bin /usr/local/opt/ccache/libexec /usr/local/bin ~/usr/local/sbin /.scripts/tools  ~/.scripts/nnn ~/git/nnn/scripts/nlaunch ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.krew/bin ~/.kube/plugins/jordanwilson230 $fish_user_paths
+set -U fish_user_paths ~/Library/Python/3.9/bin /opt/homebrew/bin ~/.local/share/solana/install/active_release/bin ~/.cargo/bin /usr/local/opt/ccache/libexec /usr/local/bin ~/usr/local/sbin /.scripts/tools  ~/.scripts/nnn ~/git/nnn/scripts/nlaunch ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.krew/bin ~/.kube/plugins/jordanwilson230 $fish_user_paths
 fish_add_path /usr/local/opt/ruby/bin
 
 #####
@@ -258,7 +259,8 @@ abbr drone-up 'exo vm start drone'
 # Vault
 ###
 
-export VAULT_ADDR=https://vault.cynkra.link
+#export VAULT_ADDR=https://vault.cynkra.link
+export VAULT_ADDR=https://vault.cynkra.com
 
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -273,3 +275,4 @@ set -x GPG_TTY (tty)
 if [ $unamestr = Darwin ]
     gpgconf --launch gpg-agent
 end
+
