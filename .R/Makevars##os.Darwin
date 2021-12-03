@@ -64,12 +64,12 @@ else ifeq "$(fastr)" "TRUE"
 else
 
   #CXX_STD =  CXX11
-  CC      =  ccache clang
-  #CPP     =  ccache clang
-  CXX     =  ccache clang++ 
-  CXX11   =  ccache clang++ 
-  CXX14   =  ccache clang++ 
-  CXX17   =  ccache clang++ 
+  #CC      =  ccache clang
+  ##CPP     =  ccache clang
+  #CXX     =  ccache clang++ 
+  #CXX11   =  ccache clang++ 
+  #CXX14   =  ccache clang++ 
+  #CXX17   =  ccache clang++ 
   #F77     =  /opt/homebrew/bin/gfortran
   #FC      =  /opt/homebrew/bin/gfortran
   MAKE    =  make -j8

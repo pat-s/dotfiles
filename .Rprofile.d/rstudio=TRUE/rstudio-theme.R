@@ -5,8 +5,8 @@ if (interactive() && requireNamespace("rsthemes", quietly = TRUE)) {
   #rsthemes::set_theme_light("base16 Tomorrow {rsthemes}")  # light theme
   #rsthemes::set_theme_light("base16 Gruvbox light, hard {rsthemes}")  # light theme
   #rsthemes::set_theme_light("Flat White {rsthemes}")  # light theme
-  #rsthemes::set_theme_light("Textmate (default)")  # light theme
-  rsthemes::set_theme_light("Serendipity Light {rsthemes}") # dark theme
+  rsthemes::set_theme_light("Textmate (default)")  # light theme
+  #rsthemes::set_theme_light("Serendipity Light {rsthemes}") # dark theme
 
 
   #rsthemes::set_theme_dark("Mojave Dark") # dark theme
