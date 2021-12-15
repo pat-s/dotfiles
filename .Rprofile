@@ -1,1 +1,3 @@
-startup::startup()
+if (requireNamespace("startup", quietly = TRUE)) {
+  startup::startup()
+}
