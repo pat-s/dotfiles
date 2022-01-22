@@ -53,9 +53,6 @@ end
 # VPN
 #####
 
-alias vpnc "/opt/cisco/anyconnect/bin/vpn connect vpn.uni-jena.de -s < ~/.credentials"
-alias vpnd "/opt/cisco/anyconnect/bin/vpn disconnect vpn.uni-jena.de"
-
 alias ockill "sudo killall -SIGINT openconnect && tmuxinator stop edi"
 alias sonicwallkill "sudo killall -SIGINT startct.sh"
 
@@ -80,6 +77,7 @@ abbr grh "git reset --hard origin/main"
 abbr gr "git restore"
 abbr gbd "git branch -D"
 abbr gl "git log"
+abbr gpb "git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -D"
 
 ####
 # R
@@ -147,10 +145,8 @@ end
 #####
 
 abbr --add mux tmuxinator
-alias mss "/opt/cisco/anyconnect/bin/vpn connect vpn.uni-jena.de -s < ~/.credentials && tmuxinator start edi"
 alias mssalt "cat .credentials | sudo openconnect -b -u bi28yuv@uni-jena.de --passwd-on-stdin --servercert pin-sha256:QTb6yqZ4mUVaL+9ImFdOz5UC9MsTHtXB44lXK3pxDPc= vpn.uni-jena.de && tmuxinator start edi"
 alias mssu "tmuxinator start edi"
-alias msc "/opt/cisco/anyconnect/bin/vpn disconnect vpn.uni-jena.de && tmuxinator stop edi"
 alias mscu "tmuxinator stop edi"
 set -gx ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX YES
 
@@ -167,7 +163,7 @@ set -gx JAVA_HOME "/opt/homebrew/Cellar/openjdk@11/11.0.12/libexec/openjdk.jdk/C
 
 # adds `~/.scripts` and all subdirectories to $PATH
 set -e fish_user_paths
-set -U fish_user_paths ~/Library/Python/3.9/bin /opt/homebrew/sbin /opt/homebrew/bin ~/.local/share/solana/install/active_release/bin ~/.cargo/bin /usr/local/opt/ccache/libexec /usr/local/bin ~/usr/local/sbin /.scripts/tools  ~/.scripts/nnn ~/git/nnn/scripts/nlaunch ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.krew/bin ~/.kube/plugins/jordanwilson230 $fish_user_paths
+set -U fish_user_paths /opt/homebrew/opt/grep/libexec/gnubin /opt/homebrew/lib/ruby/gems/3.0.0/bin /opt/homebrew/opt/ruby/bin ~/Library/Python/3.9/bin /opt/homebrew/sbin /opt/homebrew/bin ~/.local/share/solana/install/active_release/bin ~/.cargo/bin /usr/local/opt/ccache/libexec /usr/local/bin ~/usr/local/sbin /.scripts/tools  ~/.scripts/nnn ~/git/nnn/scripts/nlaunch ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.krew/bin ~/.kube/plugins/jordanwilson230 $fish_user_paths
 fish_add_path /usr/local/opt/ruby/bin
 
 #####
@@ -243,9 +239,6 @@ set -gx PROMPT_TOOLKIT_COLOR_DEPTH DEPTH_4_BIT
 ulimit -n 1024
 
 test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell_integration.fish
-
-# GNU tools first in $PATH (overrides the native macOS ones!)
-set -g fish_user_paths "/usr/local/opt/make/libexec/gnubin:/usr/local/opt/grep/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin" $fish_user_paths
 
 ###
 # Drone

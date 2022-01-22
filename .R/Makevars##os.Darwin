@@ -37,10 +37,13 @@
 #SHLIB_CXX14LDFLAGS+=-Wl,-rpath,${R_HOME}/lib ${R_HOME}/lib/libc++abi.1.dylib
 # clang: end
 
-LDFLAGS  +=-L/opt/homebrew/opt/jpeg/lib -L/opt/homebrew/opt/libpng/lib  -L/opt/homebrew/opt/pcre2/lib
+LDFLAGS  +=-L/opt/homebrew/opt/jpeg/lib -L/opt/homebrew/opt/libpng/lib -L/opt/homebrew/opt/pcre2/lib
 CFLAGS   = -I/opt/homebrew/include
-CPPFLAGS = -I/opt/homebrew/include  
-CXXFLAGS = -I/opt/homebrew/include 
+CCLAGS   = -I/opt/homebrew/include -L/opt/homebrew/opt/pcre2/lib
+CPPFLAGS = -I/opt/homebrew/include
+CXXFLAGS = -I/opt/homebrew/include
+#JRI_LIBS = -L/opt/homebrew/opt/pcre2/lib
+#JRI_CPPFLAGS = -L/opt/homebrew/opt/pcre2/lib
 
 # R native
 FLIBS   = -L/opt/R/arm64/gfortran/lib
@@ -66,10 +69,10 @@ else
   #CXX_STD =  CXX11
   #CC      =  ccache clang
   ##CPP     =  ccache clang
-  #CXX     =  ccache clang++ 
-  #CXX11   =  ccache clang++ 
-  #CXX14   =  ccache clang++ 
-  #CXX17   =  ccache clang++ 
+  #CXX     =  ccache clang++
+  #CXX11   =  ccache clang++
+  #CXX14   =  ccache clang++
+  #CXX17   =  ccache clang++
   #F77     =  /opt/homebrew/bin/gfortran
   #FC      =  /opt/homebrew/bin/gfortran
   MAKE    =  make -j8
