@@ -244,9 +244,7 @@ test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell
 # Drone
 ###
 export DRONE_SERVER=https://drone.cynkra.com
-export DRONE_TOKEN=RsksV4J8MZC5kdI5yh6V3ehvhMNfJbqz
-abbr drone-down 'exo vm stop -f drone'
-abbr drone-up 'exo vm start drone'
+export DRONE_TOKEN=uzJLLX6ok74tbhHLBvAhec9jfPrCG8Za
 
 ###
 # Vault
@@ -269,3 +267,9 @@ if [ $unamestr = Darwin ]
     gpgconf --launch gpg-agent
 end
 
+
+
+  set -gx PKG_CONFIG_PATH "/opt/homebrew/opt/sqlite/lib/pkgconfig"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/pjs/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/pjs/Downloads/google-cloud-sdk/path.fish.inc'; end

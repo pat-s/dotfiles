@@ -13,8 +13,8 @@ if (interactive() && requireNamespace("rsthemes", quietly = TRUE)) {
   #rsthemes::set_theme_dark("base16 Gruvbox dark, pale {rsthemes}") # dark theme
   #rsthemes::set_theme_dark("Horizon Dark {rsthemes}") # dark theme
   #rsthemes::set_theme_dark("Yule RStudio {rsthemes}") # dark theme
-  #rsthemes::set_theme_dark("Dracula") # dark theme
-  rsthemes::set_theme_dark("Serendipity Dark {rsthemes}") # dark theme
+  rsthemes::set_theme_dark("Dracula") # dark theme
+  #rsthemes::set_theme_dark("Serendipity Dark {rsthemes}") # dark theme
 
   # Whenever the R session restarts inside RStudio...
   setHook("rstudio.sessionInit", function(isNewSession) {

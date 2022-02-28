@@ -33,3 +33,6 @@
 # vpn
 .config/openfortivpn/snf
 .config/openfortivpn/e360
+
+# terraform
+.config/fish/conf.d/terraform_secrets.fish
