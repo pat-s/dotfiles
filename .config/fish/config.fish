@@ -152,7 +152,10 @@ set -gx TERM xterm-256color
 set -gx LANG "en_US.UTF-8"
 set -gx LC_ALL "en_US.UTF-8"
 set -gx GPG_TTY "'(tty)'"
-set -gx JAVA_HOME "/opt/homebrew/Cellar/openjdk@11/11.0.12/libexec/openjdk.jdk/Contents/Home"
+
+if [ $unamestr = Darwin ]
+  set -gx JAVA_HOME "/opt/homebrew/Cellar/openjdk@11/11.0.12/libexec/openjdk.jdk/Contents/Home"
+end
 
 # adds `~/.scripts` and all subdirectories to $PATH
 set -e fish_user_paths
@@ -265,7 +268,7 @@ end
 
 
 
-  set -gx PKG_CONFIG_PATH "/opt/homebrew/opt/sqlite/lib/pkgconfig"
+set -gx PKG_CONFIG_PATH "/opt/homebrew/opt/sqlite/lib/pkgconfig"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/pjs/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/pjs/Downloads/google-cloud-sdk/path.fish.inc'; end
