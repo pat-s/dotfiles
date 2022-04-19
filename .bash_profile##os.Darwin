@@ -20,3 +20,5 @@ if [[ $unamestr == "Darwin" ]]
 then
   export PATH=/usr/local/bin:$PATH
 fi
+
+function gam() { "/Users/pjs/bin/gam/gam" "$@" ; }

@@ -4,11 +4,7 @@ set unamestr (uname)
 #####
 
 alias R 'R --no-save'
-if [ $unamestr = Darwin ]
-  alias r r41
-else
-  alias r radian
-end
+alias r radian
 
 set nvim_installed (which nvim 2>/dev/null || echo FALSE)
 if [ "$nvim_installed" = FALSE ]
@@ -50,7 +46,7 @@ if [ "$dust_installed" != FALSE ]
 end
 
 #####
-# VPN
+# PN
 #####
 
 alias ockill "sudo killall -SIGINT openconnect && tmuxinator stop edi"
@@ -88,11 +84,6 @@ alias install-rdev 'bash ~/.scripts/unix/install-rdev.sh'
 alias install-rmac 'bash ~/.scripts/unix/install-r-mac4.sh'
 alias rup 'export UPDATE_R=true && R -e "remotes::update_packages(ask = FALSE)" && export UPDATE_R=""'
 alias r40 'rswitch 4.0 && export R_36=false && radian'
-if [ $unamestr = Darwin ]
-    gpgconf --launch gpg-agent
-    alias r41 'rswitch 4.1 && export R_36=false && radian'
-end
-alias rdev 'rswitch 4.2 && export R_36=false && radian'
 
 ####
 # python
@@ -145,7 +136,9 @@ end
 #####
 
 abbr --add mux tmuxinator
-alias mssalt "cat .credentials | sudo openconnect -b -u bi28yuv@uni-jena.de --passwd-on-stdin --servercert pin-sha256:QTb6yqZ4mUVaL+9ImFdOz5UC9MsTHtXB44lXK3pxDPc= vpn.uni-jena.de && tmuxinator start edi"
+#alias mssalt "cat .credentials | sudo openconnect -b -u bi28yuv@uni-jena.de --passwd-on-stdin --servercert pin-sha256:QTb6yqZ4mUVaL+9ImFdOz5UC9MsTHtXB44lXK3pxDPc= vpn.uni-jena.de && tmuxinator start edi"
+alias mssalt "cat .credentials | sudo openconnect -b -u bi28yuv@uni-jena.de --passwd-on-stdin --servercert pin-sha256:9x88kNYtKRpawdGdr7RfecnvnA1WrLm5bEP0un61bVY= vpn.uni-jena.de && tmuxinator start edi"
+#alias mssalt "cat .credentials | sudo openconnect -b -u bi28yuv@uni-jena.de --passwd-on-stdin  vpn.uni-jena.de && tmuxinator start edi"
 alias mssu "tmuxinator start edi"
 alias mscu "tmuxinator stop edi"
 set -gx ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX YES
@@ -163,7 +156,7 @@ set -gx JAVA_HOME "/opt/homebrew/Cellar/openjdk@11/11.0.12/libexec/openjdk.jdk/C
 
 # adds `~/.scripts` and all subdirectories to $PATH
 set -e fish_user_paths
-set -U fish_user_paths /opt/homebrew/opt/grep/libexec/gnubin /opt/homebrew/lib/ruby/gems/3.0.0/bin /opt/homebrew/opt/ruby/bin ~/Library/Python/3.9/bin /opt/homebrew/sbin /opt/homebrew/bin ~/.local/share/solana/install/active_release/bin ~/.cargo/bin /usr/local/opt/ccache/libexec /usr/local/bin ~/usr/local/sbin /.scripts/tools  ~/.scripts/nnn ~/git/nnn/scripts/nlaunch ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.krew/bin ~/.kube/plugins/jordanwilson230 $fish_user_paths
+set -U fish_user_paths /opt/homebrew/opt/grep/libexec/gnubin /opt/homebrew/opt/ruby/bin /opt/homebrew/lib/ruby/gems/*/bin ~/Library/Python/3.9/bin /opt/homebrew/sbin /opt/homebrew/bin ~/.local/share/solana/install/active_release/bin ~/.cargo/bin /usr/local/opt/ccache/libexec /usr/local/bin ~/usr/local/sbin /.scripts/tools  ~/.scripts/nnn ~/git/nnn/scripts/nlaunch ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.krew/bin ~/.kube/plugins/jordanwilson230 $fish_user_paths
 fish_add_path /usr/local/opt/ruby/bin
 
 #####
@@ -213,6 +206,9 @@ abbr k8s-dev "aws eks update-kubeconfig --name cynkra-eks-dev --region eu-centra
 set -gx AWS_DEFAULT_PROFILE terraform
 # AWS ECR Login
 abbr awsecr "aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 222488041355.dkr.ecr.eu-central-1.amazonaws.com"
+abbr aws-ag-stat "set -gx AWS_DEFAULT_PROFILE terraform_ag_stat"
+abbr aws-cynkra-terraform "set -gx AWS_DEFAULT_PROFILE terraform"
+abbr aws-cynkra-admin "set -gx AWS_DEFAULT_PROFILE cynkra-saml-admin"
 
 #####
 # misc

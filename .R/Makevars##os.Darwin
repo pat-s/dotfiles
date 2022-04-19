@@ -46,10 +46,9 @@ CXXFLAGS = -I/opt/homebrew/include -I/opt/homebrew/opt/sqlite/include -Xclang -f
 #JRI_LIBS = -L/opt/homebrew/opt/pcre2/lib
 #JRI_CPPFLAGS = -L/opt/homebrew/opt/pcre2/lib
 
-# R native
-FLIBS   = -L/opt/R/arm64/gfortran/lib
-F77     = /opt/R/arm64/gfortran/bin/gfortran
-FC      = /opt/R/arm64/gfortran/bin/gfortran
+FLIBS   =-L/opt/homebrew/opt/gfortran/lib
+F77     = /opt/homebrew/bin/gfortran
+FC      = /opt/homebrew/bin/gfortran
 
 ifeq "$(R_36)" "TRUE"
 

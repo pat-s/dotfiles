@@ -19,7 +19,7 @@ if (Sys.info()["sysname"] == "Darwin") {
   options(
     Ncpus = 10L,
     install.packages.check.source = "no",
-    pkgType = "source",
+    #pkgType = "source",
     precommit.path_cp_config_from = "https://raw.githubusercontent.com/mlr-org/mlr/master/.pre-commit-config.yaml"
   )
 }

@@ -36,3 +36,6 @@
 
 # terraform
 .config/fish/conf.d/terraform_secrets.fish
+
+# google
+.config/gmail/credentials.json

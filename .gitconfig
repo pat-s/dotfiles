@@ -31,3 +31,5 @@
 	defaultBranch = main
 [commit]
 	gpgSign = true
+[advice]
+	detachedHead = false

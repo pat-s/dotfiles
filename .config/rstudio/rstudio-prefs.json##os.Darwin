@@ -25,7 +25,7 @@
             "Connections",
             "Tutorial"
         ],
-        "console_left_on_top": true,
+        "console_left_on_top": false,
         "console_right_on_top": true,
         "additional_source_columns": 0
     },
@@ -70,6 +70,5 @@
     "find_panel_legacy_tab_sequence": true,
     "pdf_previewer": "none",
     "rmd_preferred_template_path": "/Users/pjs/Library/R/x86_64/4.1/library/rticles/rmarkdown/templates/copernicus",
-    "quarto_enabled": "enabled",
-    "editor_theme": "Dracula"
+    "quarto_enabled": "enabled"
 }
