@@ -7,6 +7,7 @@ if (interactive() && Sys.info()[["sysname"]] == "Darwin") {
   suppressMessages(require(remotes))
   #suppressMessages(require(prettycode))
   suppressMessages(require(browse))
+  suppressMessages(require(pak))
 }
 #if (requireNamespace("prompt", quietly = TRUE)) {
 #  prompt::set_prompt(prompt::prompt_git)
