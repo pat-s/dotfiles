@@ -1,11 +1,11 @@
 CXX_STD = CXX14
 
-CXX=ccache g++
-CXX11=ccache g++
-CXX14=ccache g++
-CC=ccache gcc
-C11=ccache gcc
-C14=ccache gcc
+#CXX=ccache g++
+#CXX11=ccache g++
+#CXX14=ccache g++
+#CC=ccache gcc
+#C11=ccache gcc
+#C14=ccache gcc
 FC=ccache gfortran
 F77=ccache gfortran
 

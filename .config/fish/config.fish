@@ -159,7 +159,7 @@ end
 
 # adds `~/.scripts` and all subdirectories to $PATH
 set -e fish_user_paths
-set -U fish_user_paths /opt/homebrew/opt/grep/libexec/gnubin /opt/homebrew/opt/ruby/bin /opt/homebrew/lib/ruby/gems/*/bin ~/Library/Python/3.9/bin /opt/homebrew/sbin /opt/homebrew/bin ~/.local/share/solana/install/active_release/bin ~/.cargo/bin /usr/local/opt/ccache/libexec /usr/local/bin ~/usr/local/sbin /.scripts/tools  ~/.scripts/nnn ~/git/nnn/scripts/nlaunch ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.krew/bin ~/.kube/plugins/jordanwilson230 $fish_user_paths
+set -U fish_user_paths /opt/homebrew/opt/grep/libexec/gnubin /opt/homebrew/opt/ruby/bin /opt/homebrew/lib/ruby/gems/*/bin ~/Library/Python/3.9/bin /opt/homebrew/sbin /opt/homebrew/bin ~/.local/share/solana/install/active_release/bin ~/.cargo/bin /usr/local/opt/ccache/libexec /.scripts/tools  ~/.scripts/nnn ~/git/nnn/scripts/nlaunch ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.krew/bin ~/.kube/plugins/jordanwilson230 $fish_user_paths
 fish_add_path /usr/local/opt/ruby/bin
 
 #####
