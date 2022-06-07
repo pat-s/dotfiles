@@ -69,6 +69,5 @@
     "initial_working_directory": "~",
     "find_panel_legacy_tab_sequence": true,
     "pdf_previewer": "none",
-    "rmd_preferred_template_path": "/Users/pjs/Library/R/x86_64/4.1/library/rticles/rmarkdown/templates/copernicus",
-    "source_with_echo": true
+    "rmd_preferred_template_path": "/Users/pjs/Library/R/arm64/4.2/library/rticles/rmarkdown/templates/jss"
 }

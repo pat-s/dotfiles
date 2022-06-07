@@ -37,7 +37,7 @@
 #SHLIB_CXX14LDFLAGS+=-Wl,-rpath,${R_HOME}/lib ${R_HOME}/lib/libc++abi.1.dylib
 # clang: end
 
-LDFLAGS  += -L/opt/homebrew/opt/jpeg/lib -L/opt/homebrew/opt/libpng/lib -L/opt/homebrew/opt/pcre2/lib -L/opt/homebrew/opt/sqlite/lib -L/opt/homebrew/opt/libomp/lib -lomp -I/opt/homebrew/opt/proj
+LDFLAGS  += -L /opt/homebrew/opt/udunits/lib -L/opt/homebrew/opt/jpeg/lib -L/opt/homebrew/opt/libpng/lib -L/opt/homebrew/opt/pcre2/lib -L/opt/homebrew/opt/sqlite/lib -L/opt/homebrew/opt/libomp/lib -lomp -I/opt/homebrew/opt/proj
 CFLAGS   = -I/opt/homebrew/include -Xclang -fopenmp
 CCLAGS   = -I/opt/homebrew/include -Xclang -fopenmp
 CPPFLAGS += -I/opt/homebrew/include -I/opt/homebrew/opt/jpeg/include -L/opt/homebrew/opt/jpeg/lib -Xclang -fopenmp

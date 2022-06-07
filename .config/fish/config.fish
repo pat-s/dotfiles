@@ -213,8 +213,8 @@ abbr aws-ag-stat "set -gx AWS_DEFAULT_PROFILE terraform_ag_stat"
 abbr aws-cynkra-terraform "set -gx AWS_DEFAULT_PROFILE terraform"
 abbr aws-cynkra-admin "set -gx AWS_DEFAULT_PROFILE cynkra-saml-admin"
 
-abbr ec2misc-start "aws ec2 start-instances --instance-ids i-0c065fc3aa7896c3d --region eu-central-1"
-abbr ec2misc-stop "aws ec2 stop-instances --hibernate --instance-ids i-0c065fc3aa7896c3d --region eu-central-1"
+abbr ec2misc-start "aws ec2 start-instances --instance-ids i-0ac81520a9418c1b7 --region eu-central-1"
+abbr ec2misc-stop "aws ec2 stop-instances --hibernate --instance-ids i-0ac81520a9418c1b7 --region eu-central-1"
 
 #####
 # misc

@@ -56,7 +56,9 @@ options(
   radian.escape_key_map = list(
     list(key = "-", value = " <- "),
     list(key = "o", value = " %>% "),
-    list(key = "r", value = " startup::restart()\n "),
-    list(key = "t", value = "usethis::use_tidy_description()\n "),
-    list(key = "p", value = "usethis::pr_finish()\n ")
+    list(key = "r", value = " startup::restart()\n"),
+    list(key = "t", value = "usethis::use_tidy_description()\n"),
+    list(key = "f", value = "usethis::pr_finish()\n"),
+    list(key = "i", value = "usethis::pr_init()"),
+    list(key = "p", value = "usethis::pr_push()\n")
 ))

@@ -33,6 +33,7 @@ if (Sys.info()["sysname"] == "Darwin" && Sys.info()[["machine"]] == "arm64") {
 if (grepl("mlr", getwd()) || grepl("paradox", getwd())) {
   options(styler.addins_style_transformer = "styler.mlr::mlr_style()")
 }
+options(styler.cache_root = "styler-perm")
 
 # tibble > data.frame
 # if (interactive() && "tibble" %in% rownames(utils::installed.packages())) {
