@@ -210,11 +210,12 @@ set -gx AWS_DEFAULT_PROFILE terraform
 # AWS ECR Login
 abbr awsecr "aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 222488041355.dkr.ecr.eu-central-1.amazonaws.com"
 abbr aws-ag-stat "set -gx AWS_DEFAULT_PROFILE terraform_ag_stat"
+abbr aws-efv "set -gx AWS_DEFAULT_PROFILE terraform_efv"
 abbr aws-cynkra-terraform "set -gx AWS_DEFAULT_PROFILE terraform"
 abbr aws-cynkra-admin "set -gx AWS_DEFAULT_PROFILE cynkra-saml-admin"
 
-abbr ec2misc-start "aws ec2 start-instances --instance-ids i-0ac81520a9418c1b7 --region eu-central-1"
-abbr ec2misc-stop "aws ec2 stop-instances --hibernate --instance-ids i-0ac81520a9418c1b7 --region eu-central-1"
+abbr ec2misc-start "aws ec2 start-instances --instance-ids (aws ec2 describe-instances --region eu-central-1 --filters 'Name=tag:Name,Values=ec2misc' --output text --query 'Reservations[*].Instances[*].InstanceId') --region eu-central-1"
+abbr ec2misc-stop "aws ec2 stop-instances --instance-ids (aws ec2 describe-instances --region eu-central-1 --filters 'Name=tag:Name,Values=ec2misc' --output text --query 'Reservations[*].Instances[*].InstanceId') --region eu-central-1"
 
 #####
 # misc
