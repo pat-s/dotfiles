@@ -214,8 +214,8 @@ abbr aws-efv "set -gx AWS_DEFAULT_PROFILE terraform_efv"
 abbr aws-cynkra-terraform "set -gx AWS_DEFAULT_PROFILE terraform"
 abbr aws-cynkra-admin "set -gx AWS_DEFAULT_PROFILE cynkra-saml-admin"
 
-abbr ec2misc-start "aws ec2 start-instances --instance-ids (aws ec2 describe-instances --region eu-central-1 --filters 'Name=tag:Name,Values=ec2misc' --output text --query 'Reservations[*].Instances[*].InstanceId') --region eu-central-1"
-abbr ec2misc-stop "aws ec2 stop-instances --instance-ids (aws ec2 describe-instances --region eu-central-1 --filters 'Name=tag:Name,Values=ec2misc' --output text --query 'Reservations[*].Instances[*].InstanceId') --region eu-central-1"
+abbr ec2misc-start "aws ec2 start-instances --instance-ids (aws ec2 describe-instances --region eu-central-1 --filters 'Name=tag:Name,Values=ec2misc' 'Name=instance-state-name,Values=running,stopped' --output text --query 'Reservations[*].Instances[*].InstanceId') --region eu-central-1"
+abbr ec2misc-stop "aws ec2 stop-instances --instance-ids (aws ec2 describe-instances --region eu-central-1 --filters 'Name=tag:Name,Values=ec2misc' 'Name=instance-state-name,Values=running,stopped' --output text --query 'Reservations[*].Instances[*].InstanceId') --region eu-central-1"
 
 #####
 # misc
