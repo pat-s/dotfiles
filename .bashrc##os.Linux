@@ -7,11 +7,11 @@ HISTSIZE= HISTFILESIZE= # Infinite history.
 
 alias git-remove-untracked='git fetch --prune && git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}" | xargs git branch -D'
 
-export SPACK_ROOT=/opt/spack
-. $SPACK_ROOT/share/spack/setup-env.sh
+if [[ $(hostname) == "edi" ]]; then
+  export SPACK_ROOT=/opt/spack
+  . $SPACK_ROOT/share/spack/setup-env.sh
 
-
-export MODULEPATH=/opt/spack/share/spack/modules/linux-centos7-x86_64
+  export MODULEPATH=/opt/spack/share/spack/modules/linux-centos7-x86_64
 
 module load gcc-9.2.0-gcc-4.8.5-5kwstwt \
   geos-3.9.1-gcc-9.2.0-y3oyr6h \
@@ -22,3 +22,5 @@ module load gcc-9.2.0-gcc-4.8.5-5kwstwt \
 alias r404="module load r-4.0.4-gcc-9.2.0-udi7a3a && radian"
 
 alias paper2="cd ~/papers/2019-feature-selection && r404"
+
+fi
