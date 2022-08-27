@@ -5,7 +5,8 @@ if (Sys.info()[["sysname"]] == "Darwin") {
     # mlr3learners = 'https://mlr3learners.github.io/mlr3learners.drat'
   )))
 } else if (Sys.info()[["nodename"]] == "parallels") {
-  options(repos = structure(c(
-    CRAN = "https://packagemanager.rstudio.com/all/__linux__/focal/latest"
-  )))
+  # FIXME: no arm binaries yet!
+  # options(repos = structure(c(
+    # CRAN = "https://packagemanager.rstudio.com/all/__linux__/focal/latest"
+  # )))
 }

@@ -197,10 +197,15 @@ abbr dex "docker exec -it"
 # k8s
 #####
 
-abbr k "kubectl"
+abbr k "kubecolor"
 abbr mk "minikube"
 abbr k8s-prod "aws eks update-kubeconfig --name cynkra-eks-prod --region eu-central-1 --alias eks-prod"
 abbr k8s-dev "aws eks update-kubeconfig --name cynkra-eks-dev --region eu-central-1 --alias eks-dev"
+
+# fish support for kubecolor plugin: https://github.com/hidetatz/kubecolor#fish
+function kubectl
+  kubecolor $argv
+end
 
 #####
 # AWS
