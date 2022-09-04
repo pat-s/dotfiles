@@ -159,8 +159,18 @@ end
 
 # adds `~/.scripts` and all subdirectories to $PATH
 set -e fish_user_paths
-set -U fish_user_paths /opt/homebrew/opt/grep/libexec/gnubin /opt/homebrew/opt/ruby/bin /opt/homebrew/lib/ruby/gems/*/bin ~/Library/Python/3.9/bin /opt/homebrew/sbin /opt/homebrew/bin ~/.local/share/solana/install/active_release/bin ~/.cargo/bin /usr/local/opt/ccache/libexec /.scripts/tools  ~/.scripts/nnn ~/git/nnn/scripts/nlaunch ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.krew/bin ~/.kube/plugins/jordanwilson230 $fish_user_paths
-fish_add_path /usr/local/opt/ruby/bin
+if [ $unamestr = Darwin ]
+  set -U fish_user_paths /opt/homebrew/opt/grep/libexec/gnubin /opt/homebrew/lib/ruby/gems/*/bin ~/Library/Python/3.9/bin /opt/homebrew/sbin /opt/homebrew/bin ~/.local/share/solana/install/active_release/bin ~/.cargo/bin /usr/local/opt/ccache/libexec /.scripts/tools  ~/.scripts/nnn ~/git/nnn/scripts/nlaunch ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.krew/bin ~/.kube/plugins/jordanwilson230 $fish_user_paths
+end
+
+if [ $unamestr = Linux ]
+ if test -d /usr/local/opt/ruby 
+   set -U fish_user_paths /usr/local/opt/ruby/bin $fish_user_paths
+ end
+ if test -d $HOME/.local/bin 
+   set -U fish_user_paths $HOME/.local/bin $fish_user_paths
+ end
+end
 
 #####
 # nnn
@@ -217,9 +227,6 @@ abbr awsecr "aws ecr get-login-password --region eu-central-1 | docker login --u
 abbr aws-ag-stat "set -gx AWS_DEFAULT_PROFILE terraform_ag_stat"
 abbr aws-efv "set -gx AWS_DEFAULT_PROFILE terraform_efv"
 abbr aws-cynkra-terraform "set -gx AWS_DEFAULT_PROFILE terraform"
-abbr aws-cynkra-admin "set -gx AWS_DEFAULT_PROFILE cynkra-saml-admin"
-
-abbr ec2misc-start "aws ec2 start-instances --instance-ids (aws ec2 describe-instances --region eu-central-1 --filters 'Name=tag:Name,Values=ec2misc' 'Name=instance-state-name,Values=running,stopped' --output text --query 'Reservations[*].Instances[*].InstanceId') --region eu-central-1"
 abbr ec2misc-stop "aws ec2 stop-instances --instance-ids (aws ec2 describe-instances --region eu-central-1 --filters 'Name=tag:Name,Values=ec2misc' 'Name=instance-state-name,Values=running,stopped' --output text --query 'Reservations[*].Instances[*].InstanceId') --region eu-central-1"
 
 #####
