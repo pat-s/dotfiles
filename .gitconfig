@@ -29,6 +29,7 @@
 	rebase = false
 [init]
 	defaultBranch = main
+	templateDir = /Users/pjs/.git-template
 [commit]
 	gpgSign = true
 [advice]

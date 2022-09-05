@@ -160,14 +160,14 @@ end
 # adds `~/.scripts` and all subdirectories to $PATH
 set -e fish_user_paths
 if [ $unamestr = Darwin ]
-  set -U fish_user_paths /opt/homebrew/opt/grep/libexec/gnubin /opt/homebrew/lib/ruby/gems/*/bin ~/Library/Python/3.9/bin /opt/homebrew/sbin /opt/homebrew/bin ~/.local/share/solana/install/active_release/bin ~/.cargo/bin /usr/local/opt/ccache/libexec /.scripts/tools  ~/.scripts/nnn ~/git/nnn/scripts/nlaunch ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.krew/bin ~/.kube/plugins/jordanwilson230 $fish_user_paths
+  set -U fish_user_paths /opt/homebrew/opt/grep/libexec/gnubin /opt/homebrew/lib/ruby/gems/*/bin ~/Library/Python/3.9/bin /opt/homebrew/sbin /opt/homebrew/bin ~/.local/share/solana/install/active_release/bin ~/.cargo/bin /usr/local/opt/ccache/libexec /.scripts/tools  ~/.scripts/nnn ~/git/nnn/scripts/nlaunch ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.krew/bin ~/.kube/plugins/jordanwilson230 ~/go/bin $fish_user_paths
 end
 
 if [ $unamestr = Linux ]
- if test -d /usr/local/opt/ruby 
+ if test -d /usr/local/opt/ruby
    set -U fish_user_paths /usr/local/opt/ruby/bin $fish_user_paths
  end
- if test -d $HOME/.local/bin 
+ if test -d $HOME/.local/bin
    set -U fish_user_paths $HOME/.local/bin $fish_user_paths
  end
 end
@@ -211,6 +211,7 @@ abbr k "kubecolor"
 abbr mk "minikube"
 abbr k8s-prod "aws eks update-kubeconfig --name cynkra-eks-prod --region eu-central-1 --alias eks-prod"
 abbr k8s-dev "aws eks update-kubeconfig --name cynkra-eks-dev --region eu-central-1 --alias eks-dev"
+abbr kc "kubectx"
 
 # fish support for kubecolor plugin: https://github.com/hidetatz/kubecolor#fish
 function kubectl
