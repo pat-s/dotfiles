@@ -70,5 +70,6 @@
     "find_panel_legacy_tab_sequence": true,
     "pdf_previewer": "none",
     "rmd_preferred_template_path": "/Users/pjs/Library/R/arm64/4.2/library/rticles/rmarkdown/templates/jss",
-    "syntax_color_console": true
+    "syntax_color_console": true,
+    "editor_theme": "One Light {rsthemes}"
 }

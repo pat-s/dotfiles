@@ -39,3 +39,9 @@
 
 # google
 .config/gmail/credentials.json
+
+# ansible
+.ansible.cfg
+
+# fish
+.config/fish/conf.d/vault.fish

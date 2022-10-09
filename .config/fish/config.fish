@@ -170,6 +170,9 @@ if [ $unamestr = Linux ]
  if test -d $HOME/.local/bin
    set -U fish_user_paths $HOME/.local/bin $fish_user_paths
  end
+ if test -d /usr/local/taudem
+   set -U fish_user_paths /usr/local/taudem $fish_user_paths
+ end
 end
 
 #####
