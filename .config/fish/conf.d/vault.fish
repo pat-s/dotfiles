@@ -1,2 +1,0 @@
-### Vault cynkra
-set -gx VAULT_CYNKRA_USER_PASSWORD "8w8HRARQDmZvqPmuE49J"

@@ -45,3 +45,4 @@
 
 # fish
 .config/fish/conf.d/vault.fish
+.config/fish/conf.d/azure.fish
