@@ -4,8 +4,8 @@
 .Renviron.d/Github_PAT.R
 
 # ssh
-.ssh/id_rsa
-.ssh/id_rsa.pub
+.ssh/id_ed25519
+.ssh/id_ed25519.pub
 .ssh/keys/aur
 .ssh/keys/aur.pub
 .ssh/config
