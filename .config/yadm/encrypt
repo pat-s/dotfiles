@@ -46,3 +46,6 @@
 # fish
 .config/fish/conf.d/vault.fish
 .config/fish/conf.d/azure.fish
+.config/fish/conf.d/gitea.fish
+.config/fish/conf.d/drone.fish
+
