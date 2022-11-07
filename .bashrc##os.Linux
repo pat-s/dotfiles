@@ -24,3 +24,5 @@ alias r404="module load r-4.0.4-gcc-9.2.0-udi7a3a && radian"
 alias paper2="cd ~/papers/2019-feature-selection && r404"
 
 fi
+
+eval $(keychain --eval --agents gpg)
