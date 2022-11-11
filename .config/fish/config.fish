@@ -287,6 +287,11 @@ if [ $unamestr = Darwin ]
 end
 
 
+set keychain_installed (which nvim 2>/dev/null || echo FALSE)
+if [ "$keychain_installed" = TRUE ]
+  keychain -q --eval --agents gpg >/dev/null
+end
+
 
 set -gx PKG_CONFIG_PATH "/opt/homebrew/opt/sqlite/lib/pkgconfig"
 
