@@ -22,9 +22,6 @@ echo "$0" | grep "bash$" >/dev/null && [ -f ~/.bashrc ] && source "$HOME/.bashrc
 export PATH="/Users/pjs/.local/share/solana/install/active_release/bin:$PATH"
 export PATH="/Library/TeX/texbin:$PATH"
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/profile.post.bash" ]] && builtin source "$HOME/.fig/shell/profile.post.bash"
-
 # Invoke GnuPG-Agent the first time we login.
 # Does `~/.gpg-agent-info' exist and points to gpg-agent process accepting signals?
 if test -f $HOME/.gpg-agent-info && \
@@ -36,3 +33,6 @@ else
 fi
 export GPG_TTY=`tty`
 export GPG_AGENT_INFO
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/profile.post.bash" ]] && builtin source "$HOME/.fig/shell/profile.post.bash"
