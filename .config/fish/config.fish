@@ -210,16 +210,16 @@ abbr dex "docker exec -it"
 # k8s
 #####
 
-abbr k "kubecolor"
+abbr k "kubectl"
 abbr mk "minikube"
 abbr k8s-prod "aws eks update-kubeconfig --name cynkra-eks-prod --region eu-central-1 --alias eks-prod"
 abbr k8s-dev "aws eks update-kubeconfig --name cynkra-eks-dev --region eu-central-1 --alias eks-dev"
 abbr kc "kubectx"
 
 # fish support for kubecolor plugin: https://github.com/hidetatz/kubecolor#fish
-function kubectl
-  kubecolor $argv
-end
+#function kubectl
+#  kubecolor $argv
+#end
 
 #####
 # AWS
@@ -297,4 +297,6 @@ set -gx PKG_CONFIG_PATH "/opt/homebrew/opt/sqlite/lib/pkgconfig"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/pjs/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/pjs/Downloads/google-cloud-sdk/path.fish.inc'; end
+
+starship init fish | source
 
