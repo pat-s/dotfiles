@@ -264,6 +264,7 @@ test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell
 ###
 export DRONE_SERVER=https://drone.cynkra.com
 export DRONE_TOKEN=uzJLLX6ok74tbhHLBvAhec9jfPrCG8Za
+set -gx WOODPECKER_SERVER "https://woodpecker.cynkra.com"
 
 ###
 # Vault

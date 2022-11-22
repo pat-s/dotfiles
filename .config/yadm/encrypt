@@ -49,4 +49,5 @@
 .config/fish/conf.d/gitea.fish
 .config/fish/conf.d/drone.fish
 .config/fish/conf.d/aws.fish
+.config/fish/conf.d/ci.fish
 
