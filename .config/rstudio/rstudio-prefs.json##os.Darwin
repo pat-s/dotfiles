@@ -49,7 +49,6 @@
     "default_latex_program": "XeLaTeX",
     "jobs_tab_visibility": "shown",
     "tab_multiline_completion": true,
-    "show_indent_guides": true,
     "style_diagnostics": true,
     "terminal_track_environment": false,
     "check_for_updates": false,
@@ -71,5 +70,6 @@
     "pdf_previewer": "none",
     "rmd_preferred_template_path": "/Users/pjs/Library/R/arm64/4.2/library/rticles/rmarkdown/templates/jss",
     "syntax_color_console": true,
-    "editor_theme": "One Dark {rsthemes}"
+    "editor_theme": "One Dark {rsthemes}",
+    "soft_wrap_r_files": true
 }

@@ -74,6 +74,7 @@ abbr gr "git restore"
 abbr gbd "git branch -D"
 abbr gl "git log"
 abbr gpb "git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -D"
+abbr gca "git commit --amend --no-edit -n && git push --force"
 
 ####
 # R
@@ -234,6 +235,13 @@ abbr aws-cynkra-terraform "set -gx AWS_DEFAULT_PROFILE terraform"
 abbr ec2misc-stop "aws ec2 stop-instances --instance-ids (aws ec2 describe-instances --region eu-central-1 --filters 'Name=tag:Name,Values=ec2misc' 'Name=instance-state-name,Values=running,stopped' --output text --query 'Reservations[*].Instances[*].InstanceId') --region eu-central-1"
 
 #####
+# Azure
+#####
+
+abbr az-cynkra "az account set --subscription f1fcfb5d-1357-4de9-a1e5-d87693d2660e"
+abbr az-vbz-dev "az account set --subscription 75d104e2-3c07-44a0-ae19-061438e298e5"
+
+#####
 # misc
 #####
 
@@ -300,3 +308,4 @@ if [ -f '/Users/pjs/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/pjs/D
 
 starship init fish | source
 
+source /Users/pjs/.config/op/plugins.sh
