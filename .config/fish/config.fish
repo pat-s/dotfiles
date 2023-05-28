@@ -53,6 +53,7 @@ alias ockill "sudo killall -SIGINT openconnect && tmuxinator stop edi"
 alias sonicwallkill "sudo killall -SIGINT startct.sh"
 
 alias vpnsnf "sudo openfortivpn -c ~/.config/openfortivpn/snf"
+alias vpnbit "sudo openfortivpn -c ~/.config/openfortivpn/bit"
 
 #####
 # Git
@@ -216,6 +217,7 @@ abbr mk "minikube"
 abbr k8s-prod "aws eks update-kubeconfig --name cynkra-eks-prod --region eu-central-1 --alias eks-prod"
 abbr k8s-dev "aws eks update-kubeconfig --name cynkra-eks-dev --region eu-central-1 --alias eks-dev"
 abbr kc "kubectx"
+abbr kdn 'kubectl describe no | grep "beta.kubernetes.io/instance-type"'
 
 # fish support for kubecolor plugin: https://github.com/hidetatz/kubecolor#fish
 #function kubectl
@@ -271,7 +273,7 @@ test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell
 # Drone
 ###
 set -gx DRONE_SERVER "https://drone.cynkra.com"
-set -gx WOODPECKER_SERVER "https://woodpecker.cynkra.com"
+#set -gx WOODPECKER_SERVER "https://woodpecker.cynkra.com"
 
 ###
 # Vault

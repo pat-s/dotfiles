@@ -1,55 +1,10 @@
-# clang: start
-#CFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
-#CCFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
-#CXXFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
-#CPPFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
-
-#CFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk -Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include -L/usr/local/opt/libomp/lib -lomp
-#CCFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk -Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include -L/usr/local/opt/libomp/lib -lomp
-#CXXFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk -Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include -L/usr/local/opt/libomp/lib -lomp
-#CPPFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk -Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include -L/usr/local/opt/libomp/lib -lomp
-
-#wget -nv https://github.com/phracker/MacOSX-SDKs/releases/download/10.15/MacOSX10.13.sdk.tar.xz
-#tar fxz MacOSX10.13.sdk.tar.xz
-#sudo mv MacOSX10.13.sdk /Library/Developer/CommandLineTools/SDKs/
-#rm -rf MacOSX10.13*
-
-#CFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk
-#CCFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk
-#CXXFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk
-# The two additions cause igraph install to fail
-#CPPFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk -I/usr/local/include -I/usr/local/lib
-#CPPFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.13.sdk -I/usr/local/opt/jpeg/include
-## openmp support for R > 4.0
-#CPPFLAGS += -I/usr/local/opt/libomp/include -Xclang -fopenmp
-#LDFLAGS += -L/usr/local/opt/libomp/lib -lomp
-#LDFLAGS += -lomp
-#LDFLAGS += -L/usr/local/opt/jpeg/lib
-
-
-#CFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -I/usr/local/include
-#CCFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -I/usr/local/include
-#CXXFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk  -I/usr/local/include
-#CPPFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk
-#CPPFLAGS=-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -I/usr/local/opt/libomp/include -Xclang -fopenmp
-#LDFLAGS+=-L/usr/local/opt/llvm/lib
-#SHLIB_CXXLDFLAGS+=-Wl,-rpath,${R_HOME}/lib ${R_HOME}/lib/libc++abi.1.dylib
-#SHLIB_CXX14LDFLAGS+=-Wl,-rpath,${R_HOME}/lib ${R_HOME}/lib/libc++abi.1.dylib
-# clang: end
-
 LDFLAGS  += -L/opt/homebrew/opt/udunits/lib -L/opt/homebrew/opt/jpeg/lib -L/opt/homebrew/opt/libpng/lib -L/opt/homebrew/opt/pcre2/lib -L/opt/homebrew/opt/sqlite/lib -L/opt/homebrew/opt/libomp/lib -I/opt/homebrew/opt/proj
-#CFLAGS   = -I/opt/homebrew/include -Xclang -fopenmp -Wno-error=unused-command-line-argument
-#CCLAGS   = -I/opt/homebrew/include -Xclang -fopenmp -Wno-error=unused-command-line-argument
-CPPFLAGS += -I/opt/homebrew/include -I/opt/homebrew/opt/jpeg/include -L/opt/homebrew/opt/jpeg/lib -Xclang 
-#CPPFLAGS += -L/opt/homebrew/opt/jpeg/lib 
+CPPFLAGS += -I/opt/homebrew/include   
 CXXFLAGS = -I/opt/homebrew/include -Xclang -fopenmp -Wno-error=unused-command-line-argument
-#PKG_LIBS += -I/opt/homebrew/opt/proj/lib
-#JRI_LIBS = -L/opt/homebrew/opt/pcre2/lib
-#JRI_CPPFLAGS = -L/opt/homebrew/opt/pcre2/lib
-LIBRARY_RELEASE_OPTIONS=-Wno-error=unused-command-line-argument
-LDLIBS+=-lomp
-PKG_LIBS+=-L/opt/homebrew/opt/jpeg/lib
-PKG_CONFIG_PATH+=/opt/homebrew/opt/jpeg/lib/pkgconfig
+#LIBRARY_RELEASE_OPTIONS=-Wno-error=unused-command-line-argument
+#LDLIBS+=-lomp
+#PKG_LIBS+=-L/opt/homebrew/opt/jpeg/lib
+#PKG_CONFIG_PATH+=/opt/homebrew/opt/jpeg/lib/pkgconfig
 
 FLIBS   =-L/opt/homebrew/opt/gfortran/lib
 F77     = /opt/homebrew/bin/gfortran
