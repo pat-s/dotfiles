@@ -233,6 +233,7 @@ set -gx AWS_DEFAULT_PROFILE terraform
 abbr awsecr "aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 222488041355.dkr.ecr.eu-central-1.amazonaws.com"
 abbr aws-ag-stat "set -gx AWS_DEFAULT_PROFILE terraform_ag_stat"
 abbr aws-efv "set -gx AWS_DEFAULT_PROFILE terraform_efv"
+abbr aws-personal "set -gx AWS_DEFAULT_PROFILE personal"
 abbr aws-cynkra-terraform "set -gx AWS_DEFAULT_PROFILE terraform"
 abbr ec2misc-stop "aws ec2 stop-instances --instance-ids (aws ec2 describe-instances --region eu-central-1 --filters 'Name=tag:Name,Values=ec2misc' 'Name=instance-state-name,Values=running,stopped' --output text --query 'Reservations[*].Instances[*].InstanceId') --region eu-central-1"
 
