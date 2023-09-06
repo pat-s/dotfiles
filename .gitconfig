@@ -34,3 +34,5 @@
 	gpgSign = true
 [advice]
 	detachedHead = false
+[merge "theirs"]
+	driver = true

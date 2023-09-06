@@ -70,6 +70,6 @@
     "pdf_previewer": "none",
     "rmd_preferred_template_path": "/Users/pjs/Library/R/arm64/4.2/library/rticles/rmarkdown/templates/jss",
     "syntax_color_console": true,
-    "editor_theme": "One Dark {rsthemes}",
+    "editor_theme": "One Light {rsthemes}",
     "soft_wrap_r_files": true
 }
