@@ -50,4 +50,5 @@
 .config/fish/conf.d/drone.fish
 .config/fish/conf.d/aws.fish
 .config/fish/conf.d/ci.fish
+.config/fish/conf.d/R.fish
 
