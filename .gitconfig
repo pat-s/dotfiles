@@ -29,7 +29,7 @@
 	rebase = false
 [init]
 	defaultBranch = main
-	templateDir = /Users/pjs/.git-template
+	templateDir = /Users/pjs/git/woodpeckerci/woodpecker/git_hooks
 [commit]
 	gpgSign = true
 [advice]

@@ -162,7 +162,7 @@ end
 # adds `~/.scripts` and all subdirectories to $PATH
 set -e fish_user_paths
 if [ $unamestr = Darwin ]
-  set -U fish_user_paths /opt/homebrew/opt/grep/libexec/gnubin /opt/homebrew/lib/ruby/gems/*/bin ~/Library/Python/3.9/bin /opt/homebrew/sbin /opt/homebrew/bin ~/.local/share/solana/install/active_release/bin ~/.cargo/bin /usr/local/opt/ccache/libexec /.scripts/tools  ~/.scripts/nnn ~/git/nnn/scripts/nlaunch ~/.local/bin ~/git/nnn/plugins ~/.scripts/R ~/.krew/bin ~/.kube/plugins/jordanwilson230 ~/go/bin /opt/homebrew/opt/ruby/bin $fish_user_paths
+  set -U fish_user_paths /opt/homebrew/opt/grep/libexec/gnubin /opt/homebrew/lib/ruby/gems/*/bin /opt/homebrew/sbin /opt/homebrew/bin $HOME/.local/share/solana/install/active_release/bin $HOME/.cargo/bin /usr/local/opt/ccache/libexec /.scripts/tools $HOME/.scripts/nnn $HOME/git/nnn/scripts/nlaunch $HOME/.local/bin $HOME/git/nnn/plugins $HOME/.scripts/R $HOME/.krew/bin $HOME/.kube/plugins/jordanwilson230 $HOME/go/bin /opt/homebrew/opt/ruby/bin $fish_user_paths
 end
 
 if [ $unamestr = Linux ]
@@ -235,6 +235,7 @@ abbr aws-ag-stat "set -gx AWS_DEFAULT_PROFILE terraform_ag_stat"
 abbr aws-efv "set -gx AWS_DEFAULT_PROFILE terraform_efv"
 abbr aws-personal "set -gx AWS_DEFAULT_PROFILE personal"
 abbr aws-cynkra-terraform "set -gx AWS_DEFAULT_PROFILE terraform"
+abbr aws-cynkra-terraform-zurich "set -gx AWS_DEFAULT_PROFILE terraform-zurich"
 abbr ec2misc-stop "aws ec2 stop-instances --instance-ids (aws ec2 describe-instances --region eu-central-1 --filters 'Name=tag:Name,Values=ec2misc' 'Name=instance-state-name,Values=running,stopped' --output text --query 'Reservations[*].Instances[*].InstanceId') --region eu-central-1"
 
 #####
