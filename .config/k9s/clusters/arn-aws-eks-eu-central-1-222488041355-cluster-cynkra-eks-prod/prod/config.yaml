@@ -1,0 +1,13 @@
+k9s:
+  cluster: arn:aws:eks:eu-central-1:222488041355:cluster/cynkra-eks-prod
+  namespace:
+    active: all
+    lockFavorites: false
+    favorites:
+    - all
+    - default
+  view:
+    active: po
+  featureGates:
+    nodeShell: true
+  portForwardAddress: localhost

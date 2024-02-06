@@ -17,6 +17,8 @@
 	smudge = git-lfs smudge -- %f
 [credential]
 	helper = cache
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
 [gpg]
     program = gpg
 [tag]
@@ -24,6 +26,7 @@
     #forceSignAnnotated = true
 [core]
 	fileMode = false
+	ignorecase = false
 #	autocrlf = true
 [pull]
 	rebase = false
@@ -31,8 +34,12 @@
 	defaultBranch = main
 	templateDir = /Users/pjs/git/woodpeckerci/woodpecker/git_hooks
 [commit]
-	gpgSign = true
+	gpgsign = true
 [advice]
 	detachedHead = false
 [merge "theirs"]
 	driver = true
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[credential "https://gitea.cynkra.com"]
+	provider = generic

@@ -195,6 +195,12 @@ set --export NNN_FIFO "/tmp/nnn.fifo"
 abbr update_nnn "cd ~/git/nnn && git pull && sudo make O_NERD=1 && sudo make install"
 
 ####
+# k9s
+####
+
+set -gx K9S_CONFIG_DIR ~/.config/k9s
+
+####
 # docker
 ####
 

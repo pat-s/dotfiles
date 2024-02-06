@@ -1,6 +1,7 @@
 LDFLAGS  += -L/opt/homebrew/opt/udunits/lib -L/opt/homebrew/opt/jpeg/lib -L/opt/homebrew/opt/libpng/lib -L/opt/homebrew/opt/pcre2/lib -L/opt/homebrew/opt/sqlite/lib -L/opt/homebrew/opt/libomp/lib -I/opt/homebrew/opt/proj
 CPPFLAGS += -I/opt/homebrew/include   
-CXXFLAGS = -I/opt/homebrew/include -Xclang -fopenmp -Wno-error=unused-command-line-argument
+# -std=c++20 added 2023-12 https://stackoverflow.com/questions/40063467/what-does-the-expected-for-function-style-cast-or-type-construction-error?noredirect=1
+CXXFLAGS = -I/opt/homebrew/include -Xclang -fopenmp -Wno-error=unused-command-line-argument -std=c++20
 #LIBRARY_RELEASE_OPTIONS=-Wno-error=unused-command-line-argument
 #LDLIBS+=-lomp
 #PKG_LIBS+=-L/opt/homebrew/opt/jpeg/lib
@@ -10,33 +11,15 @@ FLIBS   =-L/opt/homebrew/opt/gfortran/lib
 F77     = /opt/homebrew/bin/gfortran
 FC      = /opt/homebrew/bin/gfortran
 
-ifeq "$(R_36)" "TRUE"
-
-  CC      =  ccache /usr/local/clang7/bin/clang
-  CPP     =  ccache /usr/local/clang7/bin/clang
-  CXX     =  ccache /usr/local/clang7/bin/clang++ -Wno-error=unused-command-line-argument
-  CXX11   =  ccache /usr/local/clang7/bin/clang++ -Wno-error=unused-command-line-argument
-  CXX14   =  ccache /usr/local/clang7/bin/clang++ -Wno-error=unused-command-line-argument
-  CXX17   =  ccache /usr/local/clang7/bin/clang++ -Wno-error=unused-command-line-argument
-  F77     =  ccache /usr/local/gfortran/bin/gfortran
-  FC      =  ccache /usr/local/gfortran/bin/gfortran
-  MAKE    =  make -j8
-
-else ifeq "$(fastr)" "TRUE"
-
-else
-
-  #CXX_STD =  CXX11
-  #CC      =  ccache clang
-  ##CPP     =  ccache clang
-  CXX     =  ccache clang++
-  CXX11   =  ccache clang++
-  CXX14   =  ccache clang++
-  #CXX17   =  ccache clang++
-  #F77     =  /opt/homebrew/bin/gfortran
-  #FC      =  /opt/homebrew/bin/gfortran
-  MAKE    =  make -j8
-
-endif
+#CXX_STD =  CXX11
+#CC      =  ccache clang
+##CPP     =  ccache clang
+CXX     =  ccache clang++
+CXX11   =  ccache clang++
+CXX14   =  ccache clang++
+#CXX17   =  ccache clang++
+#F77     =  /opt/homebrew/bin/gfortran
+#FC      =  /opt/homebrew/bin/gfortran
+MAKE    =  make -j8
 
 

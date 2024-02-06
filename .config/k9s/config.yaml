@@ -1,0 +1,6 @@
+k9s:
+  shellPod:
+    image: cynkra/alpine-htop:latest
+    namespace: default
+    tty: true
+
