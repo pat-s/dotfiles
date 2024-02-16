@@ -43,3 +43,7 @@
 	useHttpPath = true
 [credential "https://gitea.cynkra.com"]
 	provider = generic
+[maintenance]
+	repo = /Users/pjs/cynkra/ansible/ansible
+	repo = /Users/pjs/cynkra/devops/terraform/aws-frankfurt-k8s
+	repo = /Users/pjs/git/woodpeckerci/woodpecker-helm
