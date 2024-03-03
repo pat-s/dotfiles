@@ -45,7 +45,7 @@
     "show_hidden_files": true,
     "rmd_viewer_type": "pane",
     "custom_shell_command": "/opt/homebrew/bin/fish",
-    "default_project_location": "~/cynkra/rstudio",
+    "default_project_location": "/Users/pjs/cynkra/intern",
     "default_latex_program": "XeLaTeX",
     "jobs_tab_visibility": "shown",
     "tab_multiline_completion": true,
@@ -70,6 +70,7 @@
     "pdf_previewer": "none",
     "rmd_preferred_template_path": "/Users/pjs/Library/R/arm64/4.2/library/rticles/rmarkdown/templates/jss",
     "syntax_color_console": true,
-    "editor_theme": "One Light {rsthemes}",
-    "soft_wrap_r_files": true
+    "editor_theme": "Dracula",
+    "soft_wrap_r_files": true,
+    "plumber_viewer_type": "pane"
 }

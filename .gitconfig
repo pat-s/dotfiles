@@ -1,7 +1,7 @@
 [user]
 	email = patrick.schratz@gmail.com
 	name = pat-s
-	signingkey = 1EF78925
+	signingkey = AAC690DCD5A1FEB645C3C79F81271241A44A9A69
     #signingkey = BE2167750633FE1BEA664E548D4E0C3649536FDC
     #github = pat-s
 [color]
@@ -47,3 +47,22 @@
 	repo = /Users/pjs/cynkra/ansible/ansible
 	repo = /Users/pjs/cynkra/devops/terraform/aws-frankfurt-k8s
 	repo = /Users/pjs/git/woodpeckerci/woodpecker-helm
+	repo = /Users/pjs/git/personal
+	repo = /Users/pjs/git/woodpeckerci/ansible
+	repo = /Users/pjs/git/gitea/helm-chart
+	repo = /Users/pjs/git/woodpeckerci/woodpecker
+	repo = /Users/pjs/cynkra/devops/terraform/aws-frankfurt-ecr
+	repo = /Users/pjs/cynkra/devops/terraform/aws-frankfurt-s3-cf
+	repo = /Users/pjs/cynkra/devops/terraform/aws-zurich-rds
+	repo = /Users/pjs/cynkra/devops/terraform/aws-iam
+	repo = /Users/pjs/git/woodpeckerci/docker-buildx
+	repo = /Users/pjs/git/helm
+	repo = /Users/pjs/git/woodpeckerci/infrastructure
+	repo = /Users/pjs/cynkra/eae-core/managed-server-manual
+	repo = /Users/pjs/cynkra/intern/cynkraweb
+[credential "https://codeberg.org"]
+	provider = generic
+[push]
+	autoSetupRemote = true
+[branch]
+	autoSetupMerge = always

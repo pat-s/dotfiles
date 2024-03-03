@@ -17,7 +17,10 @@ end
 
 alias git-sub-up "git submodule update --remote --merge"
 alias imp "impressive -c memory -t WipeLeft -ff --noclicks --nowheel --fade"
-abbr n "n -x"
+# -x      notis, selection sync, xterm title
+# -a      auto NNN_FIFO
+# -K detect key collision
+#abbr n "nnn -xa"
 alias vi nvim
 
 # edit configs
@@ -61,6 +64,7 @@ alias vpnbit "sudo openfortivpn -c ~/.config/openfortivpn/bit"
 #####
 
 abbr ga "git add"
+abbr gaa "git add -A"
 abbr ph "git push"
 abbr pu "git pull"
 abbr gc 'git commit -m'
@@ -68,13 +72,14 @@ abbr gunst "git reset HEAD"
 abbr gdiff "git diff"
 abbr gst "git status"
 abbr gs "git switch"
+abbr gd "git diff"
 abbr gmm "git merge main"
 abbr gsm "git switch main"
 abbr grh "git reset --hard origin/main"
 abbr gr "git restore"
 abbr gbd "git branch -D"
 abbr gl "git log"
-abbr gpb "git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -D"
+abbr gpb 'git fetch -p && git branch -vv | grep ": gone" | awk \'{print $1}\' | xargs git branch -D'
 abbr gca "git commit --amend --no-edit -n && git push --force"
 
 ####
@@ -191,8 +196,12 @@ set -gx NNN_FCOLORS c1e2272e006033f7c6d6abc4
 set -gx NNN_SSHFS "sshfs -o reconnect,idmap=user"
 set -gx NNN_PLUG 'i:imgview;d:dragdrop;j:autojump;o:-fzopen;c:fzcd;k:-pskill;p:preview-tui'
 set --export NNN_FIFO "/tmp/nnn.fifo"
+set -gx NNN_TERMINAL "tmux"
+set -gx NNN_ICONLOOKUP 1
+set -gx NNN_TMPFILE ~/.config/nnn/.lastd
 
 abbr update_nnn "cd ~/git/nnn && git pull && sudo make O_NERD=1 && sudo make install"
+abbr update_nnn_plugins 'sh -c "$(curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs)'
 
 ####
 # k9s
