@@ -6,6 +6,10 @@
 # ssh
 .ssh/id_ed25519
 .ssh/id_ed25519.pub
+id_ed25519_sk
+id_ed25519_sk.pub
+id_ed25519_cynkra
+id_ed25519_cynkra.pub
 .ssh/keys/aur
 .ssh/keys/aur.pub
 .ssh/config
@@ -20,6 +24,8 @@
 
 # GPG
 .gnupg/private.key
+.gnupg/pubring.kbx
+.gnupg/gpg.conf
 
 .circleci
 

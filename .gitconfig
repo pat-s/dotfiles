@@ -64,5 +64,7 @@
 	provider = generic
 [push]
 	autoSetupRemote = true
+	autoSetupRemote = true
+	default = current
 [branch]
 	autoSetupMerge = always
