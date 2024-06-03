@@ -17,8 +17,6 @@
 	smudge = git-lfs smudge -- %f
 [credential]
 	helper = cache
-	helper = 
-	helper = /usr/local/share/gcm-core/git-credential-manager
 [gpg]
     program = gpg
 [tag]
@@ -29,7 +27,7 @@
 	ignorecase = false
 #	autocrlf = true
 [pull]
-	rebase = false
+	rebase = true
 [init]
 	defaultBranch = main
 	templateDir = /Users/pjs/git/woodpeckerci/woodpecker/git_hooks
@@ -39,8 +37,6 @@
 	detachedHead = false
 [merge "theirs"]
 	driver = true
-[credential "https://dev.azure.com"]
-	useHttpPath = true
 [credential "https://gitea.cynkra.com"]
 	provider = generic
 [maintenance]
@@ -68,3 +64,30 @@
 	default = current
 [branch]
 	autoSetupMerge = always
+
+[core]
+    #pager = delta
+
+[interactive]
+    #diffFilter = delta --color-only --features=interactive
+
+[delta]
+    features = decorations
+    side-by-side = true
+    line-numbers-left-format = ""
+    line-numbers-right-format = "│ "
+
+[delta "interactive"]
+    keep-plus-minus-markers = false
+
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
+[diff "lockb"]
+	textconv = bun
+	binary = true

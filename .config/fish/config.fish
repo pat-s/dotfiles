@@ -108,8 +108,8 @@ alias py3 python3
 # terraform
 ###
 
-alias tf terraform
-alias tfa "terraform apply"
+alias tf tofu
+alias tfa "tofu apply"
 
 #####
 # yadm
@@ -328,3 +328,7 @@ if [ -f '/Users/pjs/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/pjs/D
 starship init fish | source
 
 source /Users/pjs/.config/op/plugins.sh
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

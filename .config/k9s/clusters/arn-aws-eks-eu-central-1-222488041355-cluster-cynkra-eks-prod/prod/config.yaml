@@ -6,7 +6,7 @@ k9s:
     favorites:
     - all
   view:
-    active: po
+    active: pod
   featureGates:
     nodeShell: true
   portForwardAddress: localhost
