@@ -167,7 +167,7 @@ end
 # adds `~/.scripts` and all subdirectories to $PATH
 set -e fish_user_paths
 if [ $unamestr = Darwin ]
-  set -U fish_user_paths /opt/homebrew/opt/grep/libexec/gnubin /opt/homebrew/lib/ruby/gems/*/bin /opt/homebrew/sbin /opt/homebrew/bin $HOME/.local/share/solana/install/active_release/bin $HOME/.cargo/bin /usr/local/opt/ccache/libexec /.scripts/tools $HOME/.scripts/nnn $HOME/git/nnn/scripts/nlaunch $HOME/.local/bin $HOME/git/nnn/plugins $HOME/.scripts/R $HOME/.krew/bin $HOME/.kube/plugins/jordanwilson230 $HOME/go/bin /opt/homebrew/opt/ruby/bin /Users/pjs/git/terravision $fish_user_paths
+  set -U fish_user_paths /opt/homebrew/opt/ansible@9/bin /opt/homebrew/opt/grep/libexec/gnubin /opt/homebrew/lib/ruby/gems/*/bin /opt/homebrew/sbin /opt/homebrew/bin $HOME/.local/share/solana/install/active_release/bin $HOME/.cargo/bin /usr/local/opt/ccache/libexec /.scripts/tools $HOME/.scripts/nnn $HOME/git/nnn/scripts/nlaunch $HOME/.local/bin $HOME/git/nnn/plugins $HOME/.scripts/R $HOME/.krew/bin $HOME/.kube/plugins/jordanwilson230 $HOME/go/bin /opt/homebrew/opt/ruby/bin /Users/pjs/git/terravision $fish_user_paths
 end
 
 if [ $unamestr = Linux ]
@@ -233,6 +233,7 @@ abbr k8s-prod "aws eks update-kubeconfig --name cynkra-eks-prod --region eu-cent
 abbr k8s-dev "aws eks update-kubeconfig --name cynkra-eks-dev --region eu-central-1 --alias eks-dev"
 abbr kc "kubectx"
 abbr kdn 'kubectl describe no | grep "beta.kubernetes.io/instance-type"'
+abbr kdr 'kubectl drain --ignore-daemonsets --delete-emptydir-data --disable-eviction'
 
 # fish support for kubecolor plugin: https://github.com/hidetatz/kubecolor#fish
 #function kubectl
@@ -297,7 +298,8 @@ set -gx DRONE_SERVER "https://drone.cynkra.com"
 ###
 
 #export VAULT_ADDR=https://vault.cynkra.link
-export VAULT_ADDR=https://vault.cynkra.com
+#export VAULT_ADDR=https://vault.cynkra.com
+export VAULT_ADDR=https://vault.devxy.io
 
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -307,7 +309,9 @@ end
 
 ### GPG
 set -x GPG_TTY (tty)
-#set -x SSH_AUTH_SOCK ~/.gnupg/S.gpg-agent.ssh
+# without this line, ssh via yubikey on fish does not work # https://www.foxk.it/blog/gpg-ssh-agent-fish/
+set -e SSH_AUTH_SOCK
+set -U -x SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
 
 if [ $unamestr = Darwin ]
     gpgconf --launch gpg-agent
@@ -327,8 +331,18 @@ if [ -f '/Users/pjs/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/pjs/D
 
 starship init fish | source
 
-source /Users/pjs/.config/op/plugins.sh
+#source /Users/pjs/.config/op/plugins.sh
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+# kube-hetzner
+alias create_microos_snapshots='set tmp_script (mktemp); curl -sSL -o "{tmp_script}" https://raw.githubusercontent.com/kube-hetzner/terraform-hcloud-kube-hetzner/master/scripts/create.sh; chmod +x "{tmp_script}"; bash "{tmp_script}"; rm "{tmp_script}"'
+
+
+# direnv (allows project-specific env var configurations)
+# https://direnv.net/docs/hook.html
+eval (direnv hook fish)
+direnv hook fish | source
+set -g direnv_fish_mode eval_on_arrow
