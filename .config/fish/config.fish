@@ -344,7 +344,10 @@ set -gx PKG_CONFIG_PATH "/opt/homebrew/opt/sqlite/lib/pkgconfig"
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/pjs/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/pjs/Downloads/google-cloud-sdk/path.fish.inc'; end
 
-starship init fish | source
+set starship_installed (which starship 2>/dev/null || echo FALSE)
+if [ "$starship_installed" != FALSE ]
+  starship init fish | source
+end
 
 #source /Users/pjs/.config/op/plugins.sh
 
@@ -358,8 +361,12 @@ alias create_microos_snapshots='set tmp_script (mktemp); curl -sSL -o "{tmp_scri
 
 # direnv (allows project-specific env var configurations)
 # https://direnv.net/docs/hook.html
-eval (direnv hook fish)
-direnv hook fish | source
+set direnv_installed (which direnv 2>/dev/null || echo FALSE)
+if [ "$direnv_installed" != FALSE ]
+  eval (direnv hook fish)
+  direnv hook fish | source
+end
+
 set -g direnv_fish_mode eval_on_arrow
 
 # Added by OrbStack: command-line tools and integration
