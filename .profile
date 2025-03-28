@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/profile.pre.bash" ]] && builtin source "$HOME/.fig/shell/profile.pre.bash"
 #!/bin/sh
 # Profile file. Runs on login.
 
@@ -29,10 +27,11 @@ if test -f $HOME/.gpg-agent-info && \
     GPG_AGENT_INFO=`cat $HOME/.gpg-agent-info | cut -c 16-`
 else
     # No, gpg-agent not available; start gpg-agent
-    eval `gpg-agent --daemon --no-grab --write-env-file $HOME/.gpg-agent-info`
+    eval `gpg-agent --daemon --no-grab $HOME/.gpg-agent-info`
 fi
 export GPG_TTY=`tty`
 export GPG_AGENT_INFO
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/profile.post.bash" ]] && builtin source "$HOME/.fig/shell/profile.post.bash"
+# creates temporary AWS credential key pair
+export aws_tmp_key_pair=$(vault read -format=json aws/creds/terraform)
+

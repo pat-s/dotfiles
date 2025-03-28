@@ -1,18 +1,13 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/bash_profile.pre.bash" ]] && builtin source "$HOME/.fig/shell/bash_profile.pre.bash"
 #!/bin/sh
 # Profile file. Runs on login.
 
 # Adds `~/.scripts` and all subdirectories to $PATH
 export PATH="$PATH:$(du "$HOME/.scripts/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
-export EDITOR="nvim"
+export EDITOR="vim"
 
 echo "$0" | grep "bash$" >/dev/null && [ -f ~/.bashrc ] && source "$HOME/.bashrc"
 
 # also read .bashrc (only read if interactive and non-login by default)
-[[ -r ~/.bashrc ]] && . ~/.bashrc
-. "$HOME/.cargo/env"
-export PATH="/Users/pjs/.local/share/solana/install/active_release/bin:$PATH"
 
 alias git-remove-untracked='git fetch --prune && git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}" | xargs git branch -d'
 export PATH=$PATH:~/.kube/plugins/jordanwilson230
@@ -23,7 +18,4 @@ then
   export PATH=/usr/local/bin:$PATH
 fi
 
-function gam() { "/Users/pjs/bin/gam/gam" "$@" ; }
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/bash_profile.post.bash" ]] && builtin source "$HOME/.fig/shell/bash_profile.post.bash"

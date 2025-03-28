@@ -15,10 +15,16 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[lfs]
+	concurrenttransfers = 10
+	activitytimeout = 3600
+	dialtimeout = 3600
+	keepalive = 3600
+	tlstimeout = 3600
 [credential]
 	helper = cache
 [gpg]
-    program = gpg
+    program = /opt/homebrew/bin/gpg
 [tag]
 	gpgSign = true
     #forceSignAnnotated = true
@@ -66,6 +72,7 @@
 	autoSetupMerge = always
 
 [core]
+	pager = cat
     #pager = delta
 
 [interactive]
@@ -91,3 +98,7 @@
 [diff "lockb"]
 	textconv = bun
 	binary = true
+[rebase]
+	autoStash = true
+[checkout]
+	defaultRemote=origin

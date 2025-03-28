@@ -17,6 +17,7 @@ export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/opt/make/libexec/g
 
 # HSTR configuration - add this to ~/.bashrc
 alias hh=hstr                    # hh to be alias for hstr
+
 export HSTR_CONFIG=hicolor       # get more colors
 shopt -s histappend              # append new history items to .bash_history
 export HISTCONTROL=ignorespace   # leading space hides commands from history
@@ -29,4 +30,7 @@ if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hstr -- \C-j"'; fi
 # if this is interactive shell, then bind 'kill last command' to Ctrl-x k
 if [[ $- =~ .*i.* ]]; then bind '"\C-xk": "\C-a hstr -k \C-j"'; fi
 bind '"\C-r": "\e^ihstr -- \n"'
+
+# direnv
+eval "$(direnv hook bash)"
 

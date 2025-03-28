@@ -65,9 +65,17 @@ alias vpnbit "sudo openfortivpn -c ~/.config/openfortivpn/bit"
 
 abbr ga "git add"
 abbr gaa "git add -A"
-abbr ph "git push"
+abbr pho "git push -u origin"
 abbr pu "git pull"
-abbr gc 'git commit -m'
+
+abbr gc --set-cursor=j 'git commit -m "j"'
+abbr gcf --set-cursor=j 'git commit -m "feat: j"'
+abbr gcp --set-cursor=j 'git commit -m "fix: j"'
+abbr gcc --set-cursor=j 'git commit -m "chore: j"'
+abbr gcci --set-cursor=j 'git commit -m "ci: j"'
+abbr gcd --set-cursor=j 'git commit -m "docs: j"'
+abbr gcr --set-cursor=j 'git commit -m "refactor: j"'
+
 abbr gunst "git reset HEAD"
 abbr gdiff "git diff"
 abbr gst "git status"
@@ -81,6 +89,13 @@ abbr gbd "git branch -D"
 abbr gl "git log"
 abbr gpb 'git fetch -p && git branch -vv | grep ": gone" | awk \'{print $1}\' | xargs git branch -D'
 abbr gca "git commit --amend --no-edit -n && git push --force"
+abbr --set-cursor=j gb "git checkout -b 'j'"
+abbr --set-cursor=j gbcp "git checkout -b 'fix/j'"
+abbr --set-cursor=j gbcf "git checkout -b 'feat/j'"
+abbr --set-cursor=j gbcc "git checkout -b 'chore/j'"
+abbr --set-cursor=j gbci "git checkout -b 'ci/j'"
+abbr --set-cursor=j gbcd "git checkout -b 'docs/j'"
+abbr --set-cursor=j gbcr "git checkout -b 'refactor/j'"
 
 ####
 # R
@@ -109,6 +124,7 @@ alias py3 python3
 ###
 
 alias tf tofu
+alias ot tofu
 alias tfa "tofu apply"
 
 #####
@@ -167,7 +183,7 @@ end
 # adds `~/.scripts` and all subdirectories to $PATH
 set -e fish_user_paths
 if [ $unamestr = Darwin ]
-  set -U fish_user_paths /opt/homebrew/opt/ansible@9/bin /opt/homebrew/opt/grep/libexec/gnubin /opt/homebrew/lib/ruby/gems/*/bin /opt/homebrew/sbin /opt/homebrew/bin $HOME/.local/share/solana/install/active_release/bin $HOME/.cargo/bin /usr/local/opt/ccache/libexec /.scripts/tools $HOME/.scripts/nnn $HOME/git/nnn/scripts/nlaunch $HOME/.local/bin $HOME/git/nnn/plugins $HOME/.scripts/R $HOME/.krew/bin $HOME/.kube/plugins/jordanwilson230 $HOME/go/bin /opt/homebrew/opt/ruby/bin /Users/pjs/git/terravision $fish_user_paths
+  set -U fish_user_paths /opt/homebrew/bin /opt/homebrew/opt/sqlite/bin /opt/homebrew/opt/trash-cli/bin /usr/local/go/bin /opt/homebrew/opt/ansible@9/bin /opt/homebrew/opt/grep/libexec/gnubin /opt/homebrew/lib/ruby/gems/*/bin /opt/homebrew/sbin /opt/homebrew/bin $HOME/.local/share/solana/install/active_release/bin $HOME/.cargo/bin /usr/local/opt/ccache/libexec /.scripts/tools $HOME/.scripts/nnn $HOME/git/nnn/scripts/nlaunch $HOME/.local/bin $HOME/git/nnn/plugins $HOME/.scripts/R $HOME/.krew/bin $HOME/.kube/plugins/jordanwilson230 $HOME/go/bin /opt/homebrew/opt/ruby/bin /Users/pjs/git/terravision $fish_user_paths
 end
 
 if [ $unamestr = Linux ]
@@ -189,7 +205,7 @@ end
 #set -gx NNN_BMS "d:~/Downloads;g:~/git;f:~/.config/nnn/edi/papers/2019-feature-selection;p:~/.config/nnn/edi/papers/2018-model-comparison;"
 set -gx NNN_OPS_PROG 1
 set -gx NNN_RESTRICT_NAV_OPEN 1
-set -gx NNN_TRASH 1
+#set -gx NNN_TRASH 1
 set -gx NNN_COLORS 62354
 set -gx NNN_FCOLORS c1e2272e006033f7c6d6abc4
 #set -gx NNN_SCRIPT "$HOME/.scripts/nnn"
@@ -200,7 +216,7 @@ set -gx NNN_TERMINAL "tmux"
 set -gx NNN_ICONLOOKUP 1
 set -gx NNN_TMPFILE ~/.config/nnn/.lastd
 
-abbr update_nnn "cd ~/git/nnn && git pull && sudo make O_NERD=1 && sudo make install"
+abbr update_nnn "cd ~/git/github.com/other/nnn && git pull && sudo make O_NERD=1 && sudo make install"
 abbr update_nnn_plugins 'sh -c "$(curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs)'
 
 ####
@@ -244,7 +260,7 @@ abbr kdr 'kubectl drain --ignore-daemonsets --delete-emptydir-data --disable-evi
 # AWS
 #####
 
-set -gx AWS_DEFAULT_PROFILE terraform
+set -gx AWS_DEFAULT_PROFILE devxy-terraform
 # AWS ECR Login
 abbr awsecr "aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 222488041355.dkr.ecr.eu-central-1.amazonaws.com"
 abbr aws-ag-stat "set -gx AWS_DEFAULT_PROFILE terraform_ag_stat"
@@ -258,7 +274,6 @@ abbr ec2misc-stop "aws ec2 stop-instances --instance-ids (aws ec2 describe-insta
 # Azure
 #####
 
-abbr az-cynkra "az account set --subscription f1fcfb5d-1357-4de9-a1e5-d87693d2660e"
 abbr az-vbz-dev "az account set --subscription 75d104e2-3c07-44a0-ae19-061438e298e5"
 
 #####
@@ -346,3 +361,7 @@ alias create_microos_snapshots='set tmp_script (mktemp); curl -sSL -o "{tmp_scri
 eval (direnv hook fish)
 direnv hook fish | source
 set -g direnv_fish_mode eval_on_arrow
+
+# Added by OrbStack: command-line tools and integration
+# This won't be added again if you remove it.
+source ~/.orbstack/shell/init.fish 2>/dev/null || :
