@@ -35,10 +35,6 @@ if [ "$system_type" = "Darwin" ]; then
 
 fi
 
-### Update the yadm repo origin URL
-echo "Updating the yadm repo origin URL"
-yadm remote set-url origin "git@github.com:pat-s/dotfiles.git"
-
 ### nvim -------------------------------
 nvim_installed=$(which nvim 2>/dev/null || echo FALSE)
 if [ "$nvim_installed" != "FALSE" ]; then
