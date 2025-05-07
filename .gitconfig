@@ -36,15 +36,12 @@
 	rebase = true
 [init]
 	defaultBranch = main
-	templateDir = /Users/pjs/git/woodpeckerci/woodpecker/git_hooks
 [commit]
 	gpgsign = true
 [advice]
 	detachedHead = false
 [merge "theirs"]
 	driver = true
-[credential "https://gitea.cynkra.com"]
-	provider = generic
 [maintenance]
 	repo = /Users/pjs/cynkra/ansible/ansible
 	repo = /Users/pjs/cynkra/devops/terraform/aws-frankfurt-k8s

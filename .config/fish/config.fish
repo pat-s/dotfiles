@@ -1,4 +1,5 @@
 set unamestr (uname)
+
 # abbreviations
 
 #####
@@ -345,8 +346,8 @@ set -gx PKG_CONFIG_PATH "/opt/homebrew/opt/sqlite/lib/pkgconfig"
 if [ -f '/Users/pjs/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/pjs/Downloads/google-cloud-sdk/path.fish.inc'; end
 
 set starship_installed (which starship 2>/dev/null || echo FALSE)
-if [ "$starship_installed" != FALSE ]
-  starship init fish | source
+  if [ "$starship_installed" != FALSE ]
+    # starship init fish | source
 end
 
 #source /Users/pjs/.config/op/plugins.sh
@@ -368,7 +369,15 @@ if [ "$direnv_installed" != FALSE ]
 end
 
 set -g direnv_fish_mode eval_on_arrow
+set -g DEVPOD_DISABLE_TELEMETRY true
 
 # Added by OrbStack: command-line tools and integration
 # This won't be added again if you remove it.
 source ~/.orbstack/shell/init.fish 2>/dev/null || :
+
+# pnpm
+set -gx PNPM_HOME "/Users/pjs/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
