@@ -1,0 +1,131 @@
+// Static tasks configuration.
+//
+// Example:
+[
+  {
+    "label": "Example task",
+    "command": "for i in {1..5}; do echo \"Hello $i/5\"; sleep 1; done",
+    //"args": [],
+    // Env overrides for the command, will be appended to the terminal's environment from the settings.
+    "env": { "foo": "bar" },
+    // Current working directory to spawn the command into, defaults to current project root.
+    //"cwd": "/path/to/working/directory",
+    // Whether to use a new terminal tab or reuse the existing one to spawn the process, defaults to `false`.
+    "use_new_terminal": false,
+    // Whether to allow multiple instances of the same task to be run, or rather wait for the existing ones to finish, defaults to `false`.
+    "allow_concurrent_runs": false,
+    // What to do with the terminal pane and tab, after the command was started:
+    // * `always` — always show the task's pane, and focus the corresponding tab in it (default)
+    // * `no_focus` — always show the task's pane, add the task's tab in it, but don't focus it
+    // * `never` — do not alter focus, but still add/reuse the task's tab in its pane
+    "reveal": "always",
+    // Where to place the task's terminal item after starting the task:
+    // * `dock` — in the terminal dock, "regular" terminal items' place (default)
+    // * `center` — in the central pane group, "main" editor area
+    "reveal_target": "dock",
+    // What to do with the terminal pane and tab, after the command had finished:
+    // * `never` — Do nothing when the command finishes (default)
+    // * `always` — always hide the terminal tab, hide the pane also if it was the last tab in it
+    // * `on_success` — hide the terminal tab on task success only, otherwise behaves similar to `always`
+    "hide": "never",
+    // Which shell to use when running a task inside the terminal.
+    // May take 3 values:
+    // 1. (default) Use the system's default terminal configuration in /etc/passwd
+    //      "shell": "system"
+    // 2. A program:
+    //      "shell": {
+    //        "program": "sh"
+    //      }
+    // 3. A program with arguments:
+    //     "shell": {
+    //         "with_arguments": {
+    //           "program": "/bin/bash",
+    //           "args": ["--login"]
+    //         }
+    //     }
+    "shell": "system"
+  },
+  {
+    "label": "lazygit",
+    "command": "lazygit -p $ZED_WORKTREE_ROOT"
+  },
+  {
+    "label": "Open Repository in Browser",
+    "command": "gitopen",
+    "reveal": "never",
+    "hide": "on_success",
+    "problemMatcher": []
+  },
+  {
+    "label": "R Terminal",
+    "command": "R",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": true
+  },
+  {
+    "label": "Install local R package",
+    "command": "R CMD INSTALL .",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "show_summary": true,
+    "show_output": true,
+    "show_error": true
+  },
+  {
+    "label": "Document local R package",
+    "command": "Rscript -e \"devtools::document(roclets = c('rd', 'collate', 'namespace'))\"",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false
+  },
+  {
+    "label": "Check local R package",
+    "command": "Rscript -e \"devtools::check()\"",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false
+  },
+  {
+    "label": "Run all R tests",
+    "command": "Rscript -e \"testthat::test_dir('tests/testthat')\"",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "show_summary": true,
+    "show_output": true
+  },
+  {
+    "label": "Run current R file test",
+    "command": "Rscript -e \"testthat::test_file('$ZED_RELATIVE_FILE')\"",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "show_summary": true,
+    "show_output": true
+  },
+  {
+    "label": "Run test_that test", // Can be triggered, without a keyboard shortcut
+    // or clicking on the run button, by toggling the code action menu (Ctrl+.)
+    "command": "Rscript",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "args": [
+      "-e",
+      "\"testthat::test_file(\\\"${ZED_FILE}\\\", desc = \\\"${ZED_CUSTOM_desc}\\\")\""
+    ],
+    "tags": ["r-test"]
+  },
+  {
+    "label": "Source current file",
+    "command": "Rscript -e \"source('$ZED_RELATIVE_FILE', echo = TRUE)\"",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "show_summary": true,
+    "show_output": true
+  }
+]

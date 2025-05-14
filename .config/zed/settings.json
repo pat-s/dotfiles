@@ -1,0 +1,73 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "agent": {
+    "always_allow_tool_actions": true,
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet-thinking-latest"
+    },
+    "version": "2"
+  },
+  "ssh_connections": [
+    {
+      "host": "artemis",
+      "username": "local_admin",
+      "projects": [
+        {
+          "paths": ["~/git/forgejo"]
+        }
+      ],
+      "nickname": "artemis (local_admin)"
+    },
+    {
+      "host": "artemis",
+      "username": "local_admin",
+      "projects": []
+    }
+  ],
+  "icon_theme": "Bearded Icon Theme",
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "language_models": {
+    "openai": {
+      "version": "1",
+      "api_url": "https://api.openai.com/v1"
+    }
+  },
+  "base_keymap": "VSCode",
+  "vim_mode": true,
+  "ui_font_size": 12,
+  "buffer_font_size": 11,
+  "ensure_final_newline_on_save": true,
+  // "format_on_save": "on",
+  "highlight_line": true,
+  "remove_trailing_whitespace_on_save": true,
+  "soft_wrap": "editor_width",
+  "auto_update": true,
+  "enable_language_server": true,
+  "formatter": "prettier",
+  "languages": {
+    "Terraform": {
+      "formatter": {
+        "external": {
+          "command": "tofu",
+          "arguments": ["fmt", "-"]
+        }
+      }
+    }
+  },
+  "theme": {
+    "mode": "system",
+    "dark": "XY-Zed",
+    "light": "Cyan Light"
+  },
+  "tabs": { "file_icons": true }
+}

@@ -1,0 +1,71 @@
+[
+  // Standard macOS bindings
+  // Ref: https://zed.dev/docs/key-bindings
+  {
+    "bindings": {
+      "alt-shift-w": "workspace::CloseWindow",
+      "ctrl-shift-f10": "repl::Restart", // Equivalent to restarting R in RStudio
+      "ctrl-\\": "assistant::InlineAssist",
+      "cmd-shift-m": ["workspace::SendKeystrokes", "space |> space"],
+      "alt--": ["workspace::SendKeystrokes", "space < - space"],
+      "cmd-alt-i": ["workspace::SendKeystrokes", "\n# space %%\n"],
+      "cmd-shift-d": [
+        "task::Spawn",
+        { "task_name": "Document local R package", "reveal_target": "center" }
+      ],
+      "cmd-b": ["task::Spawn", { "task_name": "Open Repository in Browser" }],
+      "cmd-alt-enter": [
+        "workspace::SendKeystrokes",
+        "ctrl-c ctrl-` ctrl-shift-v enter ctrl-`"
+      ]
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-shift-c": [
+        "editor::ToggleComments",
+        {
+          "advance_downwards": false
+        }
+      ],
+      "ctrl-t": "workspace::NewTerminal",
+      "cmd-g": [
+        "task::Spawn",
+        { "task_name": "lazygit", "reveal_target": "center" }
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-`": "projects::OpenRecent",
+      "ctrl-t": "workspace::NewTerminal",
+      "ctrl-s": "terminal_panel::ToggleFocus",
+      "cmd-shift-t": [
+        "task::Spawn",
+        { "task_name": "Run all R tests", "reveal_target": "center" }
+      ],
+      "cmd-shift-r": [
+        "task::Spawn",
+        { "task_name": "Run current R file test", "reveal_target": "center" }
+      ],
+      "cmd-shift-b": [
+        "task::Spawn",
+        { "task_name": "Install local R package", "reveal_target": "center" }
+      ],
+      "cmd-2": [
+        "task::Spawn",
+        { "task_name": "R Terminal", "reveal_target": "dock" }
+      ],
+      "cmd-shift-s": [
+        "task::Spawn",
+        { "task_name": "Source current file", "reveal_target": "center" }
+      ],
+      "cmd-shift-e": [
+        "task::Spawn",
+        { "task_name": "Check local R package", "reveal_target": "center" }
+      ]
+    }
+  }
+]
