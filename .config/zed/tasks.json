@@ -58,7 +58,7 @@
   },
   {
     "label": "R Terminal",
-    "command": "R",
+    "command": "radian",
     "cwd": "$ZED_WORKTREE_ROOT",
     "use_new_terminal": true
   },
@@ -83,6 +83,13 @@
   {
     "label": "Check local R package",
     "command": "Rscript -e \"devtools::check()\"",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false
+  },
+  {
+    "label": "Load local R package",
+    "command": "Rscript -e \"devtools::load_all()\"",
     "cwd": "$ZED_WORKTREE_ROOT",
     "use_new_terminal": false,
     "allow_concurrent_runs": false

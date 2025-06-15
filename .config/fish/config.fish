@@ -184,7 +184,7 @@ end
 # adds `~/.scripts` and all subdirectories to $PATH
 set -e fish_user_paths
 if [ $unamestr = Darwin ]
-  set -U fish_user_paths /opt/homebrew/bin /opt/homebrew/opt/sqlite/bin /opt/homebrew/opt/trash-cli/bin /usr/local/go/bin /opt/homebrew/opt/ansible@9/bin /opt/homebrew/opt/grep/libexec/gnubin /opt/homebrew/lib/ruby/gems/*/bin /opt/homebrew/sbin /opt/homebrew/bin $HOME/.local/share/solana/install/active_release/bin $HOME/.cargo/bin /usr/local/opt/ccache/libexec /.scripts/tools $HOME/.scripts/nnn $HOME/git/nnn/scripts/nlaunch $HOME/.local/bin $HOME/git/nnn/plugins $HOME/.scripts/R $HOME/.krew/bin $HOME/.kube/plugins/jordanwilson230 $HOME/go/bin /opt/homebrew/opt/ruby/bin /Users/pjs/git/terravision $fish_user_paths
+  set -U fish_user_paths $HOME/.cargo/bin /opt/homebrew/bin /opt/homebrew/opt/sqlite/bin /opt/homebrew/opt/trash-cli/bin /usr/local/go/bin /opt/homebrew/opt/ansible@9/bin /opt/homebrew/opt/grep/libexec/gnubin /opt/homebrew/lib/ruby/gems/*/bin /opt/homebrew/sbin /opt/homebrew/bin $HOME/.local/share/solana/install/active_release/bin $HOME/.cargo/bin /usr/local/opt/ccache/libexec /.scripts/tools $HOME/.scripts/nnn $HOME/git/nnn/scripts/nlaunch $HOME/.local/bin $HOME/git/nnn/plugins $HOME/.scripts/R $HOME/.krew/bin $HOME/.kube/plugins/jordanwilson230 $HOME/go/bin /opt/homebrew/opt/ruby/bin /Users/pjs/git/terravision $fish_user_paths
 end
 
 if [ $unamestr = Linux ]

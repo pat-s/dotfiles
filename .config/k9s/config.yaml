@@ -4,3 +4,7 @@ k9s:
     namespace: default
     tty: true
 
+  logger:
+     tail: 500
+     buffer: 5000
+     sinceSeconds: -1

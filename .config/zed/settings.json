@@ -8,12 +8,16 @@
 // from the command palette or from `Zed` application menu.
 {
   "agent": {
+    "default_profile": "write",
     "always_allow_tool_actions": true,
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-thinking-latest"
+      "model": "claude-sonnet-4-thinking"
     },
     "version": "2"
+  },
+  "minimap": {
+    "show": "always"
   },
   "ssh_connections": [
     {
@@ -47,7 +51,7 @@
   "ui_font_size": 12,
   "buffer_font_size": 11,
   "ensure_final_newline_on_save": true,
-  // "format_on_save": "on",
+  "format_on_save": "off",
   "highlight_line": true,
   "remove_trailing_whitespace_on_save": true,
   "soft_wrap": "editor_width",
@@ -55,6 +59,11 @@
   "enable_language_server": true,
   "formatter": "prettier",
   "languages": {
+    "R": {
+      "language_servers": ["air", "r_language_server"],
+      "use_on_type_format": false,
+      "format_on_save": "on"
+    },
     "Terraform": {
       "formatter": {
         "external": {

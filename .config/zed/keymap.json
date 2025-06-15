@@ -11,7 +11,7 @@
       "cmd-alt-i": ["workspace::SendKeystrokes", "\n# space %%\n"],
       "cmd-shift-d": [
         "task::Spawn",
-        { "task_name": "Document local R package", "reveal_target": "center" }
+        { "task_name": "Document local R package", "reveal_target": "dock" }
       ],
       "cmd-b": ["task::Spawn", { "task_name": "Open Repository in Browser" }],
       "cmd-alt-enter": [
@@ -65,6 +65,10 @@
       "cmd-shift-e": [
         "task::Spawn",
         { "task_name": "Check local R package", "reveal_target": "center" }
+      ],
+      "ctrl-shift-l": [
+        "task::Spawn",
+        { "task_name": "Load local R package", "reveal_target": "dock" }
       ]
     }
   }
